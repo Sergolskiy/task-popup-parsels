@@ -1,0 +1,4 @@
+ #select2-user_own_tasks-results li:nth-child(2){
+     color: black;
+     font-weight: bold;
+ }
