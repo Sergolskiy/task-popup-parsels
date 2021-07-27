@@ -5,7 +5,6 @@ function openNewPopup2() {
 }
 
 function searchCard(that) {
-    console.log(that);
     let list = $(that).closest('.delivery_list_center_inner').find('.delivery_list_center_card');
 
     let filter = $(that).prev().val().toLowerCase();
@@ -105,7 +104,6 @@ function toggleVisibilityDeliveryPopup(that) {
 }
 
 function removeCard(that) {
-    console.log(that);
     let cardtId = $(that).closest('.delivery_list_right_remove').find('.delivery_list_right_remove_text').attr('data-item-name')
     $(that).closest('.delivery_list_content').find(".delivery_list_center_card[data-card-id =" + cardtId + "]").remove()
     $('.delivery_list_right_form.delivery_list_right_remove.active').removeClass('active')
@@ -156,7 +154,11 @@ function filterCheckbox(that){
             $(that).prop('checked', true)
         }
     } else {
-        $('#all').prop('checked',false)
+        if(!$('#menu').prop('checked') && !$('#automatic').prop('checked')) {
+            $('#all').prop('checked',true)
+        } else {
+            $('#all').prop('checked',false)
+        }
     }
     searchCard($('.delivery_list_center_search_ico')[0]);
 }
