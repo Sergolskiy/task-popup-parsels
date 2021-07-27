@@ -1,8 +1,22 @@
+$('#newPopup2').modal()
+
+function openNewPopup2() {
+    $('#newPopup2').modal()
+}
 
 function searchCard(that) {
+    console.log(that);
     let list = $(that).closest('.delivery_list_center_inner').find('.delivery_list_center_card');
 
     let filter = $(that).prev().val().toLowerCase();
+    let showSearchEmpty = false
+
+    let isFilterCheckbox = true
+    let filterCheckbox = []
+    if($('#all').prop('checked')) isFilterCheckbox = false
+    if($('#menu').prop('checked')) filterCheckbox.push('menu')
+    if($('#automatic').prop('checked')) filterCheckbox.push('automatic')
+
     list.each(function (index, item) {
         let flag = false
         let itemTitle = $(item).find('.delivery_list_center_card_title')
@@ -22,12 +36,34 @@ function searchCard(that) {
             }
         }
 
-        if(flag){
+        if(flag && (filterCheckbox.indexOf($(item).attr('data-filter')) > -1 || !isFilterCheckbox)){
             $(item).show()
+            showSearchEmpty = true
         } else {
             $(item).hide()
         }
     });
+
+    if(showSearchEmpty){
+        $('.delivery_list_search_empty').removeClass('active')
+        $('.delivery_list_center_list-wrap').addClass('active')
+    } else {
+        $('.delivery_list_search_empty').addClass('active')
+        $('.delivery_list_center_list-wrap').removeClass('active')
+    }
+
+}
+
+function showList() {
+    $('.delivery_list_center_search input').val('')
+    $('#menu').prop('checked',false)
+    $('#automatic').prop('checked',false)
+    $('#all').prop('checked',true)
+
+    searchCard($('.delivery_list_center_search_ico')[0]);
+
+    $('.delivery_list_search_empty').removeClass('active')
+    $('.delivery_list_center_list-wrap').addClass('active')
 }
 
 function toggleVisibilityDeliveryPopup(that) {
@@ -110,6 +146,19 @@ function editAnimation(){
     setTimeout(() => {
         $('.delivery_list_content .delivery_list_center_card.active-animation').removeClass('active-animation');
     }, 3000)
+}
+
+function filterCheckbox(that){
+    if($(that).attr('id') === 'all'){
+        $('#menu').prop('checked',false)
+        $('#automatic').prop('checked',false)
+        if(!$(that).prop('checked')){
+            $(that).prop('checked', true)
+        }
+    } else {
+        $('#all').prop('checked',false)
+    }
+    searchCard($('.delivery_list_center_search_ico')[0]);
 }
 
 $(document).ready(function () {
