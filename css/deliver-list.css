@@ -135,7 +135,7 @@
 .delivery_list_center_body_inner {
   display: block;
   /*height: 100%;*/
-  height: 470px;
+  height: calc(100vh - 195px);
 }
 
 .delivery_list_center_list-wrap{
