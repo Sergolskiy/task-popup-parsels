@@ -19,6 +19,7 @@
   <link href="./css/app.css" rel="stylesheet">
   <link href="./css/custom.css" rel="stylesheet">
   <link href="./css/taskPopup.css" rel="stylesheet">
+  <link href="./css/deliver-list.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 </head>
@@ -30,7 +31,7 @@
     Launch demo modal
   </button>
 
-  <div class="modal fade" tabindex="-1" id="newPopup" role="dialog">
+  <div class="modal fade parcels-popup" tabindex="-1" id="newPopup" role="dialog">
     <div class="modal-dialog mw-1420 mw-1712" role="document">
       <div class="modal-content">
         <div class="modal-close close_list_content">
@@ -43,6 +44,8 @@
         <div class="taskPopup-content delivery_list_content">
           <div class="taskPopup-center delivery_list_center">
             <div class="delivery_list_center_inner">
+              <div class="delivery_list_center_body">
+                
               <div class="delivery_list_center_top">
                 <div class="delivery_list_center_title">
                   <div class="delivery_list_center_title_text">
@@ -68,7 +71,6 @@
                   </svg>
                 </div>
               </div>
-              <div class="delivery_list_center_body">
                 <div class="delivery_list_center_body_inner">
                   <div class="delivery_list_center_list-wrap">
                     <ul class="delivery_list_center_list">
@@ -800,6 +802,26 @@
                       </select>
                     </div>
                   </div>
+                  
+
+                  <div class="delivery_list_right_row">
+                    <div class="delivery_list_right_select">
+                      <div class="delivery_list_right_select_title_wrapper">
+                        <div class="delivery_list_right_row_title">
+                          Список для клиента
+                        </div>
+                      </div>
+                      <select class="delivery_list_show_users" name="state">
+                        <option value="" selected>Users...</option>
+                        <option value="User_1">User_11</option>
+                        <option value="User_2">User_21</option>
+                        <option value="User_3">User_31</option>
+                        <option value="User_4">User_41</option>
+                        <option value="User_5">User_51</option>
+                        <option value="User_6">User_61</option>
+                      </select>
+                    </div>
+                  </div>
 
                   <div class="delivery_list_right_info_btns">
                     <div class="delivery_list_right_info_btn delivery_list_right_info_btn_show_list">
@@ -930,19 +952,40 @@
                     </div>
                   </div>
 
+                  
+
+                  <div class="delivery_list_right_row">
+                    <div class="delivery_list_right_select">
+                      <div class="delivery_list_right_select_title_wrapper">
+                        <div class="delivery_list_right_row_title">
+                          Список для клиента
+                        </div>
+                      </div>
+                      <select class="delivery_list_show_users" name="state">
+                        <option value="" selected>Users...</option>
+                        <option value="User_1">User_11</option>
+                        <option value="User_2">User_21</option>
+                        <option value="User_3">User_31</option>
+                        <option value="User_4">User_41</option>
+                        <option value="User_5">User_51</option>
+                        <option value="User_6">User_61</option>
+                      </select>
+                    </div>
+                  </div>
+
                   <div class="delivery_list_right_info_btns">
                     <div class="delivery_list_right_info_btn delivery_list_right_info_btn_show_list">
                       <div class="taskPopup-create-btns">
-                        <button class="taskPopup-create-btn taskPopup-create-btn_cansel">
+                        <a href="javascript:void(0)" class="taskPopup-create-btn taskPopup-create-btn_cansel" onclick="clearForm(this)">
                           Отменить
-                        </button>
+                        </a>
                       </div>
                     </div>
 
                     <div class="delivery_list_right_info_btn delivery_list_right_info_btn_show_list">
                       <div class="taskPopup-create-btns">
                         <button class="taskPopup-create-btn taskPopup-create-btn_edit">
-                          Редактировать
+                          Создать
                         </button>
                       </div>
                     </div>
@@ -967,6 +1010,7 @@
   <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
   <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
   <script src="./js/taskPopup.js"></script>
+  <script src="./js/deliver-list.js"></script>
 
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
