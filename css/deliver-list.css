@@ -532,7 +532,7 @@
   cursor: pointer;
 }
 .delivery_list_center_card_add_btn:hover {
-  background-color: rgb(47 104 204);
+  background-color: #6C96EF;
 }
 
 
@@ -643,6 +643,10 @@
 .delivery_list_center_btn-filter:checked + label{
   background: #5081E9;
   color: white;
+}
+
+.delivery_list_center_btn-filter:checked + label:hover{
+  background: #6C96EF;
 }
 
 
