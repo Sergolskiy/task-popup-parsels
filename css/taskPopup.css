@@ -11,6 +11,9 @@
 }
 .modal-dialog {
   position: relative;
+}
+.modal-dialog.task_popup,
+.modal-dialog.delivery_popup{
   height: calc(100vh - 60px);
 }
 .modal-close {

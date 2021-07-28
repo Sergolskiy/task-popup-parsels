@@ -463,6 +463,9 @@
 .delivery_list_center_card:hover {
   background-color:#DAE5FF;
 }
+.delivery_list_center_card_info{
+  z-index: 5;
+}
 .delivery_list_center_card_top {
   display: flex;
   justify-content: space-between;
@@ -486,6 +489,9 @@
 .delivery_list_center_card_btn_edit {
   margin-right: 11px;
 }
+.delivery_list_center_card_btn_clear {
+  margin-right: 11px;
+}
 .delivery_list_center_card_btn_remove {
 }
 
@@ -496,14 +502,40 @@
   color: #000000;
   z-index: 2;
 }
+.delivery_list_center_card_view_btn_wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+.delivery_list_center_card_view_btn_left_wrapper{
+  display: flex;
+}
 .delivery_list_center_card_view_btn {
-  width: 100%;
+  width: fit-content;
   z-index: 2;
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #5081E9;
+}
+
+.delivery_list_center_card_view_btn:first-child {
+ margin-left: 0;
 }
 
 .delivery_list_center_card_view_btn svg {
   margin: 0 auto;
   cursor: pointer;
+}
+
+.delivery_list_center_card_view_btn:nth-child(2){
+  margin-left: -14px;
+}
+
+.delivery_list_bottom_card_view_btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .delivery_list_center_list_add {
@@ -630,7 +662,8 @@
   font-size: 14px;
   line-height: 16px;
   color: #5081E9;
-  background: #E5ECFC;
+  border: 3px solid #E5ECFC;
+  background: white;
   border-radius: 12px;
   min-width: 153px;
   display: flex;
@@ -638,16 +671,42 @@
   justify-content: center;
   height: 100%;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.delivery_list_center_btn-filter + label svg{
+  margin-right: 8px;
+}
+
+.delivery_list_center_btn-filter + label svg path{
+  transition: 0.2s;
 }
 
 .delivery_list_center_btn-filter:checked + label{
   background: #5081E9;
+  border: 3px solid #5081E9;
   color: white;
 }
 
-.delivery_list_center_btn-filter:checked + label:hover{
-  background: #6C96EF;
+.delivery_list_center_btn-filter:checked + label svg path{
+  fill: white;
 }
+
+.delivery_list_center_btn .select2-container--default .select2-selection--single{
+  background-color: #fff !important;
+  border: 1px solid #5081E9 !important;
+}
+.delivery_list_center_btn .select2-container--default .select2-selection--single .select2-selection__rendered{
+  color: #5081E9 !important;
+}
+
+.delivery_list_center_btn_select{
+  width: 185px;
+}
+
+/*.delivery_list_center_btn-filter:checked + label:hover{*/
+/*  background: #6C96EF;*/
+/*}*/
 
 
 @media screen and (max-width: 1800px) {

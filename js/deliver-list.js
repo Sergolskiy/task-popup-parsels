@@ -12,9 +12,13 @@ function searchCard(that) {
 
     let isFilterCheckbox = true
     let filterCheckbox = []
-    if($('#all').prop('checked')) isFilterCheckbox = false
-    if($('#menu').prop('checked')) filterCheckbox.push('menu')
+    // if($('#all').prop('checked')) isFilterCheckbox = false
+    if($('#menu').prop('checked')) filterCheckbox.push('displayed')
     if($('#automatic').prop('checked')) filterCheckbox.push('automatic')
+
+    if($('.delivery_list_btn_select').val() !== '') filterCheckbox.push($('.delivery_list_btn_select').val())
+
+    if(filterCheckbox.length === 0) isFilterCheckbox = false
 
     list.each(function (index, item) {
         let flag = false
@@ -35,12 +39,22 @@ function searchCard(that) {
             }
         }
 
-        if(flag && (filterCheckbox.indexOf($(item).attr('data-filter')) > -1 || !isFilterCheckbox)){
-            $(item).show()
-            showSearchEmpty = true
-        } else {
-            $(item).hide()
-        }
+        let flagFilterItems = false
+
+        if(!$(item).attr('data-filter')) return
+
+        $(item).attr('data-filter').split('|').map((itemFilter) => {
+            if(!flagFilterItems){
+                if(flag && (filterCheckbox.indexOf(itemFilter) > -1 || !isFilterCheckbox)){
+                    $(item).show()
+                    showSearchEmpty = true
+                    flagFilterItems = true
+                } else {
+                    $(item).hide()
+                }
+            }
+        })
+
     });
 
     if(showSearchEmpty){
@@ -76,6 +90,12 @@ function toggleVisibilityDeliveryPopup(that) {
     if (curAttr === 'form_info') {
         $(curentForm).find('.delivery_list_right_info_title').html(titleCard)
         $(curentForm).find('.delivery_list_right_info_text').html(descrCard)
+    }
+
+    if (curAttr === 'form_clear') {
+        let cardId = $(that).closest('.delivery_list_center_card').attr('data-card-id');
+        $(curentForm).find('.name_list').html(titleCard)
+        $(curentForm).find('.delivery_list_right_remove_text').attr('data-item-name', cardId)
     }
 
     if (curAttr === 'form_remove') {
@@ -167,8 +187,16 @@ $(document).ready(function () {
 
     $('.delivery_list_show_users').select2();
 
+
     $('#newPopup').on('hidden.bs.modal', function () {
         clearForms(this)
     });
 
+})
+
+
+$('.delivery_list_btn_select').select2();
+
+$('.delivery_list_btn_select').change(function (){
+    searchCard($('.delivery_list_center_search_ico')[0]);
 })
