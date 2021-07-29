@@ -12,7 +12,7 @@ function searchCard(that) {
 
     let isFilterCheckbox = true
     let filterCheckbox = []
-    // if($('#all').prop('checked')) isFilterCheckbox = false
+
     if($('#menu').prop('checked')) filterCheckbox.push('displayed')
     if($('#automatic').prop('checked')) filterCheckbox.push('automatic')
 
@@ -21,40 +21,29 @@ function searchCard(that) {
     if(filterCheckbox.length === 0) isFilterCheckbox = false
 
     list.each(function (index, item) {
-        let flag = false
-        let itemTitle = $(item).find('.delivery_list_center_card_title')
-        let itemText = $(item).find('.delivery_list_center_card_text')
-        let itemTitleTxt
-        let itemTextTxt
-        if(itemTitle.length > 0){
-            itemTitleTxt = itemTitle.html().toLowerCase()
-            if(itemTitleTxt.indexOf(filter) > -1){
-                flag = true
-            }
-        }
-        if(itemText.length > 0){
-            itemTextTxt = itemText.html().toLowerCase()
-            if(itemTextTxt.indexOf(filter) > -1){
-                flag = true
-            }
+
+        if(isFilterCheckbox && !$(item).attr('data-filter')) {
+            $(item).hide()
+            return
         }
 
-        let flagFilterItems = false
+        let isTextMatches = filterText(item, filter)
+        let flagFilterItems = []
 
-        if(!$(item).attr('data-filter')) return
-
-        $(item).attr('data-filter').split('|').map((itemFilter) => {
-            if(!flagFilterItems){
-                if(flag && (filterCheckbox.indexOf(itemFilter) > -1 || !isFilterCheckbox)){
-                    $(item).show()
-                    showSearchEmpty = true
-                    flagFilterItems = true
-                } else {
-                    $(item).hide()
+        if(isFilterCheckbox){
+            $(item).attr('data-filter').split('|').map((itemFilter) => {
+                if(filterCheckbox.indexOf(itemFilter) > -1){
+                    flagFilterItems.push(itemFilter)
                 }
-            }
-        })
+            })
+        }
 
+        if((isTextMatches && flagFilterItems.length === filterCheckbox.length)){
+            $(item).show()
+            showSearchEmpty = true
+        } else {
+            $(item).hide()
+        }
     });
 
     if(showSearchEmpty){
@@ -65,6 +54,30 @@ function searchCard(that) {
         $('.delivery_list_center_list-wrap').removeClass('active')
     }
 
+}
+
+function filterText (item, filter){
+    let textFlag = false
+    let itemTitle = $(item).find('.delivery_list_center_card_title')
+    let itemText = $(item).find('.delivery_list_center_card_text')
+    let itemTitleTxt
+    let itemTextTxt
+    if(itemTitle.length > 0){
+        itemTitleTxt = itemTitle.html().toLowerCase()
+        if(itemTitleTxt.indexOf(filter) > -1){
+            textFlag = true
+        }
+    }
+    if(itemText.length > 0){
+        itemTextTxt = itemText.html().toLowerCase()
+        if(itemTextTxt.indexOf(filter) > -1){
+            textFlag = true
+        }
+    }
+    if(itemText.length === 0)
+        textFlag = true
+
+    return textFlag
 }
 
 function showList() {
@@ -166,20 +179,7 @@ function editAnimation(){
     }, 3000)
 }
 
-function filterCheckbox(that){
-    if($(that).attr('id') === 'all'){
-        $('#menu').prop('checked',false)
-        $('#automatic').prop('checked',false)
-        if(!$(that).prop('checked')){
-            $(that).prop('checked', true)
-        }
-    } else {
-        if(!$('#menu').prop('checked') && !$('#automatic').prop('checked')) {
-            $('#all').prop('checked',true)
-        } else {
-            $('#all').prop('checked',false)
-        }
-    }
+function filterCheckbox(){
     searchCard($('.delivery_list_center_search_ico')[0]);
 }
 
