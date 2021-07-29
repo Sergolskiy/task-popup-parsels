@@ -140,7 +140,7 @@
   /* min-width: 428px; */
   width: 100%;
   max-width: 428px;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
 }

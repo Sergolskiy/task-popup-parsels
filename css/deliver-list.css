@@ -648,7 +648,7 @@
 }
 
 .delivery_list_center_btn{
-  margin-right: 16px;
+  margin-right: 8px;
 }
 
 .delivery_list_center_btn:last-child{
@@ -666,7 +666,7 @@
   font-size: 14px;
   line-height: 16px;
   color: #5081E9;
-  border: 3px solid #E5ECFC;
+  border: 1px solid #6691ec;
   background: white;
   border-radius: 12px;
   min-width: 153px;
@@ -705,7 +705,7 @@
 }
 
 .delivery_list_center_btn_select{
-  width: 185px;
+  width: 205px;
 }
 
 /*.delivery_list_center_btn-filter:checked + label:hover{*/
