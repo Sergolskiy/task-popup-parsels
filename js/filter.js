@@ -14,8 +14,6 @@ class FilterLists {
             isFilterAutomatic  = modalList.find('#automatic').prop('checked'),
             isFilterText       = modalList.find('input[name=search]').val();
 
-
-
         if(isFilterSelect)
             this.select()
 
@@ -24,11 +22,6 @@ class FilterLists {
 
         if(isFilterAutomatic)
             this.checkbox('automatic')
-
-
-
-
-
     }
 
     static checkbox(valueFilter) {
