@@ -11,6 +11,9 @@
 }
 .modal-dialog {
   position: relative;
+}
+.modal-dialog.task_popup,
+.modal-dialog.delivery_popup{
   height: calc(100vh - 60px);
 }
 .modal-close {
@@ -47,7 +50,8 @@
   }
 }
 
-.modal-content {
+.parcels-popup .modal-content,
+.taskPopup .modal-content {
   position: relative;
   font-family: Roboto;
   border-radius: 20px !important;
@@ -1652,7 +1656,7 @@
   border: 0 !important;
 }
 
-.select2-container--default .select2-selection--single {
+.taskPopup-content .select2-container--default .select2-selection--single {
   background: #f3f3f4 !important;
   border-radius: 8px;
   height: 48px;
@@ -1662,14 +1666,14 @@
   border: 0 !important;
 }
 
-.select2-container--default
+.taskPopup-content .select2-container--default
   .select2-selection--single
   .select2-selection__rendered {
   color: #444;
   line-height: 40px;
 }
 
-.select2-container--default
+.taskPopup-content .select2-container--default
   .select2-selection--single
   .select2-selection__arrow {
   top: 8px !important;
