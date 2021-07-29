@@ -50,7 +50,8 @@
   }
 }
 
-.modal-content {
+.parcels-popup .modal-content,
+.taskPopup .modal-content {
   position: relative;
   font-family: Roboto;
   border-radius: 20px !important;
