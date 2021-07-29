@@ -57,7 +57,7 @@
   font-family: 'Roboto-Regular';
 }
 .delivery_list_center {
-  height: 100%; 
+  height: 100%;
   width: 100%;
   max-width: 100%;
   padding: 40px;
@@ -530,6 +530,10 @@
 
 .delivery_list_center_card_view_btn:nth-child(2){
   margin-left: -14px;
+}
+
+.delivery_list_center_card_view_left{
+  min-width: 30px;
 }
 
 .delivery_list_bottom_card_view_btn{
