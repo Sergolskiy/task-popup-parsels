@@ -132,20 +132,20 @@
   margin: 0;
   line-height: 18px;
 }
-.custom-parcels-checkbox {
+.custom_parcels_checkbox {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
-.custom-parcels-checkbox + label {
+.custom_parcels_checkbox + label {
   display: flex;
   align-items: center;
   user-select: none;
 }
-.custom-parcels-checkbox + label::before {
+.custom_parcels_checkbox + label::before {
   content: "";
   display: inline-block;
-  width: 16px;
+  min-width: 16px;
   height: 16px;
   border: 1px solid #adb5bd;
   border-radius: 3px;
@@ -153,30 +153,31 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
-.custom-parcels-checkbox:not(:disabled):not(:checked) + label:hover::before {
+.custom_parcels_checkbox:not(:disabled):not(:checked) + label:hover::before {
   border-color: #0b76ef;
 }
-.custom-parcels-checkbox:not(:disabled):active + label::before {
+.custom_parcels_checkbox:not(:disabled):active + label::before {
   background-color: #0b76ef;
   border-color: #0b76ef;
 }
-/*.custom-parcels-checkbox:focus + label::before {*/
+/*.custom_parcels_checkbox:focus + label::before {*/
 /*  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);*/
 /*}*/
-.custom-parcels-checkbox:focus:not(:checked) + label::before {
+.custom_parcels_checkbox:focus:not(:checked) + label::before {
   border-color: #0b76ef;
 }
-.custom-parcels-checkbox:checked + label::before {
+.custom_parcels_checkbox:checked + label::before {
   border-color: #0b76ef;
   background-color: #0b76ef;
   background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8389 0.159541C10.6241 -0.0531803 10.2759 -0.0531803 10.0611 0.159541L3.47175 6.68516L0.93892 4.17684C0.724141 3.96412 0.375922 3.96414 0.1611 4.17684C-0.0537001 4.38954 -0.0537001 4.73439 0.1611 4.94711L3.08284 7.84053C3.29756 8.05323 3.64603 8.05308 3.86066 7.84053L10.8389 0.929831C11.0537 0.717131 11.0537 0.372262 10.8389 0.159541Z' fill='white'/%3E%3C/svg%3E%0A");
+  background-position: 2px 3px;
 }
-.custom-parcels-checkbox:checked + label {
+.custom_parcels_checkbox:checked + label {
   color: #5081e9;
   background: #E5ECFC;
   box-shadow: 0 0 0 3px #e5ecfc;
 }
-.custom-parcels-checkbox:disabled + label::before {
+.custom_parcels_checkbox:disabled + label::before {
   background-color: #e9ecef;
 }
 .parcels_list_btns {
