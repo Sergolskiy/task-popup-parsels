@@ -6,7 +6,7 @@
 
 /* add_parcels_list */
 @font-face {
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -14,7 +14,7 @@
     url(../fonts/Roboto-Regular.ttf) format("ttf");
 }
 @font-face {
-  font-family: "Roboto-Light";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -22,7 +22,7 @@
     url(../fonts/Roboto-Light.ttf) format("ttf");
 }
 @font-face {
-  font-family: "Roboto-Black";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
   font-display: swap;
@@ -30,7 +30,7 @@
     url(../fonts/Roboto-Black.ttf) format("ttf");
 }
 @font-face {
-  font-family: "Roboto-Bold";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -38,7 +38,7 @@
     url(../fonts/Roboto-Bold.ttf) format("ttf");
 }
 @font-face {
-  font-family: "Roboto-Medium";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -134,10 +134,9 @@
   line-height: 18px;
 }
 .custom_parcels_checkbox {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
+  display: none;
 }
+
 .custom_parcels_checkbox + label {
   display: flex;
   align-items: center;
@@ -197,6 +196,15 @@
   min-width: 153px;
   text-align: center;
   transition: 0.3s;
+}
+
+.parcels_list_item_check{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #5081E9;
 }
 
 .parcels_list_btn_add:hover {

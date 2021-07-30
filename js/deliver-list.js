@@ -4,89 +4,11 @@ function openNewPopup2() {
     $('#newPopup2').modal()
 }
 
-function searchCard(that) {
-    let list = $(that).closest('.delivery_list_center_inner').find('.delivery_list_center_card');
-
-    let filter = $(that).prev().val().toLowerCase();
-    let showSearchEmpty = false
-
-    let isFilterCheckbox = true
-    let filterCheckbox = []
-
-    if($('#menu').prop('checked')) filterCheckbox.push('displayed')
-    if($('#automatic').prop('checked')) filterCheckbox.push('automatic')
-
-    if($('.delivery_list_btn_select').val() !== '') filterCheckbox.push($('.delivery_list_btn_select').val())
-
-    if(filterCheckbox.length === 0) isFilterCheckbox = false
-
-    list.each(function (index, item) {
-
-        if(isFilterCheckbox && !$(item).attr('data-filter')) {
-            $(item).hide()
-            return
-        }
-
-        let isTextMatches = filterText(item, filter)
-        let flagFilterItems = []
-
-        if(isFilterCheckbox){
-            $(item).attr('data-filter').split('|').map((itemFilter) => {
-                if(filterCheckbox.indexOf(itemFilter) > -1){
-                    flagFilterItems.push(itemFilter)
-                }
-            })
-        }
-
-        if((isTextMatches && flagFilterItems.length === filterCheckbox.length)){
-            $(item).show()
-            showSearchEmpty = true
-        } else {
-            $(item).hide()
-        }
-    });
-
-    if(showSearchEmpty){
-        $('.delivery_list_search_empty').removeClass('active')
-        $('.delivery_list_center_list-wrap').addClass('active')
-    } else {
-        $('.delivery_list_search_empty').addClass('active')
-        $('.delivery_list_center_list-wrap').removeClass('active')
-    }
-
-}
-
-function filterText (item, filter){
-    let textFlag = false
-    let itemTitle = $(item).find('.delivery_list_center_card_title')
-    let itemText = $(item).find('.delivery_list_center_card_text')
-    let itemTitleTxt
-    let itemTextTxt
-    if(itemTitle.length > 0){
-        itemTitleTxt = itemTitle.html().toLowerCase()
-        if(itemTitleTxt.indexOf(filter) > -1){
-            textFlag = true
-        }
-    }
-    if(itemText.length > 0){
-        itemTextTxt = itemText.html().toLowerCase()
-        if(itemTextTxt.indexOf(filter) > -1){
-            textFlag = true
-        }
-    }
-    if(itemText.length === 0)
-        textFlag = true
-
-    return textFlag
-}
 
 function showList() {
     $('.delivery_list_center_search input').val('')
     $('#menu').prop('checked',false)
     $('#automatic').prop('checked',false)
-    $('#all').prop('checked',true)
-
-    searchCard($('.delivery_list_center_search_ico')[0]);
 
     $('.delivery_list_search_empty').removeClass('active')
     $('.delivery_list_center_list-wrap').addClass('active')
