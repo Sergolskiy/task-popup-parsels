@@ -12,6 +12,9 @@ function showList() {
 
     $('.delivery_list_search_empty').removeClass('active')
     $('.delivery_list_center_list-wrap').addClass('active')
+
+    $('#newPopup2').find('ul.delivery_list_center_list li').show()
+
 }
 
 function toggleVisibilityDeliveryPopup(that) {

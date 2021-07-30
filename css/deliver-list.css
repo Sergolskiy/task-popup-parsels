@@ -8,7 +8,9 @@
 .parcels-popup .modal-content{
   max-height: 890px;
 }
-
+.delivery_list_right_info_btns.single_btn {
+  margin-top:27px;
+}
 
 /* List of delivery */
 @font-face {
@@ -729,7 +731,7 @@
 }
 
 .delivery_list_center_btn-filter + label{
-  font-family: Roboto;
+  font-family: "Roboto-Medium";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
