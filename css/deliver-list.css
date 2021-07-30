@@ -137,13 +137,15 @@
 .delivery_list_center_body_inner {
   display: block;
   /*height: 100%;*/
-  height: calc(100vh - 195px);
+  /*height: calc(100vh - 195px);*/
+  /*max-height: 1000px;*/
 }
 
 .delivery_list_center_list-wrap{
   display: none;
   overflow-y: scroll;
   height: 100%;
+  max-height: 950px;
 }
 
 .delivery_list_center_list-wrap.active{
@@ -668,6 +670,7 @@
   align-items: center;
   height: 100%;
   justify-content: center;
+   min-height: 500px;
 }
 .delivery_list_search_empty_icon{
   margin-bottom: 24px;
