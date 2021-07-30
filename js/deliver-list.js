@@ -86,10 +86,11 @@ function showList() {
     $('#automatic').prop('checked',false)
     $('#all').prop('checked',true)
 
-    searchCard($('.delivery_list_center_search_ico')[0]);
-
     $('.delivery_list_search_empty').removeClass('active')
     $('.delivery_list_center_list-wrap').addClass('active')
+
+    $('#newPopup2').find('ul.delivery_list_center_list li').show()
+
 }
 
 function toggleVisibilityDeliveryPopup(that) {
