@@ -70,7 +70,8 @@
   padding-top: 3px;
   overflow-x: hidden;
   overflow-y: auto;
-  height: calc(100vh - 260px);
+  /*height: calc(100vh - 260px);*/
+  max-height: 450px;
 }
 .parcels_list_container::-webkit-scrollbar {
   width: 3px;
