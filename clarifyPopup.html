@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!--  <link rel="preconnect" href="https://fonts.gstatic.com">-->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="./css/taskstyle.css" rel="stylesheet">
+  <link href="./css/timeline.css" rel="stylesheet">
+  <link href="./css/tailwind.min.css" rel="stylesheet">
+  <link href="./css/crm-group-task-parcel.css" rel="stylesheet">
+  <link href="./css/parcels.css" rel="stylesheet">
+  <link href="./css/app.css" rel="stylesheet">
+  <link href="./css/custom.css" rel="stylesheet">
+  <link href="./css/taskPopup.css" rel="stylesheet">
+  <link href="./css/clarify-popup.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+</head>
+
+<body>
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary btn-lg" onclick="openClarifyPopup()">
+    Launch demo modal
+  </button>
+
+  <div class="modal taskPopup fade" tabindex="-1" id="clarify-popup" role="dialog">
+    <div class="modal-dialog mw-1420 mw-1712" role="document">
+      <div class="modal-close">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.4893 0L7.5 5.98929L1.51071 0L0 1.51071L5.98929 7.5L0 13.4893L1.51071 15L7.5 9.01071L13.4893 15L15 13.4893L9.01071 7.5L15 1.51071L13.4893 0Z"
+            fill="white" />
+        </svg>
+      </div>
+      <div class="modal-content">
+        <div class="taskPopup-content">
+          <div class="taskPopup-left">
+            <div class="taskPopup-left-block package-number">
+              <div class="taskPopup-left-item">
+                <div class="taskPopup-left-title">
+                  Номер посылки Меест
+                </div>
+                <div class="taskPopup-left-name"> CV858286079CZ
+                  <a href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                        fill="#5081E9" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="taskPopup-left-item clarify-left-item-small">
+                <div class="taskPopup-left-title">
+                  Номер посылки НП
+                </div>
+                <div class="taskPopup-left-name taskPopup-left-name-medium"> 20 4002 3132 0297
+                  <a href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                        fill="#5081E9" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="taskPopup-left-item clarify-left-item-small">
+                <div class="taskPopup-left-title">
+                  ПЕРЕВОЗЧИК
+                </div>
+                <div class="taskPopup-left-name taskPopup-left-name-medium"> Meest
+                  <a href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                        fill="#5081E9" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="taskPopup-left-item clarify-left-item-small">
+                <div class="taskPopup-left-title">
+                  ТИП ДОСТАВКИ
+                </div>
+                <div class="taskPopup-left-name taskPopup-left-name-medium"> Nova Poshta
+                  <a href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                        fill="#5081E9" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-block-wrap">
+              <div class="accordion-block">
+                <div class="taskPopup-recipient-data according-item" onclick="accordingInfo(this)">
+                  <div class=" accordion-title">
+                    <div class="accordion-title-ico active _active">
+                      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M0.442383 1.5575L3.87738 5L0.442383 8.4425L1.49988 9.5L5.99988 5L1.49988 0.5L0.442383 1.5575Z"
+                          fill="#8C8C8C" />
+                      </svg>
+                    </div>
+
+                    Дание получателя
+                  </div>
+                  <div class="taskPopup-left-item accordion-content active">
+                    <div class="taskPopup-left-recipient-name">
+                      Кульчицька Світлана Василівна
+                    </div>
+                    <div class="taskPopup-left-value">
+                      380979856356
+                    </div>
+                    <div class="taskPopup-left-value">
+                      Svitlana.test@gmail.com
+                    </div>
+                    <div class="taskPopup-left-value">
+                      # Заказа 253651254142
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="taskPopup-package-info according-item" onclick="accordingInfo(this)">
+                  <div class="accordion-title">
+                    <div class="accordion-title-ico">
+                      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M0.442383 1.5575L3.87738 5L0.442383 8.4425L1.49988 9.5L5.99988 5L1.49988 0.5L0.442383 1.5575Z"
+                          fill="#8C8C8C" />
+                      </svg>
+                    </div>
+
+
+                    информация о посылке
+                  </div>
+
+                  <div class="taskPopup-left-block accordion-content">
+                    <table class="taskPopup-left-table">
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Манифест:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          EXP1888101942/NOTINO
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Тип оплаты:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          Наложений платеж
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Сумма COD:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          2050 грн
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Стоимост посылки:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          80 EUR
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Вес посылки:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          0.5 кг
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="taskPopup-address-info according-item" onclick="accordingInfo(this)">
+                  <div class="accordion-title">
+                    <div class="accordion-title-ico">
+                      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M0.442383 1.5575L3.87738 5L0.442383 8.4425L1.49988 9.5L5.99988 5L1.49988 0.5L0.442383 1.5575Z"
+                          fill="#8C8C8C" />
+                      </svg>
+                    </div>
+
+                      Адрес доставки
+                  </div>
+
+                  <div class="taskPopup-left-block accordion-content">
+                    <table class="taskPopup-left-table">
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Город доставки:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          Северодонецк
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          № отделения:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          #10, ул. Химиков, 44Г
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="taskPopup-address-info according-item" onclick="accordingInfo(this)">
+                  <div class="accordion-title">
+                    <div class="accordion-title-ico">
+                      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M0.442383 1.5575L3.87738 5L0.442383 8.4425L1.49988 9.5L5.99988 5L1.49988 0.5L0.442383 1.5575Z"
+                          fill="#8C8C8C" />
+                      </svg>
+                    </div>
+
+                      переадресация
+                  </div>
+
+                  <div class="taskPopup-left-block accordion-content">
+                    <table class="taskPopup-left-table">
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          test
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          test
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          test
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          test
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+          
+          <div class="taskPopup-center">
+            <div class="taskPopup-center-inner active">
+
+              <div class="taskPopup-create-task active">
+                <div class="taskPopup-create-task-title">
+                  <span>
+                    Уточнение
+                  </span>
+                  <div class="taskPopup-create-task-tooltype">
+                    <span class="taskPopup-create-task-tooltype-ico js_popper_task">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M14.3341 0.750122H5.66512C2.64412 0.750122 0.750122 2.88912 0.750122 5.91612V14.0841C0.750122 17.1111 2.63512 19.2501 5.66512 19.2501H14.3331C17.3641 19.2501 19.2501 17.1111 19.2501 14.0841V5.91612C19.2501 2.88912 17.3641 0.750122 14.3341 0.750122Z"
+                          stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9.99475 14.0001V10.0001" stroke="#130F26" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M9.98987 6.20435H9.99987" stroke="#130F26" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <span class="taskPopup-create-task-tooltype-text">
+                      Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text
+                      Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text
+                    </span>
+                  </div>
+
+
+                  <div class="taskPopup-create-task-priority">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.73822 6.22578L6.22547 0.738526C7.20586 -0.241862 8.79547 -0.241862 9.77585 0.738526L15.2631 6.22578C16.2435 7.20617 16.2435 8.79577 15.2631 9.77616L9.77585 15.2634C8.79547 16.2438 7.20586 16.2438 6.22547 15.2634L0.73822 9.77616C-0.242167 8.79577 -0.242167 7.20617 0.73822 6.22578Z" fill="#5081E9"/>
+                      <path d="M7.99915 4.48535C8.27643 4.48535 8.50124 4.71016 8.50124 4.98744V9.00411C8.50124 9.28138 8.27643 9.50619 7.99915 9.50619C7.72188 9.50619 7.49707 9.28138 7.49707 9.00411V4.98744C7.49707 4.71016 7.72188 4.48535 7.99915 4.48535Z" fill="white"/>
+                      <path d="M7.49707 10.5104H8.50124V11.5145H7.49707V10.5104Z" fill="white"/>
+                    </svg>
+                    Высокий приоритет
+                  </div>
+                </div>
+                <div class="taskPopup-create-task-content">
+
+                  <div class="clarify-timeline">
+                    <div class="clarify-timeline-items">
+                      <div class="clarify-timeline-item clarify-blue">
+                        <div class="clarify-timeline-left">
+                          <div class="clarify-timeline-left-line">
+
+                          </div>
+                          <div class="clarify-timeline-left-name">
+                            Открытые
+                            <div class="clarify-timeline-left-logo">
+                              <img src="img/clarify/notino-ico.png" alt="img">
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="clarify-timeline-right">
+                          <div class="clarify-timeline-right-date">
+                            26/10/2020, 13:39
+                          </div>
+                          <div class="clarify-timeline-right-name">
+                            Наталия Петрова
+                          </div>
+                          <div class="clarify-timeline-right-massage">
+                            Нужно уточнить куда отправлять посылку. Потерян адресс получателя
+                          </div>
+                          <div class="clarify-timeline-right-photo">
+                            <img src="img/clarify/ukrposhta13.png" alt="img">
+                            <span>
+                              Фото.jpg
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clarify-timeline-item clarify-orange">
+                        <div class="clarify-timeline-left">
+                          <div class="clarify-timeline-left-line">
+
+                          </div>
+                          <div class="clarify-timeline-left-name">
+                            В просессе
+                            <div class="clarify-timeline-left-logo">
+                              <img src="img/clarify/meest-ico.png" alt="img">
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="clarify-timeline-right">
+                          <div class="clarify-timeline-right-date">
+                            26/10/2020, 13:39
+                          </div>
+                          <div class="clarify-timeline-right-name">
+                            Наталия Петрова
+                          </div>
+                          <div class="clarify-timeline-right-massage">
+                            Ищу информацию
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clarify-timeline-item clarify-green">
+                        <div class="clarify-timeline-left">
+                          <div class="clarify-timeline-left-line">
+
+                          </div>
+                          <div class="clarify-timeline-left-name">
+                            Решено
+                            <div class="clarify-timeline-left-logo">
+                              <img src="img/clarify/meest-ico.png" alt="img">
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="clarify-timeline-right">
+                          <div class="clarify-timeline-right-date">
+                            26/10/2020, 13:39
+                          </div>
+                          <div class="clarify-timeline-right-name">
+                            Наталия Петрова
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="taskPopup-create-task-form">
+                    <form action="">
+
+                      <div class="clarify-timeline-radio-answer">
+                        <div class="clarify-timeline-radio-items">
+                          <div class="clarify-timeline-radio-item violet">
+                            <input type="radio" id="answer1" name="answer">
+                            <label for="answer1">
+                              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.16667 2.00087V0.300095C4.16667 0.179696 4.09125 0.0708978 3.97583 0.0236983C3.86083 -0.0231011 3.72625 0.000498575 3.63667 0.0848975L0.095 3.38486C0.0341667 3.44126 0 3.51886 0 3.60005C0 3.68125 0.0341667 3.75885 0.095 3.81525L3.63667 7.11521C3.72708 7.19921 3.86125 7.22281 3.97583 7.17641C4.09125 7.12921 4.16667 7.02041 4.16667 6.90001V5.20004H4.7575C6.68917 5.20004 8.47 6.20802 9.40458 7.8288L9.41333 7.844C9.46917 7.9416 9.575 8 9.6875 8C9.71333 8 9.73917 7.9972 9.765 7.9908C9.90333 7.9568 10 7.8372 10 7.7C10 4.59044 7.39292 2.05447 4.16667 2.00087Z" fill="#5C0086"/>
+                              </svg>
+                              Ответить
+                            </label>
+                          </div>
+                          <div class="clarify-timeline-radio-item yellow">
+                            <input type="radio" id="answer2" name="answer">
+                            <label for="answer2">
+                              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                  <path d="M0.585938 5C0.585938 2.56607 2.56607 0.585938 5 0.585938C5.91537 0.585938 6.78834 0.863496 7.52336 1.37865H6.95551C6.79371 1.37865 6.66254 1.50982 6.66254 1.67162C6.66254 1.83342 6.79371 1.96459 6.95551 1.96459H8.3284C8.4902 1.96459 8.62137 1.83342 8.62137 1.67162V0.29873C8.62137 0.136934 8.4902 0.00576172 8.3284 0.00576172C8.1666 0.00576172 8.03543 0.136934 8.03543 0.29873V1.02801C7.16772 0.361309 6.11152 0 5 0C3.66445 0 2.40885 0.520098 1.46445 1.46445C0.520098 2.40885 0 3.66445 0 5C0 5.87736 0.231856 6.74184 0.670508 7.49996C0.724805 7.59383 0.823203 7.64625 0.924355 7.64625C0.97416 7.64625 1.02463 7.63353 1.07082 7.60682C1.21086 7.52578 1.25869 7.34656 1.17768 7.2065C0.790566 6.53746 0.585938 5.77445 0.585938 5Z" fill="#BC6300"/>
+                                  <path d="M9.32975 2.50004C9.24869 2.35998 9.06943 2.31217 8.92943 2.39321C8.7894 2.47424 8.74156 2.65346 8.82258 2.79352C9.20969 3.46252 9.41432 4.22551 9.41432 5C9.41432 7.43393 7.43418 9.41406 5.00025 9.41406C4.08496 9.41406 3.21215 9.13643 2.47721 8.62135H3.04475C3.20654 8.62135 3.33772 8.49018 3.33772 8.32838C3.33772 8.16658 3.20654 8.03541 3.04475 8.03541H1.67188C1.51008 8.03541 1.37891 8.16658 1.37891 8.32838V9.70127C1.37891 9.86307 1.51008 9.99424 1.67188 9.99424C1.83367 9.99424 1.96484 9.86307 1.96484 9.70127V8.97127C2.83254 9.63819 3.88859 10 5.00025 10C6.3358 10 7.59141 9.4799 8.5358 8.53555C9.48016 7.59115 10.0003 6.33555 10.0003 5C10.0003 4.1226 9.7684 3.25813 9.32975 2.50004Z" fill="#BC6300"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0">
+                                    <rect width="10" height="10" fill="white"/>
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                              В процесе
+                            </label>
+                          </div>
+                          <div class="clarify-timeline-radio-item green">
+                            <input type="radio" id="answer3" name="answer">
+                            <label for="answer3">
+                              <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.8096 0.199426C12.5558 -0.0664754 12.1443 -0.0664754 11.8904 0.199426L4.10298 8.35645L1.10963 5.22105C0.855803 4.95515 0.444272 4.95518 0.190391 5.22105C-0.0634638 5.48693 -0.0634638 5.91799 0.190391 6.18389L3.64336 9.80066C3.89711 10.0665 4.30895 10.0664 4.5626 9.80066L12.8096 1.16229C13.0635 0.896414 13.0634 0.465328 12.8096 0.199426Z" fill="#4F9024"/>
+                              </svg>
+                              Решено
+                            </label>
+                          </div>
+                          <div class="clarify-timeline-radio-item red">
+                            <input type="radio" id="answer4" name="answer">
+                            <label for="answer4">
+                              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.91616 5.0073L9.80997 1.11338C10.0634 0.860094 10.0634 0.45057 9.80997 0.197287C9.55669 -0.0559966 9.14716 -0.0559966 8.89388 0.197287L4.99995 4.09121L1.10614 0.197287C0.852742 -0.0559966 0.443336 -0.0559966 0.190052 0.197287C-0.0633506 0.45057 -0.0633506 0.860094 0.190052 1.11338L4.08386 5.0073L0.190052 8.90122C-0.0633506 9.1545 -0.0633506 9.56402 0.190052 9.81731C0.316278 9.94365 0.482248 10.0071 0.648098 10.0071C0.813949 10.0071 0.979799 9.94365 1.10614 9.81731L4.99995 5.92339L8.89388 9.81731C9.02022 9.94365 9.18608 10.0071 9.35193 10.0071C9.51778 10.0071 9.68363 9.94365 9.80997 9.81731C10.0634 9.56402 10.0634 9.1545 9.80997 8.90122L5.91616 5.0073Z" fill="#CD2929"/>
+                              </svg>
+                              Отклонить
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="taskPopup-create-files">
+                        <div class="taskPopup-create-files-block" style="height: 65px; ">
+
+                        </div>
+                      </div>
+
+                      <textarea name="text" id="text"
+                        placeholder="Ваше сообщение сотруднику службы доставки..."></textarea>
+
+                      <div class="taskPopup-create-task-form-bottom">
+                        <div class="taskPopup-create-btns ml-auto">
+                          <button class="taskPopup-create-btn">
+                            Подтвердить
+                          </button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <div class="taskPopup-right clarify-timeline-right">
+            <div class="clarify-timeline-title">
+              Даные
+            </div>
+
+            <div class="clarify-timeline-user">
+              <div class="clarify-timeline-user-title">
+                ФИО ПОЛУЧАТЕЛЯ
+              </div>
+              <div class="clarify-timeline-user-txt active">
+                <div class="clarify-timeline-user-txt-i">
+                  Длиннофамильцева  Анастасия Константиновна
+                </div>
+                <div class="clarify-timeline-user-txt-ico">
+                  <a class="clarify-timeline-user-txt-ico-i" href="javascript:void(0)" onclick="editClarify(this)">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.0624 0.937688C14.4577 0.333 13.6538 0 12.7987 0C11.9436 0 11.1397 0.333 10.535 0.937656L1.58831 9.88441C1.51218 9.96053 1.45702 10.055 1.42815 10.1587L0.0228983 15.2074C-0.0376954 15.4252 0.0239608 15.6587 0.184242 15.8181C0.302992 15.9362 0.462117 16 0.625055 16C0.681992 16 0.73943 15.9922 0.795774 15.9762L5.84443 14.5421C6.05743 14.4816 6.22256 14.3129 6.27843 14.0986C6.33431 13.8843 6.27262 13.6565 6.11628 13.4996L2.9334 10.3071L10.3495 2.89097L13.1076 5.64903L7.43024 11.3109C7.18584 11.5546 7.18531 11.9503 7.42906 12.1947C7.67278 12.4392 8.06856 12.4397 8.31293 12.196L15.0623 5.46497C15.667 4.86031 16 4.05641 16 3.20131C16 2.34622 15.667 1.54231 15.0624 0.937688ZM4.48109 13.6299L1.52584 14.4694L2.35349 11.4959L4.48109 13.6299ZM14.1791 4.58047L13.9927 4.76638L11.2334 2.00709L11.419 1.82153C11.7875 1.45297 12.2775 1.25 12.7987 1.25C13.3199 1.25 13.8099 1.45297 14.1785 1.82156C14.547 2.19009 14.75 2.68009 14.75 3.20131C14.75 3.72253 14.547 4.21253 14.1791 4.58047Z" fill="#5081E9"></path>
+                    </svg>
+                  </a>
+                  <a class="clarify-timeline-user-txt-ico-i" href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z" fill="#5081E9"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="clarify-timeline-user-input">
+                <textarea name="userName">Длиннофамильцева  Анастасия Константиновна</textarea>
+                <div class="clarify-timeline-user-input-ico">
+                  <a href="javascript:void(0)" class="clarify-timeline-user-input-ico-i" onclick="confirmClarify(this)">
+                    <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.6925 0.307555C20.2824 -0.102518 19.6176 -0.102518 19.2075 0.307555L6.62789 12.8873L1.79248 8.05191C1.38245 7.64184 0.71767 7.64188 0.307555 8.05191C-0.102518 8.46195 -0.102518 9.12673 0.307555 9.5368L5.88543 15.1146C6.29534 15.5246 6.96061 15.5243 7.37036 15.1146L20.6925 1.79248C21.1025 1.38245 21.1025 0.717629 20.6925 0.307555Z" fill="#5081E9"/>
+                    </svg>
+                  </a>
+                  <a href="javascript:void(0)" class="clarify-timeline-user-input-ico-i" onclick="closeClarify(this)">
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.46585 8.01314L15.6959 1.78287C16.1014 1.37762 16.1014 0.722377 15.6959 0.317124C15.2907 -0.0881297 14.6354 -0.0881297 14.2302 0.317124L7.99991 6.5474L1.76983 0.317124C1.36439 -0.0881297 0.709336 -0.0881297 0.304083 0.317124C-0.101361 0.722377 -0.101361 1.37762 0.304083 1.78287L6.53417 8.01314L0.304083 14.2434C-0.101361 14.6487 -0.101361 15.3039 0.304083 15.7092C0.506045 15.9113 0.771595 16.0129 1.03696 16.0129C1.30232 16.0129 1.56768 15.9113 1.76983 15.7092L7.99991 9.47889L14.2302 15.7092C14.4323 15.9113 14.6977 16.0129 14.9631 16.0129C15.2284 16.0129 15.4938 15.9113 15.6959 15.7092C16.1014 15.3039 16.1014 14.6487 15.6959 14.2434L9.46585 8.01314Z" fill="#5081E9"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="clarify-timeline-user">
+              <div class="clarify-timeline-user-title">
+                НОМЕР ТЕЛЕФОНА
+              </div>
+              <div class="clarify-timeline-user-txt active">
+                <div class="clarify-timeline-user-txt-i">
+                  +38 063 794 99 51
+                </div>
+                <div class="clarify-timeline-user-txt-ico">
+                  <a class="clarify-timeline-user-txt-ico-i" href="javascript:void(0)" onclick="editClarify(this)">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.0624 0.937688C14.4577 0.333 13.6538 0 12.7987 0C11.9436 0 11.1397 0.333 10.535 0.937656L1.58831 9.88441C1.51218 9.96053 1.45702 10.055 1.42815 10.1587L0.0228983 15.2074C-0.0376954 15.4252 0.0239608 15.6587 0.184242 15.8181C0.302992 15.9362 0.462117 16 0.625055 16C0.681992 16 0.73943 15.9922 0.795774 15.9762L5.84443 14.5421C6.05743 14.4816 6.22256 14.3129 6.27843 14.0986C6.33431 13.8843 6.27262 13.6565 6.11628 13.4996L2.9334 10.3071L10.3495 2.89097L13.1076 5.64903L7.43024 11.3109C7.18584 11.5546 7.18531 11.9503 7.42906 12.1947C7.67278 12.4392 8.06856 12.4397 8.31293 12.196L15.0623 5.46497C15.667 4.86031 16 4.05641 16 3.20131C16 2.34622 15.667 1.54231 15.0624 0.937688ZM4.48109 13.6299L1.52584 14.4694L2.35349 11.4959L4.48109 13.6299ZM14.1791 4.58047L13.9927 4.76638L11.2334 2.00709L11.419 1.82153C11.7875 1.45297 12.2775 1.25 12.7987 1.25C13.3199 1.25 13.8099 1.45297 14.1785 1.82156C14.547 2.19009 14.75 2.68009 14.75 3.20131C14.75 3.72253 14.547 4.21253 14.1791 4.58047Z" fill="#5081E9"></path>
+                    </svg>
+                  </a>
+                  <a class="clarify-timeline-user-txt-ico-i" href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z" fill="#5081E9"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="clarify-timeline-user-input">
+                <input type="text" name="userPhone" value="+38 063 794 99 51">
+                <div class="clarify-timeline-user-input-ico">
+                  <a href="javascript:void(0)" class="clarify-timeline-user-input-ico-i" onclick="confirmClarify(this)">
+                    <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.6925 0.307555C20.2824 -0.102518 19.6176 -0.102518 19.2075 0.307555L6.62789 12.8873L1.79248 8.05191C1.38245 7.64184 0.71767 7.64188 0.307555 8.05191C-0.102518 8.46195 -0.102518 9.12673 0.307555 9.5368L5.88543 15.1146C6.29534 15.5246 6.96061 15.5243 7.37036 15.1146L20.6925 1.79248C21.1025 1.38245 21.1025 0.717629 20.6925 0.307555Z" fill="#5081E9"/>
+                    </svg>
+                  </a>
+                  <a href="javascript:void(0)" class="clarify-timeline-user-input-ico-i" onclick="closeClarify(this)">
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.46585 8.01314L15.6959 1.78287C16.1014 1.37762 16.1014 0.722377 15.6959 0.317124C15.2907 -0.0881297 14.6354 -0.0881297 14.2302 0.317124L7.99991 6.5474L1.76983 0.317124C1.36439 -0.0881297 0.709336 -0.0881297 0.304083 0.317124C-0.101361 0.722377 -0.101361 1.37762 0.304083 1.78287L6.53417 8.01314L0.304083 14.2434C-0.101361 14.6487 -0.101361 15.3039 0.304083 15.7092C0.506045 15.9113 0.771595 16.0129 1.03696 16.0129C1.30232 16.0129 1.56768 15.9113 1.76983 15.7092L7.99991 9.47889L14.2302 15.7092C14.4323 15.9113 14.6977 16.0129 14.9631 16.0129C15.2284 16.0129 15.4938 15.9113 15.6959 15.7092C16.1014 15.3039 16.1014 14.6487 15.6959 14.2434L9.46585 8.01314Z" fill="#5081E9"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="clarify-timeline-user">
+              <div class="clarify-timeline-user-title">
+                ТИП ДОСТАВКИ
+              </div>
+              <div class="clarify-timeline-user-txt active">
+                <div class="clarify-timeline-user-txt-i">
+                  Курьер
+                </div>
+                <div class="clarify-timeline-user-txt-ico">
+                  <a class="clarify-timeline-user-txt-ico-i" href="javascript:void(0)" onclick="editClarify(this)">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.0624 0.937688C14.4577 0.333 13.6538 0 12.7987 0C11.9436 0 11.1397 0.333 10.535 0.937656L1.58831 9.88441C1.51218 9.96053 1.45702 10.055 1.42815 10.1587L0.0228983 15.2074C-0.0376954 15.4252 0.0239608 15.6587 0.184242 15.8181C0.302992 15.9362 0.462117 16 0.625055 16C0.681992 16 0.73943 15.9922 0.795774 15.9762L5.84443 14.5421C6.05743 14.4816 6.22256 14.3129 6.27843 14.0986C6.33431 13.8843 6.27262 13.6565 6.11628 13.4996L2.9334 10.3071L10.3495 2.89097L13.1076 5.64903L7.43024 11.3109C7.18584 11.5546 7.18531 11.9503 7.42906 12.1947C7.67278 12.4392 8.06856 12.4397 8.31293 12.196L15.0623 5.46497C15.667 4.86031 16 4.05641 16 3.20131C16 2.34622 15.667 1.54231 15.0624 0.937688ZM4.48109 13.6299L1.52584 14.4694L2.35349 11.4959L4.48109 13.6299ZM14.1791 4.58047L13.9927 4.76638L11.2334 2.00709L11.419 1.82153C11.7875 1.45297 12.2775 1.25 12.7987 1.25C13.3199 1.25 13.8099 1.45297 14.1785 1.82156C14.547 2.19009 14.75 2.68009 14.75 3.20131C14.75 3.72253 14.547 4.21253 14.1791 4.58047Z" fill="#5081E9"></path>
+                    </svg>
+                  </a>
+                  <a class="clarify-timeline-user-txt-ico-i" href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z" fill="#5081E9"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="clarify-timeline-user-input">
+                <input type="text" name="userPhone" value="Курьер">
+                <div class="clarify-timeline-user-input-ico">
+                  <a href="javascript:void(0)" class="clarify-timeline-user-input-ico-i" onclick="confirmClarify(this)">
+                    <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.6925 0.307555C20.2824 -0.102518 19.6176 -0.102518 19.2075 0.307555L6.62789 12.8873L1.79248 8.05191C1.38245 7.64184 0.71767 7.64188 0.307555 8.05191C-0.102518 8.46195 -0.102518 9.12673 0.307555 9.5368L5.88543 15.1146C6.29534 15.5246 6.96061 15.5243 7.37036 15.1146L20.6925 1.79248C21.1025 1.38245 21.1025 0.717629 20.6925 0.307555Z" fill="#5081E9"/>
+                    </svg>
+                  </a>
+                  <a href="javascript:void(0)" class="clarify-timeline-user-input-ico-i" onclick="closeClarify(this)">
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.46585 8.01314L15.6959 1.78287C16.1014 1.37762 16.1014 0.722377 15.6959 0.317124C15.2907 -0.0881297 14.6354 -0.0881297 14.2302 0.317124L7.99991 6.5474L1.76983 0.317124C1.36439 -0.0881297 0.709336 -0.0881297 0.304083 0.317124C-0.101361 0.722377 -0.101361 1.37762 0.304083 1.78287L6.53417 8.01314L0.304083 14.2434C-0.101361 14.6487 -0.101361 15.3039 0.304083 15.7092C0.506045 15.9113 0.771595 16.0129 1.03696 16.0129C1.30232 16.0129 1.56768 15.9113 1.76983 15.7092L7.99991 9.47889L14.2302 15.7092C14.4323 15.9113 14.6977 16.0129 14.9631 16.0129C15.2284 16.0129 15.4938 15.9113 15.6959 15.7092C16.1014 15.3039 16.1014 14.6487 15.6959 14.2434L9.46585 8.01314Z" fill="#5081E9"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="clarify-timeline-user">
+              <div class="clarify-timeline-user-title">
+                АДРЕС
+              </div>
+              <div class="clarify-timeline-user-txt active">
+                <div class="clarify-timeline-user-txt-i">
+                  Киев, Киевская обл., ул. Патриарха Мстислава Скрипника (ран. Островского), 60
+                </div>
+                <div class="clarify-timeline-user-txt-ico">
+                  <a class="clarify-timeline-user-txt-ico-i" href="javascript:void(0)" onclick="editClarify(this)">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.0624 0.937688C14.4577 0.333 13.6538 0 12.7987 0C11.9436 0 11.1397 0.333 10.535 0.937656L1.58831 9.88441C1.51218 9.96053 1.45702 10.055 1.42815 10.1587L0.0228983 15.2074C-0.0376954 15.4252 0.0239608 15.6587 0.184242 15.8181C0.302992 15.9362 0.462117 16 0.625055 16C0.681992 16 0.73943 15.9922 0.795774 15.9762L5.84443 14.5421C6.05743 14.4816 6.22256 14.3129 6.27843 14.0986C6.33431 13.8843 6.27262 13.6565 6.11628 13.4996L2.9334 10.3071L10.3495 2.89097L13.1076 5.64903L7.43024 11.3109C7.18584 11.5546 7.18531 11.9503 7.42906 12.1947C7.67278 12.4392 8.06856 12.4397 8.31293 12.196L15.0623 5.46497C15.667 4.86031 16 4.05641 16 3.20131C16 2.34622 15.667 1.54231 15.0624 0.937688ZM4.48109 13.6299L1.52584 14.4694L2.35349 11.4959L4.48109 13.6299ZM14.1791 4.58047L13.9927 4.76638L11.2334 2.00709L11.419 1.82153C11.7875 1.45297 12.2775 1.25 12.7987 1.25C13.3199 1.25 13.8099 1.45297 14.1785 1.82156C14.547 2.19009 14.75 2.68009 14.75 3.20131C14.75 3.72253 14.547 4.21253 14.1791 4.58047Z" fill="#5081E9"></path>
+                    </svg>
+                  </a>
+                  <a class="clarify-timeline-user-txt-ico-i" href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z" fill="#5081E9"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="clarify-timeline-user-input">
+                <textarea name="userAddress">Киев, Киевская обл., ул. Патриарха Мстислава Скрипника (ран. Островского), 60</textarea>
+                <div class="clarify-timeline-user-input-ico">
+                  <a href="javascript:void(0)" class="clarify-timeline-user-input-ico-i" onclick="confirmClarify(this)">
+                    <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.6925 0.307555C20.2824 -0.102518 19.6176 -0.102518 19.2075 0.307555L6.62789 12.8873L1.79248 8.05191C1.38245 7.64184 0.71767 7.64188 0.307555 8.05191C-0.102518 8.46195 -0.102518 9.12673 0.307555 9.5368L5.88543 15.1146C6.29534 15.5246 6.96061 15.5243 7.37036 15.1146L20.6925 1.79248C21.1025 1.38245 21.1025 0.717629 20.6925 0.307555Z" fill="#5081E9"/>
+                    </svg>
+                  </a>
+                  <a href="javascript:void(0)" class="clarify-timeline-user-input-ico-i" onclick="closeClarify(this)">
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.46585 8.01314L15.6959 1.78287C16.1014 1.37762 16.1014 0.722377 15.6959 0.317124C15.2907 -0.0881297 14.6354 -0.0881297 14.2302 0.317124L7.99991 6.5474L1.76983 0.317124C1.36439 -0.0881297 0.709336 -0.0881297 0.304083 0.317124C-0.101361 0.722377 -0.101361 1.37762 0.304083 1.78287L6.53417 8.01314L0.304083 14.2434C-0.101361 14.6487 -0.101361 15.3039 0.304083 15.7092C0.506045 15.9113 0.771595 16.0129 1.03696 16.0129C1.30232 16.0129 1.56768 15.9113 1.76983 15.7092L7.99991 9.47889L14.2302 15.7092C14.4323 15.9113 14.6977 16.0129 14.9631 16.0129C15.2284 16.0129 15.4938 15.9113 15.6959 15.7092C16.1014 15.3039 16.1014 14.6487 15.6959 14.2434L9.46585 8.01314Z" fill="#5081E9"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <script src="./js/app.js"></script> -->
+  <!-- include FilePond library -->
+  <!--<script src="./js/filepond/filepond.min.js"></script>-->
+  <!-- include FilePond jQuery adapter -->
+  <!--<script src="./js/filepond/filepond.jquery.js"></script>-->
+  <!-- include FilePond plugins -->
+  <!--<script src="./js/filepond/filepond-plugin-file-validate-type.js"></script>-->
+  <script src="./js/fapp.js"></script>
+  <!-- <script src="./js/select2.full.min.js"></script> -->
+  <!--<script src="./js/custom.js"></script>-->
+
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+  <script src="./js/clarify-popup.js"></script>
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/locale/ru.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+</body>
+
+</html>
