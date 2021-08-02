@@ -14,7 +14,7 @@
 
 /* List of delivery */
 @font-face {
-  font-family: 'Roboto-Regular';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -22,7 +22,7 @@
        url(../fonts/Roboto-Regular.ttf) format('ttf');
 }
 @font-face {
-  font-family: 'Roboto-Light';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -30,7 +30,7 @@
        url(../fonts/Roboto-Light.ttf) format('ttf');
 }
 @font-face {
-  font-family: 'Roboto-Black';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 900;
   font-display: swap;
@@ -38,7 +38,7 @@
        url(../fonts/Roboto-Black.ttf) format('ttf');
 }
 @font-face {
-  font-family: 'Roboto-Bold';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -46,7 +46,7 @@
        url(../fonts/Roboto-Bold.ttf) format('ttf');
 }
 @font-face {
-  font-family: 'Roboto-Medium';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -56,7 +56,8 @@
 
 
 .delivery_list_content * {
-  font-family: 'Roboto-Regular';
+  font-family: 'Roboto';
+  font-weight: 400;
 }
 .delivery_list_center {
   height: 100%;
@@ -78,7 +79,7 @@
   padding-right: 36px;
 }
 .delivery_list_center_title {
-  font-family: "Roboto-Bold";
+  font-family: "Roboto";
   font-weight: 700;
   font-size: 24px;
   line-height: 117%;
@@ -211,7 +212,7 @@
   margin-bottom: 25px;
 }
 .delivery_list_right_info_title {
-  font-family: "Roboto-Medium";
+  font-family: "Roboto";
   max-width: 350px;
   font-weight: 500;
   font-size: 24px;
@@ -253,13 +254,15 @@
   justify-content: flex-end;
 }
 .delivery_list_right_info_btn_radio .taskPopup-create-task-radio-label span{
-  font-family: 'Roboto-Medium';
+  font-family: 'Roboto';
+  font-weight: 500;
 }
 .taskPopup-create-task-radio-label .width_50{
   width: 50%;
 }
 .delivery_list_right_info_btn_show_list .taskPopup-create-btn{
-  font-family: "Roboto-Medium";
+  font-family: "Roboto";
+  font-weight: 500;
   padding: 16px 12px;
   margin-top: 0;
 }
@@ -279,7 +282,8 @@
   margin-right: 12px;
 }
 .delivery_list_right_info_btn_text{
-  font-family: "Roboto-Medium";
+  font-family: "Roboto";
+  font-weight: 500;
   font-size: 14px;
   line-height: 114%;
   color: #5081E9;
@@ -294,7 +298,8 @@
   padding: 24px 0;
 }
 .delivery_list_right_info_row_name{
-  font-family: 'Roboto-Medium';
+  font-family: 'Roboto';
+  font-weight: 500;
   font-size: 18px;
   line-height: 111%;
   color: #130F26;
@@ -302,7 +307,8 @@
   width: 30%;
 }
 .delivery_list_right_info_client_name{
-  font-family: 'Roboto-Medium';
+  font-family: 'Roboto';
+  font-weight: 500;
   font-size: 18px;
   line-height: 20px;
   color: #5081E9;
@@ -311,7 +317,8 @@
 .delivery_list_right_info_users_name{
 }
 .delivery_list_right_info_user_name{
-  font-family: 'Roboto-Medium';
+  font-family: 'Roboto';
+  font-weight: 500;
   font-size: 18px;
   line-height: 111%;
   color: #5081E9;
@@ -324,7 +331,8 @@
   margin-bottom: 24px;
 }
 .delivery_list_right_row_title{
-  font-family: "Roboto-Medium";
+  font-family: "Roboto";
+  font-weight: 500;
   font-size: 14px;
   line-height: 114%;
   color: #000000;
@@ -542,7 +550,7 @@
   z-index: 2;
 }
 .delivery_list_center_card_title {
-  font-family: 'Roboto-Medium';
+  font-family: 'Roboto';
   padding-right: 35px;
   font-weight: 500;
   font-size: 18px;
@@ -643,7 +651,7 @@
 
 
 .delivery_list_right_form_title{
-  font-family: 'Roboto-Medium';
+  font-family: 'Roboto';
   font-weight: 500;
   font-size: 24px;
   line-height: 83%;
@@ -731,7 +739,7 @@
 }
 
 .delivery_list_center_btn-filter + label{
-  font-family: "Roboto-Medium";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
