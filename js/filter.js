@@ -43,7 +43,7 @@ class FilterLists {
             if( valueList === undefined || ! valueList.length)
                 listEl.hide();
             else
-            if(valueFilter.indexOf(valueList) === -1)
+            if(valueList.indexOf(valueFilter) === -1)
                 listEl.hide();
 
         })
