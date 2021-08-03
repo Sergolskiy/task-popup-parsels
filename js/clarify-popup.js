@@ -30,3 +30,15 @@ function accordingInfo(that) {
     $(that.closest('.according-item').querySelector('.accordion-content')).slideToggle()
     //  .toggleClass('_active')
 }
+
+var templateText = document.querySelector('.taskPopup-create-task-tooltype-text');
+if (templateText) {
+    tippy('.js_popper_task', {
+        content: templateText.innerHTML,
+        animation: 'fade',
+        arrow: true,
+        maxWidth: 708,
+        placement: 'bottom',
+        delay: [100, 1000],
+    });
+}

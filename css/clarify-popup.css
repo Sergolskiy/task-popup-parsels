@@ -41,6 +41,19 @@
     url(../fonts/Roboto-Medium.ttf) format("ttf");
 }
 
+.modal-close.close-list-content {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 15px;
+    height: 15px;
+    transition: 0.3s;
+    z-index: 2;
+}
+.close-list-content svg * {
+    fill: #5081e9;
+}
+
 .taskPopup-create-files-block{
     margin-bottom: 20px;
     margin-top: 0;
@@ -80,7 +93,18 @@
 }
 
 .clarify-timeline-items{
+    max-height: 350px;
+    overflow: auto;
+    padding-right: 10px;
+}
 
+.clarify-timeline-items::-webkit-scrollbar {
+    width: 8px;
+}
+
+.clarify-timeline-items::-webkit-scrollbar-thumb {
+    background-color: #dadce0;
+    border-radius: 4px;
 }
 
 .clarify-timeline-item{
