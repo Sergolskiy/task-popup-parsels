@@ -139,17 +139,27 @@
     border-radius: 50%;
 }
 
-.clarify-timeline-item.clarify-blue .clarify-timeline-left-line:before{
+.clarify-timeline-item.clarify-open .clarify-timeline-left-line:before{
     background: #5081E9;
     border: 3px solid #E5ECFC;
 }
 
-.clarify-timeline-item.clarify-orange .clarify-timeline-left-line:before{
+.clarify-timeline-item.in-progress .clarify-timeline-left-line:before{
     background: #EF814E;
     border: 3px solid #E5ECFC;
 }
 
-.clarify-timeline-item.clarify-green .clarify-timeline-left-line:before{
+.clarify-timeline-item.reply .clarify-timeline-left-line:before{
+    background: #5C0086;
+    border: 3px solid #E5ECFC;
+}
+
+.clarify-timeline-item.reject .clarify-timeline-left-line:before{
+    background: #CD2929;
+    border: 3px solid #E5ECFC;
+}
+
+.clarify-timeline-item.success .clarify-timeline-left-line:before{
     background: #6CCC79;
     border: 3px solid #E5ECFC;
 }
@@ -169,15 +179,23 @@
 }
 
 
-.clarify-timeline-item.clarify-blue .clarify-timeline-left-line:after{
+.clarify-timeline-item.clarify-open .clarify-timeline-left-line:after{
     background: #5081E9;
 }
 
-.clarify-timeline-item.clarify-orange .clarify-timeline-left-line:after{
+.clarify-timeline-item.in-progress .clarify-timeline-left-line:after{
     background: #EF814E;
 }
 
-.clarify-timeline-item.clarify-green .clarify-timeline-left-line:after{
+.clarify-timeline-item.reply .clarify-timeline-left-line:after{
+    background: #5C0086;
+}
+
+.clarify-timeline-item.reject .clarify-timeline-left-line:after{
+    background: #CD2929;
+}
+
+.clarify-timeline-item.success .clarify-timeline-left-line:after{
     background: #6CCC79;
 }
 
@@ -190,15 +208,23 @@
     line-height: 16px;
 }
 
-.clarify-timeline-item.clarify-blue .clarify-timeline-left-name{
+.clarify-timeline-item.clarify-open .clarify-timeline-left-name{
     color: #5081E9;
 }
 
-.clarify-timeline-item.clarify-orange .clarify-timeline-left-name{
+.clarify-timeline-item.in-progress .clarify-timeline-left-name{
     color: #EF814E;
 }
 
-.clarify-timeline-item.clarify-green .clarify-timeline-left-name{
+.clarify-timeline-item.reply .clarify-timeline-left-name{
+    color: #5C0086;
+}
+
+.clarify-timeline-item.reject .clarify-timeline-left-name{
+    color: #CD2929;
+}
+
+.clarify-timeline-item.success .clarify-timeline-left-name{
     color: #6CCC79;
 }
 
@@ -239,36 +265,65 @@
     color: #000000;
 }
 
-.clarify-timeline-item.clarify-blue .clarify-timeline-right-massage{
+.clarify-timeline-item.clarify-open .clarify-timeline-right-massage{
     background: #E5ECFC;
     border-radius: 12px;
     padding: 14px 16px;
 }
 
-.clarify-timeline-item.clarify-orange .clarify-timeline-right-massage{
+.clarify-timeline-item.in-progress .clarify-timeline-right-massage{
     background: #FFEEE7;
+    border-radius: 12px;
+    padding: 14px 16px;
+}
+
+.clarify-timeline-item.reply .clarify-timeline-right-massage{
+    background: #F5E0FF;
+    border-radius: 12px;
+    padding: 14px 16px;
+}
+
+.clarify-timeline-item.reject .clarify-timeline-right-massage{
+    background: #FFE1E5;
     border-radius: 12px;
     padding: 14px 16px;
 }
 
 .clarify-timeline-right-photo{
+}
+
+.clarify-timeline-photo-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.clarify-timeline-photo-item{
     position: relative;
-    margin-top: 14px;
-    background: #E5ECFC;
-    border-radius: 12px;
-    max-width: 122px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 122px;
+    margin-right: 20px;
+    margin-top: 14px;
+    background: #E5ECFC;
+    border-radius: 12px;
     padding: 16px;
 }
 
-.clarify-timeline-item.clarify-orange .clarify-timeline-right-photo{
+.clarify-timeline-item.in-progress .clarify-timeline-photo-item{
     background: #FFEEE7;
 }
 
-.clarify-timeline-right-photo:after{
+.clarify-timeline-item.reply .clarify-timeline-photo-item{
+    background: #F5E0FF;
+}
+
+.clarify-timeline-item.reject .clarify-timeline-photo-item{
+    background: #FFE1E5;
+}
+
+.clarify-timeline-photo-item:after{
     content: "";
     position: absolute;
     top: -5px;
@@ -279,11 +334,11 @@
     background: url("../img/clarify/clip.svg") center center no-repeat;
 }
 
-.clarify-timeline-right-photo img{
+.clarify-timeline-photo-item img{
     max-width: 90px;
 }
 
-.clarify-timeline-right-photo span{
+.clarify-timeline-photo-item span{
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -295,7 +350,7 @@
 
 
 
-.clarify-timeline-radio-answer{
+.clarify-create-task-form{
     margin-top: 40px;
 }
 
