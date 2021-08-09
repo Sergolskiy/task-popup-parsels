@@ -139,7 +139,7 @@
     border-radius: 50%;
 }
 
-.clarify-timeline-item.clarify-open .clarify-timeline-left-line:before{
+.clarify-timeline-item.open .clarify-timeline-left-line:before{
     background: #5081E9;
     border: 3px solid #E5ECFC;
 }
@@ -179,7 +179,7 @@
 }
 
 
-.clarify-timeline-item.clarify-open .clarify-timeline-left-line:after{
+.clarify-timeline-item.open .clarify-timeline-left-line:after{
     background: #5081E9;
 }
 
@@ -208,7 +208,7 @@
     line-height: 16px;
 }
 
-.clarify-timeline-item.clarify-open .clarify-timeline-left-name{
+.clarify-timeline-item.open .clarify-timeline-left-name{
     color: #5081E9;
 }
 
@@ -265,7 +265,7 @@
     color: #000000;
 }
 
-.clarify-timeline-item.clarify-open .clarify-timeline-right-massage{
+.clarify-timeline-item.open .clarify-timeline-right-massage{
     background: #E5ECFC;
     border-radius: 12px;
     padding: 14px 16px;
