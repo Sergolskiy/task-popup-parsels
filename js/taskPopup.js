@@ -45,10 +45,32 @@ function changeCreateType(that, type) {
 }
 
 function changeClarification(that) {
-	if ($(that).hasClass('showFields')) {
-		$('.fields-clarification').show()
-	} else {
-		$('.fields-clarification').hide()
+	// if ($(that).hasClass('showFields')) {
+	// 	$('.fields-clarification').show()
+	// } else {
+	// 	$('.fields-clarification').hide()
+	// }
+	let deliveryType = $(that).attr('data-delivery-type')
+	let form = $(that).closest('form')
+
+	form.find('.taskPopup-select-block-item.active').removeClass('active')
+
+	switch (deliveryType){
+		case "courier":
+			form.find('div[data-delivery-type="courier"]').addClass('active')
+			break
+		case "novaPoshta":
+			form.find('div[data-delivery-type="novaPoshta"]').addClass('active')
+			break
+		case "ukrPoshta":
+			form.find('div[data-delivery-type="ukrPoshta"]').addClass('active')
+			break
+		case "apt":
+			form.find('div[data-delivery-type="apt"]').addClass('active')
+			break
+		case "meest":
+			form.find('div[data-delivery-type="meest"]').addClass('active')
+			break
 	}
 }
 function toggleActiveClass(that) {

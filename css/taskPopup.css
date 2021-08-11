@@ -1286,6 +1286,14 @@
   margin-top: 30px;
 }
 
+.taskPopup-select-block-item{
+  display: none;
+}
+
+.taskPopup-select-block-item.active{
+  display: block;
+}
+
 .taskPopup-select-block {
   margin-bottom: 25px;
 }

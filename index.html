@@ -76,8 +76,8 @@
 
             <div class="accordion-block-wrap">
               <div class="accordion-block">
-                <div class="taskPopup-recipient-data according-item" onclick="accordingInfo(this)">
-                  <div class=" accordion-title">
+                <div class="taskPopup-recipient-data according-item" >
+                  <div class=" accordion-title" onclick="accordingInfo(this)">
                     <div class="accordion-title-ico active _active">
                       <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -105,8 +105,8 @@
                 </div>
 
 
-                <div class="taskPopup-package-info according-item" onclick="accordingInfo(this)">
-                  <div class="accordion-title">
+                <div class="taskPopup-package-info according-item" >
+                  <div class="accordion-title" onclick="accordingInfo(this)">
                     <div class="accordion-title-ico">
                       <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -181,8 +181,8 @@
                   </div>
                 </div>
 
-                <div class="taskPopup-address-info according-item" onclick="accordingInfo(this)">
-                  <div class="accordion-title">
+                <div class="taskPopup-address-info according-item" >
+                  <div class="accordion-title" onclick="accordingInfo(this)">
                     <div class="accordion-title-ico">
                       <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -216,8 +216,8 @@
                   </div>
                 </div>
 
-                <div class="taskPopup-address-info according-item" onclick="accordingInfo(this)">
-                  <div class="accordion-title">
+                <div class="taskPopup-address-info according-item" >
+                  <div class="accordion-title" onclick="accordingInfo(this)">
                     <div class="accordion-title-ico">
                       <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -251,8 +251,8 @@
                   </div>
                 </div>
 
-                <div class="taskPopup-address-info according-item" onclick="accordingInfo(this)">
-                  <div class="accordion-title">
+                <div class="taskPopup-address-info according-item" >
+                  <div class="accordion-title" onclick="accordingInfo(this)">
                     <div class="accordion-title-ico">
                       <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -1034,7 +1034,8 @@
                       <div class="taskPopup-create-radio-type">
 
                         <div class="taskPopup-create-radio-type-item">
-                          <input class="showFields" type="radio" name="сlarification" id="сlarification3" checked
+                          <input class="showFields" type="radio" data-delivery-type="courier"
+                                 name="сlarification" id="сlarification3" checked
                             onchange="changeClarification(this)">
                           <label class="taskPopup-create-radio-type-label" for="сlarification3">
                             <div class="taskPopup-create-radio-type-ico">
@@ -1053,8 +1054,8 @@
                         </div>
 
                         <div class="taskPopup-create-radio-type-item">
-                          <input type="radio" name="сlarification" id="сlarification4"
-                            onchange="changeClarification(this)">
+                          <input type="radio" name="сlarification" id="сlarification4" data-delivery-type="novaPoshta"
+                                 onchange="changeClarification(this)">
                           <label class="taskPopup-create-radio-type-label" for="сlarification4">
                             <div class="taskPopup-create-radio-type-ico">
                               <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1070,8 +1071,8 @@
                         </div>
 
                         <div class="taskPopup-create-radio-type-item">
-                          <input type="radio" name="сlarification" id="сlarification5"
-                            onchange="changeClarification(this)">
+                          <input type="radio" name="сlarification" id="сlarification5" data-delivery-type="ukrPoshta"
+                                 onchange="changeClarification(this)">
                           <label class="taskPopup-create-radio-type-label" for="сlarification5">
                             <div class="taskPopup-create-radio-type-ico">
                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1089,8 +1090,8 @@
                         </div>
 
                         <div class="taskPopup-create-radio-type-item">
-                          <input type="radio" name="сlarification" id="сlarification6"
-                            onchange="changeClarification(this)">
+                          <input type="radio" name="сlarification" id="сlarification6" data-delivery-type="apt"
+                                 onchange="changeClarification(this)">
                           <label class="taskPopup-create-radio-type-label" for="сlarification6">
                             <div class="taskPopup-create-radio-type-ico">
                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1109,8 +1110,8 @@
                         </div>
 
                         <div class="taskPopup-create-radio-type-item">
-                          <input type="radio" name="сlarification" id="сlarification7"
-                            onchange="changeClarification(this)">
+                          <input type="radio" name="сlarification" id="сlarification7" data-delivery-type="meest"
+                                 onchange="changeClarification(this)">
                           <label class="taskPopup-create-radio-type-label" for="сlarification7">
                             <div class="taskPopup-create-radio-type-ico">
                               <svg width="16" height="24" viewBox="0 0 9 12" fill="none"
@@ -1126,86 +1127,308 @@
                             Meest Point
                           </label>
                         </div>
+
+
                       </div>
 
-                      <div class="taskPopup-select-block">
-                        <div class="taskPopup-select-block-top">
-                          <div class="taskPopup-select-block-left">
-                            Город:
+                      <div class="taskPopup-select-block-item active" data-delivery-type="courier">
+                        <div class="taskPopup-select-block">
+                          <div class="taskPopup-select-block-top">
+                            <div class="taskPopup-select-block-left">
+                              Город:
+                            </div>
+                            <div class="taskPopup-select-block-right">
+                              <a href="javascript:void(0)" class="copy"></a>
+                            </div>
                           </div>
-                          <div class="taskPopup-select-block-right">
-                            <a href="javascript:void(0)" class="copy"></a>
-                          </div>
+                          <select class="taskPopup-select" name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                          </select>
                         </div>
-                        <select class="taskPopup-select" name="state">
-                          <option value="AL">Alabama</option>
-                          <option value="WY">Wyoming</option>
-                        </select>
-                      </div>
 
-                      <div class="taskPopup-select-block">
-                        <div class="taskPopup-select-block-top">
-                          <div class="taskPopup-select-block-left">
-                            Отделение:
+                        <div class="taskPopup-select-block">
+                          <div class="taskPopup-select-block-top">
+                            <div class="taskPopup-select-block-left">
+                              Отделение:
+                            </div>
+                            <div class="taskPopup-select-block-right">
+                              <a href="javascript:void(0);" class="copy"></a>
+                            </div>
                           </div>
-                          <div class="taskPopup-select-block-right">
-                            <a href="javascript:void(0);" class="copy"></a>
-                          </div>
+                          <select class="taskPopup-select" name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                          </select>
                         </div>
-                        <select class="taskPopup-select" name="state">
-                          <option value="AL">Alabama</option>
-                          <option value="WY">Wyoming</option>
-                        </select>
-                      </div>
 
-                      <div class="taskPopup-row fields-clarification">
-                        <div class="taskPopup-col taskPopup-col-50">
-                          <div class="taskPopup-select-block">
-                            <div class="taskPopup-select-block-top">
-                              <div class="taskPopup-select-block-left">
-                                Номер дома:
+                        <div class="taskPopup-row fields-clarification">
+                          <div class="taskPopup-col taskPopup-col-50">
+                            <div class="taskPopup-select-block">
+                              <div class="taskPopup-select-block-top">
+                                <div class="taskPopup-select-block-left">
+                                  Номер дома:
+                                </div>
+                              </div>
+                              <div class="taskPopup-select-block-input">
+                                <input type="text">
                               </div>
                             </div>
-                            <div class="taskPopup-select-block-input">
-                              <input type="text">
-                            </div>
                           </div>
-                        </div>
-                        <div class="taskPopup-col taskPopup-col-50">
-                          <div class="taskPopup-select-block">
-                            <div class="taskPopup-select-block-top">
-                              <div class="taskPopup-select-block-left">
-                                Номер квартиры:
+                          <div class="taskPopup-col taskPopup-col-50">
+                            <div class="taskPopup-select-block">
+                              <div class="taskPopup-select-block-top">
+                                <div class="taskPopup-select-block-left">
+                                  Номер квартиры:
+                                </div>
+                              </div>
+                              <div class="taskPopup-select-block-input">
+                                <input type="text">
                               </div>
                             </div>
-                            <div class="taskPopup-select-block-input">
-                              <input type="text">
-                            </div>
+                          </div>
+                        </div>
+
+                        <div class="taskPopup-create-task-content-title">
+                          Комментарий
+                        </div>
+
+                        <textarea name="text" id="сlarification-1"
+                                  placeholder="Ваше сообщение сотруднику службы доставки..."></textarea>
+
+                        <div class="taskPopup-create-task-form-bottom">
+                          <div class="taskPopup-create-task-radio">
+                            <label class="taskPopup-create-task-radio-label" for="сlarification-2">
+                              <span>Высокий приоритет</span>
+                              <input class="taskPopup-create-task-radio-input" type="checkbox" id="сlarification-2">
+                              <span class="taskPopup-create-task-radio-span"></span>
+                            </label>
+                          </div>
+                          <div class="taskPopup-create-btns">
+                            <button class="taskPopup-create-btn">
+                              Создать задачу
+                            </button>
                           </div>
                         </div>
                       </div>
 
-                      <div class="taskPopup-create-task-content-title">
-                        Комментарий
+                      <div class="taskPopup-select-block-item" data-delivery-type="novaPoshta">
+                        <div class="taskPopup-select-block">
+                          <div class="taskPopup-select-block-top">
+                            <div class="taskPopup-select-block-left">
+                              Город:
+                            </div>
+                            <div class="taskPopup-select-block-right">
+                              <a href="javascript:void(0)" class="copy"></a>
+                            </div>
+                          </div>
+                          <select class="taskPopup-select" name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                          </select>
+                        </div>
+
+                        <div class="taskPopup-select-block">
+                          <div class="taskPopup-select-block-top">
+                            <div class="taskPopup-select-block-left">
+                              Отделение:
+                            </div>
+                            <div class="taskPopup-select-block-right">
+                              <a href="javascript:void(0);" class="copy"></a>
+                            </div>
+                          </div>
+                          <select class="taskPopup-select" name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                          </select>
+                        </div>
+
+                        <div class="taskPopup-create-task-content-title">
+                          Комментарий
+                        </div>
+
+                        <textarea name="text" id="сlarification-11"
+                                  placeholder="Ваше сообщение сотруднику службы доставки..."></textarea>
+
+                        <div class="taskPopup-create-task-form-bottom">
+                          <div class="taskPopup-create-task-radio">
+                            <label class="taskPopup-create-task-radio-label" for="сlarification-22">
+                              <span>Высокий приоритет</span>
+                              <input class="taskPopup-create-task-radio-input" type="checkbox" id="сlarification-22">
+                              <span class="taskPopup-create-task-radio-span"></span>
+                            </label>
+                          </div>
+                          <div class="taskPopup-create-btns">
+                            <button class="taskPopup-create-btn">
+                              Создать задачу
+                            </button>
+                          </div>
+                        </div>
                       </div>
 
-                      <textarea name="text" id="сlarification-1"
-                        placeholder="Ваше сообщение сотруднику службы доставки..."></textarea>
-
-                      <div class="taskPopup-create-task-form-bottom">
-                        <div class="taskPopup-create-task-radio">
-                          <label class="taskPopup-create-task-radio-label" for="сlarification-2">
-                            <span>Высокий приоритет</span>
-                            <input class="taskPopup-create-task-radio-input" type="checkbox" id="сlarification-2">
-                            <span class="taskPopup-create-task-radio-span"></span>
-                          </label>
+                      <div class="taskPopup-select-block-item" data-delivery-type="ukrPoshta">
+                        <div class="taskPopup-select-block">
+                          <div class="taskPopup-select-block-top">
+                            <div class="taskPopup-select-block-left">
+                              Город:
+                            </div>
+                            <div class="taskPopup-select-block-right">
+                              <a href="javascript:void(0)" class="copy"></a>
+                            </div>
+                          </div>
+                          <select class="taskPopup-select" name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                          </select>
                         </div>
-                        <div class="taskPopup-create-btns">
-                          <button class="taskPopup-create-btn">
-                            Создать задачу
-                          </button>
+
+                        <div class="taskPopup-select-block">
+                          <div class="taskPopup-select-block-top">
+                            <div class="taskPopup-select-block-left">
+                              Отделение:
+                            </div>
+                            <div class="taskPopup-select-block-right">
+                              <a href="javascript:void(0);" class="copy"></a>
+                            </div>
+                          </div>
+                          <select class="taskPopup-select" name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                          </select>
+                        </div>
+
+                        <div class="taskPopup-create-task-content-title">
+                          Комментарий
+                        </div>
+
+                        <textarea name="text" id="сlarification-12"
+                                  placeholder="Ваше сообщение сотруднику службы доставки..."></textarea>
+
+                        <div class="taskPopup-create-task-form-bottom">
+                          <div class="taskPopup-create-task-radio">
+                            <label class="taskPopup-create-task-radio-label" for="сlarification-21">
+                              <span>Высокий приоритет</span>
+                              <input class="taskPopup-create-task-radio-input" type="checkbox" id="сlarification-21">
+                              <span class="taskPopup-create-task-radio-span"></span>
+                            </label>
+                          </div>
+                          <div class="taskPopup-create-btns">
+                            <button class="taskPopup-create-btn">
+                              Создать задачу
+                            </button>
+                          </div>
                         </div>
                       </div>
+
+                      <div class="taskPopup-select-block-item" data-delivery-type="apt">
+                        <div class="taskPopup-select-block">
+                          <div class="taskPopup-select-block-top">
+                            <div class="taskPopup-select-block-left">
+                              Город:
+                            </div>
+                            <div class="taskPopup-select-block-right">
+                              <a href="javascript:void(0)" class="copy"></a>
+                            </div>
+                          </div>
+                          <select class="taskPopup-select" name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                          </select>
+                        </div>
+
+                        <div class="taskPopup-select-block">
+                          <div class="taskPopup-select-block-top">
+                            <div class="taskPopup-select-block-left">
+                              Отделение:
+                            </div>
+                            <div class="taskPopup-select-block-right">
+                              <a href="javascript:void(0);" class="copy"></a>
+                            </div>
+                          </div>
+                          <select class="taskPopup-select" name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                          </select>
+                        </div>
+
+                        <div class="taskPopup-create-task-content-title">
+                          Комментарий
+                        </div>
+
+                        <textarea name="text" id="сlarification-13"
+                                  placeholder="Ваше сообщение сотруднику службы доставки..."></textarea>
+
+                        <div class="taskPopup-create-task-form-bottom">
+                          <div class="taskPopup-create-task-radio">
+                            <label class="taskPopup-create-task-radio-label" for="сlarification-23">
+                              <span>Высокий приоритет</span>
+                              <input class="taskPopup-create-task-radio-input" type="checkbox" id="сlarification-23">
+                              <span class="taskPopup-create-task-radio-span"></span>
+                            </label>
+                          </div>
+                          <div class="taskPopup-create-btns">
+                            <button class="taskPopup-create-btn">
+                              Создать задачу
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="taskPopup-select-block-item" data-delivery-type="meest">
+                        <div class="taskPopup-select-block">
+                          <div class="taskPopup-select-block-top">
+                            <div class="taskPopup-select-block-left">
+                              Город:
+                            </div>
+                            <div class="taskPopup-select-block-right">
+                              <a href="javascript:void(0)" class="copy"></a>
+                            </div>
+                          </div>
+                          <select class="taskPopup-select" name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                          </select>
+                        </div>
+
+                        <div class="taskPopup-select-block">
+                          <div class="taskPopup-select-block-top">
+                            <div class="taskPopup-select-block-left">
+                              Отделение:
+                            </div>
+                            <div class="taskPopup-select-block-right">
+                              <a href="javascript:void(0);" class="copy"></a>
+                            </div>
+                          </div>
+                          <select class="taskPopup-select" name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                          </select>
+                        </div>
+
+                        <div class="taskPopup-create-task-content-title">
+                          Комментарий
+                        </div>
+
+                        <textarea name="text" id="сlarification-14"
+                                  placeholder="Ваше сообщение сотруднику службы доставки..."></textarea>
+
+                        <div class="taskPopup-create-task-form-bottom">
+                          <div class="taskPopup-create-task-radio">
+                            <label class="taskPopup-create-task-radio-label" for="сlarification-24">
+                              <span>Высокий приоритет</span>
+                              <input class="taskPopup-create-task-radio-input" type="checkbox" id="сlarification-24">
+                              <span class="taskPopup-create-task-radio-span"></span>
+                            </label>
+                          </div>
+                          <div class="taskPopup-create-btns">
+                            <button class="taskPopup-create-btn">
+                              Создать задачу
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+
 
                   
                     </form>
