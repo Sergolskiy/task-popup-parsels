@@ -13,6 +13,10 @@ function closeConfirmationPopup(){
     $('.confirmation-popup').removeClass('active')
 }
 
+function scrollToBottomClarifyPopup(){
+    $(".clarify-timeline-items").animate({ scrollTop: $('.clarify-timeline-items').height() }, 0);
+}
+
 
 function editClarify(that) {
     let block = $(that).closest('.clarify-timeline-user-txt')
