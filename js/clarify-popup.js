@@ -5,6 +5,13 @@ function openClarifyPopup() {
     $('#clarify-popup').modal()
 }
 
+function openConfirmationPopup(){
+    $('.confirmation-popup').addClass('active')
+}
+
+function closeConfirmationPopup(){
+    $('.confirmation-popup').removeClass('active')
+}
 
 
 function editClarify(that) {

@@ -55,6 +55,7 @@
   position: relative;
   font-family: Roboto;
   border-radius: 20px !important;
+  overflow: hidden;
 }
 
 .taskPopup-top {
@@ -1109,10 +1110,19 @@
   color: #ffffff;
   background: #5081e9;
   transition: 0.3s;
+  border: 0;
+  min-width: 153px;
 }
+
 .taskPopup-create-btn:hover {
   color: #fff;
   background-color: rgb(47 104 204);
+}
+
+.taskPopup-create-btn--outline{
+  background: #FFFFFF;
+  border: 1px solid #5081E9;
+  color: #5081E9;
 }
 
 .taskPopup-create-radio-type {

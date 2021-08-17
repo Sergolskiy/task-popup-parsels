@@ -11,6 +11,7 @@ function openTableDesc(that) {
 }
 
 
+
 function changeTypeTask(type, that) {
 	$('.taskPopup-top-btn').removeClass('active')
 	$(that).toggleClass('active')

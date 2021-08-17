@@ -15,6 +15,7 @@
   <link href="./css/custom.css" rel="stylesheet">
   <link href="./css/taskPopup.css" rel="stylesheet">
   <link href="./css/clarify-popup.css" rel="stylesheet">
+  <link href="./css/confirmation-popup.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 </head>
@@ -39,6 +40,9 @@
         <div class="taskPopup-content">
           <div class="taskPopup-left">
             <div class="taskPopup-left-block package-number">
+              <div class="taskPopup-left-item-top success">
+                Возврат средств
+              </div>
               <div class="taskPopup-left-item">
                 <div class="taskPopup-left-title">
                   Номер посылки Меест
@@ -67,54 +71,121 @@
                   </a>
                 </div>
               </div>
-              <div class="taskPopup-left-item clarify-left-item-small">
-                <div class="taskPopup-left-title">
-                  ПЕРЕВОЗЧИК
-                </div>
-                <div class="taskPopup-left-name taskPopup-left-name-medium">
-                  Meest
-                </div>
-              </div>
+<!--              <div class="taskPopup-left-item clarify-left-item-small">-->
+<!--                <div class="taskPopup-left-title">-->
+<!--                  ПЕРЕВОЗЧИК-->
+<!--                </div>-->
+<!--                <div class="taskPopup-left-name taskPopup-left-name-medium">-->
+<!--                 -->
+<!--                  Meest-->
+<!--                </div>-->
+<!--              </div>-->
 
               <div class="taskPopup-left-item clarify-left-item-small">
                 <div class="taskPopup-left-title">
                   ТИП ДОСТАВКИ
                 </div>
                 <div class="taskPopup-left-name taskPopup-left-name-medium">
+                  <img src="./img/clarify/meestIco.svg" style="margin-right: 10px; margin-top: 2px" alt="img">
+                  <img src="./img/clarify/novaposhta.svg" style="margin-right: 10px" alt="img">
                   Nova Poshta
+                </div>
+              </div>
+
+              <div class="taskPopup-left-item clarify-left-item-small">
+                <div class="taskPopup-left-title">
+                  АДРЕС ДОСТАВКИ
+                </div>
+                <div class="taskPopup-left-name taskPopup-left-name-medium">
+                  <div class="taskPopup-left-block">
+                    <table class="taskPopup-left-table">
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Город:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          Северодонецк
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Отделение:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          № 10
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Улица:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          ул. Химиков, 44Г
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Статус:
+                        </td>
+                        <td class="taskPopup-left-td-val address-department success">
+                          Отделение работает
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Статус:
+                        </td>
+                        <td class="taskPopup-left-td-val address-department reject">
+                          Отделение не работает
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="taskPopup-recipient-data taskPopup-recipient-data-copy">
+              <div class="taskPopup-left-item">
+                <div class="taskPopup-left-recipient-name">
+                  Кульчицька Світлана Василівна
+                </div>
+                <div class="taskPopup-left-value">
+                  380979856356
+                  <a href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                              d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                              fill="#5081E9" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="taskPopup-left-value">
+                  Svitlana.test@gmail.com
+                  <a href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                              d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                              fill="#5081E9" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="taskPopup-left-value">
+                  # Заказа 253651254142
+                  <a href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                              d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                              fill="#5081E9" />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
 
             <div class="accordion-block-wrap">
               <div class="accordion-block">
-                <div class="taskPopup-recipient-data according-item">
-                  <div class=" accordion-title" onclick="accordingInfo(this)">
-                    <div class="accordion-title-ico active _active">
-                      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M0.442383 1.5575L3.87738 5L0.442383 8.4425L1.49988 9.5L5.99988 5L1.49988 0.5L0.442383 1.5575Z"
-                          fill="#8C8C8C" />
-                      </svg>
-                    </div>
 
-                    Дание получателя
-                  </div>
-                  <div class="taskPopup-left-item accordion-content active">
-                    <div class="taskPopup-left-recipient-name">
-                      Кульчицька Світлана Василівна
-                    </div>
-                    <div class="taskPopup-left-value">
-                      380979856356
-                    </div>
-                    <div class="taskPopup-left-value">
-                      Svitlana.test@gmail.com
-                    </div>
-                    <div class="taskPopup-left-value">
-                      # Заказа 253651254142
-                    </div>
-                  </div>
-                </div>
 
 
                 <div class="taskPopup-package-info according-item" >
@@ -185,7 +256,7 @@
                           d="M0.442383 1.5575L3.87738 5L0.442383 8.4425L1.49988 9.5L5.99988 5L1.49988 0.5L0.442383 1.5575Z"
                           fill="#8C8C8C" />
                       </svg>
-                    </div> 
+                    </div>
 
                       Адрес доставки
                   </div>
@@ -286,6 +357,42 @@
                       Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text
                       Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text
                     </span>
+                  </div>
+
+                  <div class="top-status">
+
+                    <div class="success">
+                      <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.8096 0.199304C12.5558 -0.0665975 12.1443 -0.0665975 11.8904 0.199304L4.10298 8.35633L1.10963 5.22093C0.855803 4.95503 0.444272 4.95506 0.190391 5.22093C-0.0634638 5.48681 -0.0634638 5.91787 0.190391 6.18377L3.64336 9.80054C3.89711 10.0664 4.30895 10.0662 4.5626 9.80054L12.8096 1.16217C13.0635 0.896292 13.0634 0.465206 12.8096 0.199304Z" fill="#69C327"/>
+                      </svg>
+                      Решено
+                    </div>
+                    <div class="reply">
+                      <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.16667 2.00087V0.300095C4.16667 0.179696 4.09125 0.0708978 3.97583 0.0236983C3.86083 -0.0231011 3.72625 0.000498575 3.63667 0.0848975L0.095 3.38486C0.0341667 3.44126 0 3.51886 0 3.60005C0 3.68125 0.0341667 3.75885 0.095 3.81525L3.63667 7.11521C3.72708 7.19921 3.86125 7.22281 3.97583 7.17641C4.09125 7.12921 4.16667 7.02041 4.16667 6.90001V5.20004H4.7575C6.68917 5.20004 8.47 6.20802 9.40458 7.8288L9.41333 7.844C9.46917 7.9416 9.575 8 9.6875 8C9.71333 8 9.73917 7.9972 9.765 7.9908C9.90333 7.9568 10 7.8372 10 7.7C10 4.59044 7.39292 2.05447 4.16667 2.00087Z" fill="#5C0086"/>
+                      </svg>
+                      Ответ
+                    </div>
+                    <div class="in-progress">
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                          <path d="M0.585938 5C0.585938 2.56607 2.56607 0.585938 5 0.585938C5.91537 0.585938 6.78834 0.863496 7.52336 1.37865H6.95551C6.79371 1.37865 6.66254 1.50982 6.66254 1.67162C6.66254 1.83342 6.79371 1.96459 6.95551 1.96459H8.3284C8.4902 1.96459 8.62137 1.83342 8.62137 1.67162V0.29873C8.62137 0.136934 8.4902 0.00576172 8.3284 0.00576172C8.1666 0.00576172 8.03543 0.136934 8.03543 0.29873V1.02801C7.16772 0.361309 6.11152 0 5 0C3.66445 0 2.40885 0.520098 1.46445 1.46445C0.520098 2.40885 0 3.66445 0 5C0 5.87736 0.231856 6.74184 0.670508 7.49996C0.724805 7.59383 0.823203 7.64625 0.924355 7.64625C0.97416 7.64625 1.02463 7.63353 1.07082 7.60682C1.21086 7.52578 1.25869 7.34656 1.17768 7.2065C0.790566 6.53746 0.585938 5.77445 0.585938 5Z" fill="#BC6300"/>
+                          <path d="M9.32975 2.50004C9.24869 2.35998 9.06943 2.31217 8.92943 2.39321C8.7894 2.47424 8.74156 2.65346 8.82258 2.79352C9.20969 3.46252 9.41432 4.22551 9.41432 5C9.41432 7.43393 7.43418 9.41406 5.00025 9.41406C4.08496 9.41406 3.21215 9.13643 2.47721 8.62135H3.04475C3.20654 8.62135 3.33772 8.49018 3.33772 8.32838C3.33772 8.16658 3.20654 8.03541 3.04475 8.03541H1.67188C1.51008 8.03541 1.37891 8.16658 1.37891 8.32838V9.70127C1.37891 9.86307 1.51008 9.99424 1.67188 9.99424C1.83367 9.99424 1.96484 9.86307 1.96484 9.70127V8.97127C2.83254 9.63819 3.88859 10 5.00025 10C6.3358 10 7.59141 9.4799 8.5358 8.53555C9.48016 7.59115 10.0003 6.33555 10.0003 5C10.0003 4.1226 9.7684 3.25813 9.32975 2.50004Z" fill="#BC6300"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0">
+                            <rect width="10" height="10" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      В просессе
+                    </div>
+                    <div class="reject">
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.91616 5.0073L9.80997 1.11338C10.0634 0.860094 10.0634 0.45057 9.80997 0.197287C9.55669 -0.0559966 9.14716 -0.0559966 8.89388 0.197287L4.99995 4.09121L1.10614 0.197287C0.852742 -0.0559966 0.443336 -0.0559966 0.190052 0.197287C-0.0633506 0.45057 -0.0633506 0.860094 0.190052 1.11338L4.08386 5.0073L0.190052 8.90122C-0.0633506 9.1545 -0.0633506 9.56402 0.190052 9.81731C0.316278 9.94365 0.482248 10.0071 0.648098 10.0071C0.813949 10.0071 0.979799 9.94365 1.10614 9.81731L4.99995 5.92339L8.89388 9.81731C9.02022 9.94365 9.18608 10.0071 9.35193 10.0071C9.51778 10.0071 9.68363 9.94365 9.80997 9.81731C10.0634 9.56402 10.0634 9.1545 9.80997 8.90122L5.91616 5.0073Z" fill="#CD2929"/>
+                      </svg>
+                      Отклонено
+                    </div>
                   </div>
 
 
@@ -686,6 +793,135 @@
 
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="confirmation-popup">
+    <div class="confirmation-popup__inner">
+      <div class="confirmation-popup__top-img">
+        <svg width="80" height="70" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M42.9899 8.65051C41.6357 6.39751 38.3645 6.39751 37.0102 8.65051L7.48637 57.7682C6.09201 60.0879 7.766 63.0392 10.4762 63.0392H69.5238C72.234 63.0392 73.908 60.0879 72.5136 57.7682L42.9899 8.65051ZM31.0306 5.06922C35.0933 -1.68976 44.9069 -1.68972 48.9695 5.06922L78.4933 54.1869C82.6762 61.1462 77.6544 70 69.5238 70H10.4762C2.34565 70 -2.67633 61.1462 1.50678 54.1869L31.0306 5.06922ZM40.0001 21.2746C41.9258 21.2746 43.4867 22.8328 43.4867 24.755V38.6765C43.4867 40.5987 41.9258 42.1569 40.0001 42.1569C38.0744 42.1569 36.5134 40.5987 36.5134 38.6765V24.755C36.5134 22.8328 38.0744 21.2746 40.0001 21.2746ZM40.0001 45.6373C41.9258 45.6373 43.4867 47.1955 43.4867 49.1177V52.5981C43.4867 54.5203 41.9258 56.0784 40.0001 56.0784C38.0744 56.0784 36.5134 54.5203 36.5134 52.5981V49.1177C36.5134 47.1955 38.0744 45.6373 40.0001 45.6373Z" fill="#E5ECFC"/>
+        </svg>
+      </div>
+      <div class="confirmation-popup__top-txt">
+        Вы собираетесь оформить задачу <span>Возврат денег</span>. Пожалуйста, <span>проверьте</span> введенную Вами информацию
+      </div>
+
+      <div class="confirmation-popup__table">
+        <table>
+          <tr>
+            <td>
+              <div class="confirmation-popup__table-i">
+                <div class="confirmation-popup__table-top">
+                  <div class="confirmation-popup__table-ico">
+                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.3333 1H3.66667C2.19391 1 1 2.15127 1 3.57143V10.4286C1 11.8487 2.19391 13 3.66667 13H14.3333C15.8061 13 17 11.8487 17 10.4286V3.57143C17 2.15127 15.8061 1 14.3333 1Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 5H17" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8 10H10" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                  </div>
+                  <div class="confirmation-popup__table-name">
+                    Номер карты
+                  </div>
+                </div>
+                <div class="confirmation-popup__table-bottom">
+                  <div class="confirmation-popup__table-value">
+                    5168 7573 213 2564
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+
+              <div class="confirmation-popup__table-i">
+                <div class="confirmation-popup__table-top">
+                  <div class="confirmation-popup__table-ico">
+                    <svg width="13" height="19" viewBox="0 0 13 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.49675 8.33333C8.52179 8.33333 10.1634 6.69171 10.1634 4.66667C10.1634 2.64162 8.52179 1 6.49675 1C4.4717 1 2.83008 2.64162 2.83008 4.66667C2.83008 6.69171 4.4717 8.33333 6.49675 8.33333Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 17.5V15.6667C1 14.6942 1.38631 13.7616 2.07394 13.0739C2.76158 12.3863 3.69421 12 4.66667 12H8.33333C9.30579 12 10.2384 12.3863 10.9261 13.0739C11.6137 13.7616 12 14.6942 12 15.6667V17.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="confirmation-popup__table-name">
+                    ФИО получателя
+                  </div>
+                </div>
+                <div class="confirmation-popup__table-bottom">
+                  <div class="confirmation-popup__table-value">
+                    Камшев Артем Владимирович
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="confirmation-popup__table-i">
+                <div class="confirmation-popup__table-top">
+                  <div class="confirmation-popup__table-ico">
+                    <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5.28577H13" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 10.4288H13" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M6.14244 1L2.71387 14.7143" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M11.286 1L7.85742 14.7143" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="confirmation-popup__table-name">
+                    Номер возврата
+                  </div>
+                </div>
+                <div class="confirmation-popup__table-bottom">
+                  <div class="confirmation-popup__table-value">
+                    5252526554152511
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+
+              <div class="confirmation-popup__table-i">
+                <div class="confirmation-popup__table-top">
+                  <div class="confirmation-popup__table-ico">
+                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.2223 4.55566H6.33343C5.3516 4.55566 4.55566 5.3516 4.55566 6.33343V11.6667C4.55566 12.6486 5.3516 13.4445 6.33343 13.4445H15.2223C16.2041 13.4445 17.0001 12.6486 17.0001 11.6667V6.33343C17.0001 5.3516 16.2041 4.55566 15.2223 4.55566Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.7778 10.7778C11.7596 10.7778 12.5555 9.98189 12.5555 9.00006C12.5555 8.01822 11.7596 7.22229 10.7778 7.22229C9.79593 7.22229 9 8.01822 9 9.00006C9 9.98189 9.79593 10.7778 10.7778 10.7778Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M13.4444 4.55554V2.77777C13.4444 2.30628 13.2571 1.85409 12.9237 1.5207C12.5903 1.1873 12.1381 1 11.6666 1H2.77777C2.30628 1 1.85409 1.1873 1.5207 1.5207C1.1873 1.85409 1 2.30628 1 2.77777V8.11108C1 8.58257 1.1873 9.03476 1.5207 9.36815C1.85409 9.70155 2.30628 9.88885 2.77777 9.88885H4.55554" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="confirmation-popup__table-name">
+                    Сума
+                  </div>
+                </div>
+                <div class="confirmation-popup__table-bottom">
+                  <div class="confirmation-popup__table-value">
+                    2 560.00 грн
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+        </table>
+      </div>
+
+      <div class="confirmation-popup__comment">
+        <div class="confirmation-popup__comment-title">
+          Коментарий
+        </div>
+        <div class="confirmation-popup__comment-txt">
+          Разнообразный и богатый опыт консультация с широким активом обеспечивает широкому кругу.
+        </div>
+      </div>
+
+      <div class="taskPopup-create-btns confirmation-popup__btns">
+        <button class="taskPopup-create-btn taskPopup-create-btn--outline">
+          Редактировать
+        </button>
+        <button class="taskPopup-create-btn">
+          Создать задачу
+        </button>
       </div>
     </div>
   </div>

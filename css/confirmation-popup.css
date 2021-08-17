@@ -1,0 +1,139 @@
+
+.confirmation-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: #0000004d;
+    z-index: -1;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.confirmation-popup.active{
+    z-index: 10000000;
+    visibility: visible;
+    opacity: 1;
+}
+
+.confirmation-popup__inner{
+    max-width: 527px;
+    background: #FFFFFF;
+    border: 3px solid #E5ECFC;
+    box-sizing: border-box;
+    border-radius: 12px;
+    margin: 0 auto;
+    margin-top: 90px;
+    padding: 40px;
+}
+
+.confirmation-popup__top-img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.confirmation-popup__top-txt{
+    padding-bottom: 40px;
+    margin-bottom: 25px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #000000;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.confirmation-popup__top-txt span{
+    color: #5081E9;
+}
+
+.confirmation-popup__table{
+    border-bottom: 1px solid #DEDEDE;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.confirmation-popup__table tr:nth-child(n+2) .confirmation-popup__table-i{
+    padding-top: 16px;
+}
+
+.confirmation-popup__table table{
+    width: 100%;
+}
+
+.confirmation-popup__table-i{
+
+}
+
+.confirmation-popup__table-top{
+    display: flex;
+    align-items: center;
+}
+
+.confirmation-popup__table-ico{
+    display: flex;
+    margin-right: 8px;
+}
+
+.confirmation-popup__table-name{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.confirmation-popup__table-bottom{
+    padding-top: 5px;
+}
+
+.confirmation-popup__table-value{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5081E9;
+}
+
+.confirmation-popup__comment{
+    border-bottom: 1px solid #DEDEDE;
+    padding-bottom: 24px;
+}
+
+.confirmation-popup__comment-title{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    padding-bottom: 16px;
+}
+
+.confirmation-popup__comment-txt{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.confirmation-popup__btns{
+    justify-content: space-between;
+}
+
+
+@media screen and (max-width: 1550px){
+    .confirmation-popup__inner{
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+}
