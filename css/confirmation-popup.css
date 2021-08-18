@@ -50,6 +50,7 @@
 
 .confirmation-popup__top-txt span{
     color: #5081E9;
+    font-weight: 500;
 }
 
 .confirmation-popup__table{
@@ -64,6 +65,14 @@
 
 .confirmation-popup__table table{
     width: 100%;
+}
+
+.confirmation-popup__table table td:first-child{
+    width: 47%;
+}
+
+.confirmation-popup__table table td:last-child{
+    width: 55%;
 }
 
 .confirmation-popup__table-i{
@@ -128,6 +137,14 @@
 
 .confirmation-popup__btns{
     justify-content: space-between;
+}
+
+.confirmation-popup__btns button{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 

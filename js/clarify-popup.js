@@ -38,7 +38,7 @@ function closeClarify(that) {
 
 function accordingInfo(that) {
     $(that.querySelector('.accordion-title-ico')).toggleClass('_active')
-    $(that.closest('.according-item').querySelector('.accordion-content')).slideToggle()
+    $(that.closest('.according-item').querySelector('.accordion-content')).slideToggle(200)
     //  .toggleClass('_active')
 }
 

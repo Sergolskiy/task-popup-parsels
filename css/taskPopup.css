@@ -350,6 +350,11 @@
   margin-left: 4.5px;
   transition: 0.3s;
 }
+
+.accordion-title-ico{
+  transition: 0.3s;
+}
+
 .accordion-title-ico._active {
   transform: rotate(90deg);
 }
@@ -375,6 +380,10 @@
 
 .taskPopup-left-table {
   width: 100%;
+}
+
+.taskPopup-left-table tr:last-child td{
+  padding-bottom: 0;
 }
 
 .taskPopup-left-td-name {
