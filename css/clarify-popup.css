@@ -96,6 +96,7 @@
     max-height: 350px;
     overflow: auto;
     padding-right: 10px;
+    max-height: 22vh;
 }
 
 .clarify-timeline-items::-webkit-scrollbar {
@@ -609,6 +610,8 @@
     margin-right: 10px;
 }
 
+
+
 #clarify-popup .success{
     color: #7EC84E;
 }
@@ -687,6 +690,7 @@
 
 .accordion-block-wrap{
     max-height: 256px;
+    /*min-height: 256px;*/
     min-width: 380px;
     padding-right: 20px;
 }
@@ -743,6 +747,11 @@
     fill: #CD2929;
 }
 
+.taskPopup-create-task-content{
+    padding-bottom: 0;
+}
+
+
 @media screen and (max-width: 1800px){
     .modal-close.close-list-content{
         right: 40px;
@@ -759,5 +768,12 @@
     .taskPopup-recipient-data-copy {
         margin: 0 -15px 24px;
         padding: 0 15px 24px;
+    }
+}
+
+@media screen and (min-height: 875px) {
+
+    #clarify-popup .modal-dialog{
+        height: 93vh;
     }
 }

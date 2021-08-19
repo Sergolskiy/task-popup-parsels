@@ -144,7 +144,25 @@
   height: auto;
   display: flex;
   flex-direction: column;
+
+
+  overflow: auto;
+  overflow-x: hidden;
 }
+
+
+.taskPopup-left::-webkit-scrollbar {
+  width: 8px;
+}
+
+.taskPopup-left::-webkit-scrollbar-track {
+}
+
+.taskPopup-left::-webkit-scrollbar-thumb {
+  background-color: #dadce0;
+  border-radius: 4px;
+}
+
 
 .taskPopup-center {
   /* min-width: 756px; */
