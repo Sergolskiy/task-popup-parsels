@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!--  <link rel="preconnect" href="https://fonts.gstatic.com">-->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="../css/app.css" rel="stylesheet">
+  <link href="../css/custom.css" rel="stylesheet">
+  <link href="../css/taskPopup.css" rel="stylesheet">
+  <link href="../css/clarify-popup.css" rel="stylesheet">
+  <link href="../css/confirmation-popup.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+</head>
+
+<body>
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary btn-lg" onclick="openClarifyPopup()">
+    Launch demo modal
+  </button>
+
+  <div class="modal taskPopup fade" tabindex="-1" id="clarify-popup" role="dialog">
+    <div class="modal-dialog mw-1420 mw-1712" role="document">
+      <div class="modal-close close-list-content">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.4893 0L7.5 5.98929L1.51071 0L0 1.51071L5.98929 7.5L0 13.4893L1.51071 15L7.5 9.01071L13.4893 15L15 13.4893L9.01071 7.5L15 1.51071L13.4893 0Z"
+            fill="white" />
+        </svg>
+      </div>
+      <div class="modal-content">
+        <div class="taskPopup-content">
+          <div class="taskPopup-left">
+            <div class="taskPopup-left-block package-number">
+              <div class="taskPopup-left-item">
+                <div class="taskPopup-left-title">
+                  Номер посылки Меест
+                </div>
+                <div class="taskPopup-left-name"> CV858286079CZ
+                  <a href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                        fill="#5081E9" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="taskPopup-left-item clarify-left-item-small">
+                <div class="taskPopup-left-title">
+                  Номер посылки НП
+                </div>
+                <div class="taskPopup-left-name taskPopup-left-name-medium"> 20 4002 3132 0297
+                  <a href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                        fill="#5081E9" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+<!--              <div class="taskPopup-left-item clarify-left-item-small">-->
+<!--                <div class="taskPopup-left-title">-->
+<!--                  ПЕРЕВОЗЧИК-->
+<!--                </div>-->
+<!--                <div class="taskPopup-left-name taskPopup-left-name-medium">-->
+<!--                 -->
+<!--                  Meest-->
+<!--                </div>-->
+<!--              </div>-->
+
+              <div class="taskPopup-left-item clarify-left-item-small">
+                <div class="taskPopup-left-title">
+                  ТИП ДОСТАВКИ
+                </div>
+                <div class="taskPopup-left-name taskPopup-left-name-medium">
+                  Nova Poshta
+                </div>
+              </div>
+
+              <div class="taskPopup-left-item clarify-left-item-small">
+                <div class="taskPopup-left-title">
+                  АДРЕС ДОСТАВКИ
+                </div>
+                <div class="taskPopup-left-name taskPopup-left-name-medium">
+                  <div class="taskPopup-left-block">
+                    <table class="taskPopup-left-table">
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Город:
+                        </td>
+                        <td class="taskPopup-left-td-val blue-color">
+                          <div class="display-flex align-center">
+                            Северодонецк2
+                            <a href="javascript:void(0)">
+                              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                                        fill="#5081E9" />
+                              </svg>
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Отделение:
+                        </td>
+                        <td class="taskPopup-left-td-val blue-color">
+                          № 10
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Улица:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          <div class="display-flex align-center">
+                            ул. Химиков, 44Г
+                            <a href="javascript:void(0)">
+                              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                                        fill="#5081E9" />
+                              </svg>
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Статус:
+                        </td>
+                        <td class="taskPopup-left-td-val address-department success">
+                          Отделение работает
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Статус:
+                        </td>
+                        <td class="taskPopup-left-td-val address-department reject">
+                          Отделение не работает
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="taskPopup-recipient-data taskPopup-recipient-data-copy">
+              <div class="taskPopup-left-item">
+                <div class="taskPopup-left-recipient-name">
+                  Кульчицька Світлана Василівна
+                </div>
+                <div class="taskPopup-left-value">
+                  +38 (097) 985 63 56
+                  <a href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                              d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                              fill="#5081E9" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="taskPopup-left-value">
+                  Svitlana.test@gmail.com
+                  <a href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                              d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                              fill="#5081E9" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="taskPopup-left-value">
+                  # Заказа 253651254142
+                  <a href="javascript:void(0)">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                              d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                              fill="#5081E9" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-block-wrap">
+              <div class="accordion-block">
+
+
+
+                <div class="taskPopup-package-info according-item" >
+
+
+                  <div class="taskPopup-left-block ">
+                    <table class="taskPopup-left-table">
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Манифест:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          EXP1888101942/NOTINO
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Тип оплаты:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          Наложений платеж
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Сумма COD:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          2050 грн
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Стоимост посылки:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          80 EUR
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="taskPopup-left-td-name">
+                          Вес посылки:
+                        </td>
+                        <td class="taskPopup-left-td-val">
+                          0.5 кг
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="taskPopup-center">
+            <div class="taskPopup-center-inner active">
+
+              <div class="taskPopup-create-task active">
+                <div class="taskPopup-create-task-title">
+                  <span>
+                    Уточнение
+                  </span>
+<!--                  <div class="taskPopup-create-task-tooltype">-->
+<!--                    <span class="taskPopup-create-task-tooltype-ico js_popper_task">-->
+<!--                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                        <path fill-rule="evenodd" clip-rule="evenodd"-->
+<!--                          d="M14.3341 0.750122H5.66512C2.64412 0.750122 0.750122 2.88912 0.750122 5.91612V14.0841C0.750122 17.1111 2.63512 19.2501 5.66512 19.2501H14.3331C17.3641 19.2501 19.2501 17.1111 19.2501 14.0841V5.91612C19.2501 2.88912 17.3641 0.750122 14.3341 0.750122Z"-->
+<!--                          stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />-->
+<!--                        <path d="M9.99475 14.0001V10.0001" stroke="#130F26" stroke-width="1.5" stroke-linecap="round"-->
+<!--                          stroke-linejoin="round" />-->
+<!--                        <path d="M9.98987 6.20435H9.99987" stroke="#130F26" stroke-width="2" stroke-linecap="round"-->
+<!--                          stroke-linejoin="round" />-->
+<!--                      </svg>-->
+<!--                    </span>-->
+<!--                    <span class="taskPopup-create-task-tooltype-text">-->
+<!--                      Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text-->
+<!--                      Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text-->
+<!--                    </span>-->
+<!--                  </div>-->
+
+
+
+
+                  <div class="taskPopup-create-task-priority">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.73822 6.22578L6.22547 0.738526C7.20586 -0.241862 8.79547 -0.241862 9.77585 0.738526L15.2631 6.22578C16.2435 7.20617 16.2435 8.79577 15.2631 9.77616L9.77585 15.2634C8.79547 16.2438 7.20586 16.2438 6.22547 15.2634L0.73822 9.77616C-0.242167 8.79577 -0.242167 7.20617 0.73822 6.22578Z" fill="#5081E9"/>
+                      <path d="M7.99915 4.48535C8.27643 4.48535 8.50124 4.71016 8.50124 4.98744V9.00411C8.50124 9.28138 8.27643 9.50619 7.99915 9.50619C7.72188 9.50619 7.49707 9.28138 7.49707 9.00411V4.98744C7.49707 4.71016 7.72188 4.48535 7.99915 4.48535Z" fill="white"/>
+                      <path d="M7.49707 10.5104H8.50124V11.5145H7.49707V10.5104Z" fill="white"/>
+                    </svg>
+                    Высокий приоритет
+                  </div>
+                </div>
+                <div class="taskPopup-create-task-content">
+
+                  <div class="clarify-timeline">
+                    <div class="clarify-timeline-items">
+                      <div class="clarify-timeline-item open">
+                        <div class="clarify-timeline-left">
+                          <div class="clarify-timeline-left-line">
+
+                          </div>
+                          <div class="clarify-timeline-left-name">
+                            Открытые
+                            <div class="clarify-timeline-left-logo">
+                              <img src="../img/clarify/open.png" alt="img">
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="clarify-timeline-right">
+                          <div class="clarify-timeline-right-date">
+                            26/10/2020, 13:39
+                          </div>
+                          <div class="clarify-timeline-right-name">
+                            Наталия Петрова
+                          </div>
+                          <div class="clarify-timeline-right-massage">
+                            Нужно уточнить куда отправлять посылку. Потерян адресс получателя
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clarify-timeline-item in-progress">
+                        <div class="clarify-timeline-left">
+                          <div class="clarify-timeline-left-line">
+
+                          </div>
+                          <div class="clarify-timeline-left-name">
+                            В просессе
+                            <div class="clarify-timeline-left-logo">
+                              <img src="../img/clarify/in-progress.svg" alt="img">
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="clarify-timeline-right">
+                          <div class="clarify-timeline-right-date">
+                            26/10/2020, 13:39
+                          </div>
+                          <div class="clarify-timeline-right-name">
+                            Наталия Петрова
+                          </div>
+                          <div class="clarify-timeline-right-massage">
+                            Ищу информацию
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clarify-timeline-item reply">
+                        <div class="clarify-timeline-left">
+                          <div class="clarify-timeline-left-line">
+
+                          </div>
+                          <div class="clarify-timeline-left-name">
+                            Ответ
+                            <div class="clarify-timeline-left-logo">
+                              <img src="../img/clarify/reply.svg" alt="img">
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="clarify-timeline-right">
+                          <div class="clarify-timeline-right-date">
+                            26/10/2020, 13:39
+                          </div>
+                          <div class="clarify-timeline-right-name">
+                            Наталия Петрова
+                          </div>
+                          <div class="clarify-timeline-right-massage">
+                            Ищу информацию
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clarify-timeline-item reopen reject">
+                        <div class="clarify-timeline-left">
+                          <div class="clarify-timeline-left-line">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.05957 3.24613C5.87554 1.87877 8.46536 2.24375 9.83272 4.05972C10.347 4.74269 10.6303 5.54995 10.6589 6.38776L10.3399 5.96408C10.249 5.84336 10.0774 5.81919 9.95669 5.91008C9.83597 6.00098 9.81179 6.17254 9.90269 6.29326L10.674 7.31758C10.7649 7.4383 10.9364 7.46248 11.0571 7.37158L12.0815 6.6003C12.2022 6.50941 12.2264 6.33785 12.1355 6.21713C12.0446 6.09641 11.873 6.07223 11.7523 6.16313L11.2082 6.57283C11.2181 5.55088 10.8943 4.55986 10.2699 3.73054C9.5196 2.73408 8.42616 2.08945 7.19101 1.91536C5.95586 1.74132 4.72686 2.05866 3.73039 2.80896C3.07578 3.30186 2.56105 3.9605 2.24184 4.71369C2.2023 4.80693 2.21847 4.9098 2.2753 4.98527C2.30328 5.02243 2.34112 5.05294 2.387 5.0724C2.52614 5.13136 2.68672 5.06636 2.74571 4.92723C3.02741 4.26254 3.48174 3.68121 4.05957 3.24613Z" fill="#FD7D23"/>
+                              <path d="M10.838 8.36533C10.897 8.22617 10.832 8.06556 10.6929 8.00663C10.5537 7.94767 10.3931 8.01267 10.3342 8.1518C10.0525 8.81646 9.59817 9.39778 9.02031 9.83288C7.20434 11.2002 4.61452 10.8353 3.24716 9.0193C2.73295 8.33639 2.44976 7.5292 2.42118 6.69149L2.74002 7.11493C2.83092 7.23565 3.00248 7.25983 3.12319 7.16893C3.24391 7.07804 3.26809 6.90648 3.17719 6.78576L2.40592 5.76145C2.31503 5.64073 2.14347 5.61655 2.02275 5.70745L0.998425 6.47873C0.877707 6.56962 0.85353 6.74118 0.944426 6.8619C1.03532 6.98262 1.20688 7.00679 1.3276 6.9159L1.87226 6.50579C1.86213 7.52785 2.18546 8.51905 2.80998 9.34847C3.56028 10.3449 4.65372 10.9896 5.88887 11.1637C7.12402 11.3377 8.35303 11.0204 9.34949 10.2701C10.0041 9.77714 10.5189 9.11849 10.838 8.36533Z" fill="#5081E9"/>
+                            </svg>
+                          </div>
+                          <div class="clarify-timeline-left-name">
+                            Отклонено
+                            <div class="clarify-timeline-left-logo">
+                              <img src="../img/clarify/reject.svg" alt="img">
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="clarify-timeline-right">
+                          <div class="clarify-timeline-right-date">
+                            26/10/2020, 13:39
+                          </div>
+                          <div class="clarify-timeline-right-name">
+                            Наталия Петрова
+                          </div>
+                          <div class="clarify-timeline-right-massage">
+                            Ищу информацию
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clarify-timeline-item open">
+                        <div class="clarify-timeline-left">
+                          <div class="clarify-timeline-left-line">
+
+                          </div>
+                          <div class="clarify-timeline-left-name">
+                            Открытые
+                            <div class="clarify-timeline-left-logo">
+                              <img src="../img/clarify/open.png" alt="img">
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="clarify-timeline-right">
+                          <div class="clarify-timeline-right-date">
+                            26/10/2020, 13:39
+                          </div>
+                          <div class="clarify-timeline-right-name">
+                            Наталия Петрова
+                          </div>
+                          <div class="clarify-timeline-right-massage">
+                            Нужно уточнить куда отправлять посылку. Потерян адресс получателя
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="clarify-timeline-item success">
+                        <div class="clarify-timeline-left">
+                          <div class="clarify-timeline-left-line">
+
+                          </div>
+                          <div class="clarify-timeline-left-name">
+                            Решено
+                            <div class="clarify-timeline-left-logo">
+                              <img src="../img/clarify/success.svg" alt="img">
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="clarify-timeline-right">
+                          <div class="clarify-timeline-right-date">
+                            26/10/2020, 13:39
+                          </div>
+                          <div class="clarify-timeline-right-name">
+                            Наталия Петрова
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="taskPopup-create-task-form clarify-create-task-form">
+                    <form action="">
+
+                      <div class="clarify-timeline-radio-answer">
+                        <div class="clarify-timeline-radio-items">
+                          <div class="clarify-timeline-radio-item green">
+                            <input type="radio" id="answer3" name="answer" >
+                            <label for="answer3" onclick="changeRadioType()">
+                              Решено
+                            </label>
+                          </div>
+                          <div class="clarify-timeline-radio-item yellow">
+                            <input type="radio" id="answer2" name="answer" >
+                            <label for="answer2" onclick="changeRadioType()">
+                              В процесе
+                            </label>
+                          </div>
+
+                          <div class="clarify-timeline-radio-item red">
+                            <input type="radio" id="answer4" name="answer" >
+                            <label for="answer4" onclick="changeRadioType()">
+                              Отклонить
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="send-btn-wrap">
+                        <textarea name="text" id="text"
+                          placeholder="Ваше сообщение сотруднику службы доставки..."></textarea>
+
+                        <button class="send-btn">
+                          <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.045 0.0145124C14.4107 0.0145124 17.7765 0.0336428 21.1419 7.8244e-05C21.9157 -0.00758773 22.225 0.549127 21.8295 1.19652C20.3508 3.6171 18.9259 6.07001 17.4817 8.51124C15.515 11.8358 13.5487 15.1604 11.5829 18.4852C11.5477 18.5448 11.5107 18.6033 11.4739 18.6619C11.3184 18.9094 11.0981 19.0399 10.8019 18.9894C10.5071 18.939 10.3344 18.7501 10.2747 18.4617C10.2051 18.1238 10.1376 17.7854 10.0706 17.4469C9.48372 14.4787 8.89894 11.5102 8.3163 8.54114C8.26314 8.23741 8.10142 7.96282 7.86076 7.76764C6.05671 6.2131 4.26373 4.64531 2.46629 3.0829C1.79433 2.49884 1.11903 1.91871 0.446792 1.33506C0.338221 1.2485 0.238167 1.15193 0.147974 1.04666C0.076092 0.962554 0.0281749 0.86094 0.00917778 0.752323C-0.00981937 0.643705 0.000793182 0.532027 0.0399179 0.42884C0.0790426 0.325652 0.145259 0.2347 0.231719 0.165391C0.318179 0.0960818 0.421743 0.0509315 0.531701 0.0346096C0.692656 0.0128431 0.855308 0.00602228 1.01754 0.0142361C4.35999 0.0132692 7.70246 0.013016 11.045 0.0134764V0.0145124ZM19.5434 2.52778L19.4709 2.46348L9.53045 8.07732C10.0843 10.9103 10.6194 13.7003 11.1952 16.4823L11.278 16.491L19.5434 2.52778ZM18.8553 1.35371C17.8446 1.21669 2.65805 1.2575 2.40478 1.34742L8.88538 6.98233L18.8553 1.35371Z" fill="#5081E9"/>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="taskPopup-create-task-form-bottom">
+
+                        <div class="taskPopup-file-btn">
+                          <input type="file" id="fileDrop">
+                          <label for="fileDrop">Загрузить файл</label>
+                        </div>
+
+                        <div class="taskPopup-create-btns ml-auto">
+                          <button class="taskPopup-create-btn clarify-create-btn">
+                            Подтвердить
+                          </button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <div class="taskPopup-right clarify-timeline-right">
+            <div class="clarify-timeline-title open">
+              Нужно отменить доставку
+            </div>
+
+            <div class="clarify-timeline-right-comment">
+              <div class="clarify-timeline-right-comment-item blue">
+                Отмените пожалуйста доставку
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="confirmation-popup">
+    <div class="confirmation-popup__inner">
+      <div class="confirmation-popup__top-img">
+        <svg width="80" height="70" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M42.9899 8.65051C41.6357 6.39751 38.3645 6.39751 37.0102 8.65051L7.48637 57.7682C6.09201 60.0879 7.766 63.0392 10.4762 63.0392H69.5238C72.234 63.0392 73.908 60.0879 72.5136 57.7682L42.9899 8.65051ZM31.0306 5.06922C35.0933 -1.68976 44.9069 -1.68972 48.9695 5.06922L78.4933 54.1869C82.6762 61.1462 77.6544 70 69.5238 70H10.4762C2.34565 70 -2.67633 61.1462 1.50678 54.1869L31.0306 5.06922ZM40.0001 21.2746C41.9258 21.2746 43.4867 22.8328 43.4867 24.755V38.6765C43.4867 40.5987 41.9258 42.1569 40.0001 42.1569C38.0744 42.1569 36.5134 40.5987 36.5134 38.6765V24.755C36.5134 22.8328 38.0744 21.2746 40.0001 21.2746ZM40.0001 45.6373C41.9258 45.6373 43.4867 47.1955 43.4867 49.1177V52.5981C43.4867 54.5203 41.9258 56.0784 40.0001 56.0784C38.0744 56.0784 36.5134 54.5203 36.5134 52.5981V49.1177C36.5134 47.1955 38.0744 45.6373 40.0001 45.6373Z" fill="#E5ECFC"/>
+        </svg>
+      </div>
+      <div class="confirmation-popup__top-txt">
+        Вы собираетесь оформить задачу <span>Возврат денег</span>. Пожалуйста, <span>проверьте</span> введенную Вами информацию
+      </div>
+
+      <div class="confirmation-popup__table">
+        <table>
+          <tr>
+            <td>
+              <div class="confirmation-popup__table-i">
+                <div class="confirmation-popup__table-top">
+                  <div class="confirmation-popup__table-ico">
+                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.3333 1H3.66667C2.19391 1 1 2.15127 1 3.57143V10.4286C1 11.8487 2.19391 13 3.66667 13H14.3333C15.8061 13 17 11.8487 17 10.4286V3.57143C17 2.15127 15.8061 1 14.3333 1Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 5H17" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8 10H10" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                  </div>
+                  <div class="confirmation-popup__table-name">
+                    Номер карты
+                  </div>
+                </div>
+                <div class="confirmation-popup__table-bottom">
+                  <div class="confirmation-popup__table-value">
+                    5168 7573 213 2564
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+
+              <div class="confirmation-popup__table-i">
+                <div class="confirmation-popup__table-top">
+                  <div class="confirmation-popup__table-ico">
+                    <svg width="13" height="19" viewBox="0 0 13 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.49675 8.33333C8.52179 8.33333 10.1634 6.69171 10.1634 4.66667C10.1634 2.64162 8.52179 1 6.49675 1C4.4717 1 2.83008 2.64162 2.83008 4.66667C2.83008 6.69171 4.4717 8.33333 6.49675 8.33333Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 17.5V15.6667C1 14.6942 1.38631 13.7616 2.07394 13.0739C2.76158 12.3863 3.69421 12 4.66667 12H8.33333C9.30579 12 10.2384 12.3863 10.9261 13.0739C11.6137 13.7616 12 14.6942 12 15.6667V17.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="confirmation-popup__table-name">
+                    ФИО получателя
+                  </div>
+                </div>
+                <div class="confirmation-popup__table-bottom">
+                  <div class="confirmation-popup__table-value">
+                    Камшев Артем Владимирович
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="confirmation-popup__table-i">
+                <div class="confirmation-popup__table-top">
+                  <div class="confirmation-popup__table-ico">
+                    <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5.28577H13" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 10.4288H13" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M6.14244 1L2.71387 14.7143" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M11.286 1L7.85742 14.7143" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="confirmation-popup__table-name">
+                    Номер возврата
+                  </div>
+                </div>
+                <div class="confirmation-popup__table-bottom">
+                  <div class="confirmation-popup__table-value">
+                    5252526554152511
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+
+              <div class="confirmation-popup__table-i">
+                <div class="confirmation-popup__table-top">
+                  <div class="confirmation-popup__table-ico">
+                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.2223 4.55566H6.33343C5.3516 4.55566 4.55566 5.3516 4.55566 6.33343V11.6667C4.55566 12.6486 5.3516 13.4445 6.33343 13.4445H15.2223C16.2041 13.4445 17.0001 12.6486 17.0001 11.6667V6.33343C17.0001 5.3516 16.2041 4.55566 15.2223 4.55566Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.7778 10.7778C11.7596 10.7778 12.5555 9.98189 12.5555 9.00006C12.5555 8.01822 11.7596 7.22229 10.7778 7.22229C9.79593 7.22229 9 8.01822 9 9.00006C9 9.98189 9.79593 10.7778 10.7778 10.7778Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M13.4444 4.55554V2.77777C13.4444 2.30628 13.2571 1.85409 12.9237 1.5207C12.5903 1.1873 12.1381 1 11.6666 1H2.77777C2.30628 1 1.85409 1.1873 1.5207 1.5207C1.1873 1.85409 1 2.30628 1 2.77777V8.11108C1 8.58257 1.1873 9.03476 1.5207 9.36815C1.85409 9.70155 2.30628 9.88885 2.77777 9.88885H4.55554" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="confirmation-popup__table-name">
+                    Сума
+                  </div>
+                </div>
+                <div class="confirmation-popup__table-bottom">
+                  <div class="confirmation-popup__table-value">
+                    2 560.00 грн
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+        </table>
+      </div>
+
+      <div class="confirmation-popup__comment">
+        <div class="confirmation-popup__comment-title">
+          Коментарий
+        </div>
+        <div class="confirmation-popup__comment-txt">
+          Разнообразный и богатый опыт консультация с широким активом обеспечивает широкому кругу.
+        </div>
+      </div>
+
+      <div class="taskPopup-create-btns confirmation-popup__btns">
+        <button class="taskPopup-create-btn taskPopup-create-btn--outline">
+          Редактировать
+        </button>
+        <button class="taskPopup-create-btn">
+          Создать задачу
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <script src="./js/app.js"></script> -->
+  <!-- include FilePond library -->
+  <!--<script src="./js/filepond/filepond.min.js"></script>-->
+  <!-- include FilePond jQuery adapter -->
+  <!--<script src="./js/filepond/filepond.jquery.js"></script>-->
+  <!-- include FilePond plugins -->
+  <!--<script src="./js/filepond/filepond-plugin-file-validate-type.js"></script>-->
+  <script src="../js/fapp.js"></script>
+  <!-- <script src="./js/select2.full.min.js"></script> -->
+  <!--<script src="./js/custom.js"></script>-->
+
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+  <script src="../js/clarify-popup.js"></script>
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/locale/ru.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+</body>
+
+</html>

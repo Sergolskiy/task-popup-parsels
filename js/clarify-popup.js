@@ -53,3 +53,7 @@ if (templateText) {
         delay: [100, 1000],
     });
 }
+
+function changeRadioType(){
+    $('.clarify-create-btn').addClass('open')
+}
