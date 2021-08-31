@@ -57,3 +57,11 @@ if (templateText) {
 function changeRadioType(){
     $('.clarify-create-btn').addClass('open')
 }
+
+function closeTask() {
+    $('.close-task-popup').addClass('active')
+}
+
+function closeTaskNo() {
+    $('.close-task-popup').removeClass('active')
+}

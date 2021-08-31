@@ -1,5 +1,13 @@
 /* test */
 
+.lightboxOverlay{
+  z-index: 9999999;
+}
+.lightbox {
+  width: 100%;
+  z-index: 100000000;
+}
+
 .mw-1420 {
   width: 100%;
   max-width: 1420px;

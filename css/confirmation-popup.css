@@ -1,4 +1,5 @@
 
+.close-task-popup,
 .confirmation-popup{
     position: fixed;
     top: 0;
@@ -12,6 +13,7 @@
     opacity: 0;
 }
 
+.close-task-popup.active,
 .confirmation-popup.active{
     z-index: 10000000;
     visibility: visible;
@@ -29,12 +31,15 @@
     padding: 40px;
 }
 
+.close-task-popup .confirmation-popup__inner{
+    max-width: 465px;
+}
+
 .confirmation-popup__top-img{
     display: flex;
     justify-content: center;
     margin-bottom: 24px;
 }
-
 .confirmation-popup__top-txt{
     padding-bottom: 40px;
     margin-bottom: 25px;
@@ -46,6 +51,12 @@
     text-align: center;
     color: #000000;
     border-bottom: 1px solid #DEDEDE;
+}
+
+.close-task-popup .confirmation-popup__top-txt{
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 40px;
 }
 
 .confirmation-popup__top-txt span{
@@ -139,12 +150,20 @@
     justify-content: space-between;
 }
 
+.close-task-popup .confirmation-popup__btns{
+    justify-content: center;
+}
+
 .confirmation-popup__btns button{
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
+}
+
+.close-task-popup .confirmation-popup__btns button{
+    margin: 0 10px;
 }
 
 
