@@ -11,11 +11,12 @@
   <!--  <link rel="preconnect" href="https://fonts.gstatic.com">-->
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="../css/app.css" rel="stylesheet">
-  <link href="../css/custom.css" rel="stylesheet">
-  <link href="../css/taskPopup.css" rel="stylesheet">
-  <link href="../css/clarify-popup.css" rel="stylesheet">
-  <link href="../css/confirmation-popup.css" rel="stylesheet">
+  <link href="../../../css/app.css" rel="stylesheet">
+  <link href="../../../css/lightbox.min.css" rel="stylesheet">
+  <link href="../../../css/custom.css" rel="stylesheet">
+  <link href="../../../css/taskPopup.css" rel="stylesheet">
+  <link href="../../../css/clarify-popup.css" rel="stylesheet">
+  <link href="../../../css/confirmation-popup.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 </head>
@@ -282,26 +283,6 @@
                   <span>
                     Уточнение
                   </span>
-<!--                  <div class="taskPopup-create-task-tooltype">-->
-<!--                    <span class="taskPopup-create-task-tooltype-ico js_popper_task">-->
-<!--                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                        <path fill-rule="evenodd" clip-rule="evenodd"-->
-<!--                          d="M14.3341 0.750122H5.66512C2.64412 0.750122 0.750122 2.88912 0.750122 5.91612V14.0841C0.750122 17.1111 2.63512 19.2501 5.66512 19.2501H14.3331C17.3641 19.2501 19.2501 17.1111 19.2501 14.0841V5.91612C19.2501 2.88912 17.3641 0.750122 14.3341 0.750122Z"-->
-<!--                          stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />-->
-<!--                        <path d="M9.99475 14.0001V10.0001" stroke="#130F26" stroke-width="1.5" stroke-linecap="round"-->
-<!--                          stroke-linejoin="round" />-->
-<!--                        <path d="M9.98987 6.20435H9.99987" stroke="#130F26" stroke-width="2" stroke-linecap="round"-->
-<!--                          stroke-linejoin="round" />-->
-<!--                      </svg>-->
-<!--                    </span>-->
-<!--                    <span class="taskPopup-create-task-tooltype-text">-->
-<!--                      Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text-->
-<!--                      Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text-->
-<!--                    </span>-->
-<!--                  </div>-->
-
-
-
 
                   <div class="taskPopup-create-task-priority">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -324,7 +305,7 @@
                           <div class="clarify-timeline-left-name">
                             Открытые
                             <div class="clarify-timeline-left-logo">
-                              <img src="../img/clarify/open.png" alt="img">
+                              <img src="../../../img/clarify/open.svg" alt="img">
                             </div>
                           </div>
 
@@ -339,65 +320,13 @@
                           </div>
                         </div>
                       </div>
-
-                      <div class="clarify-timeline-item reply">
-                        <div class="clarify-timeline-left">
-                          <div class="clarify-timeline-left-line">
-
-                          </div>
-                          <div class="clarify-timeline-left-name">
-                            Ответ
-                            <div class="clarify-timeline-left-logo">
-                              <img src="../img/clarify/reply.svg" alt="img">
-                            </div>
-                          </div>
-
-                        </div>
-
-                        <div class="clarify-timeline-right">
-                          <div class="clarify-timeline-right-date">
-                            26/10/2020, 14:10
-                          </div>
-                          <div class="clarify-timeline-right-name">
-                            Виктория Посылкова
-                          </div>
-                          <div class="clarify-timeline-right-massage">
-                            Ищу информацию
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="clarify-timeline-item reply">
-                        <div class="clarify-timeline-left">
-                          <div class="clarify-timeline-left-line">
-
-                          </div>
-                          <div class="clarify-timeline-left-name">
-                            Ответ
-                            <div class="clarify-timeline-left-logo">
-                              <img src="../img/clarify/reply.svg" alt="img">
-                            </div>
-                          </div>
-
-                        </div>
-
-                        <div class="clarify-timeline-right">
-                          <div class="clarify-timeline-right-date">
-                            26/10/2020, 14:10
-                          </div>
-                          <div class="clarify-timeline-right-name">
-                            Наталия Петрова
-                          </div>
-                          <div class="clarify-timeline-right-massage">
-                            Сделайте срочно
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
 
                   <div class="taskPopup-create-task-form clarify-create-task-form">
                     <form action="">
+
+
 
                       <div class="send-btn-wrap">
                         <textarea name="text" id="text"
@@ -418,9 +347,10 @@
                         </div>
 
                         <div class="taskPopup-create-btns ml-auto">
-                          <button class="taskPopup-create-btn">
-                            Подтвердить
-                          </button>
+                          <a href="javascript:void(0)" class="taskPopup-create-btn taskPopup-create-btn--outline"
+                             onclick="closeTask()">
+                            Отмена задачи
+                          </a>
                         </div>
                       </div>
 
@@ -438,16 +368,33 @@
 
           <div class="taskPopup-right clarify-timeline-right">
             <div class="clarify-timeline-title open">
-              Срок хранения посылки нужно продлит до:
-            </div>
-
-            <div class="clarify-timeline-right-data">
-              05 / 09 / 2021
+              Нужно отменить доставку
             </div>
 
             <div class="clarify-timeline-right-comment">
               <div class="clarify-timeline-right-comment-item blue">
-                Нужно продлить срок хранения
+                К сожалению, клиент отклзался от заказа. Вынуждены отменить доставку. Приносим свои глубочайшие извинения.
+              </div>
+
+              <div class="clarify-timeline-right-comment-photos">
+                <div class="clarify-timeline-right-comment-photo">
+                  <a href="../../../img/clarify/photo-package-big.png"
+                     data-lightbox="example-2" data-title="imgphotosповрежленная посылка.jpg <a href='#'>Скачать</a>">
+                    <img src="../../../img/clarify/photo-package.png" alt="img">
+                  </a>
+                </div>
+                <div class="clarify-timeline-right-comment-photo">
+                  <a href="../../../img/clarify/photo-package-big.png"
+                     data-lightbox="example-2" data-title="imgphotosповрежленная посылка.jpg <a href='#'>Скачать</a>">
+                    <img src="../../../img/clarify/photo-package.png" alt="img">
+                  </a>
+                </div>
+                <div class="clarify-timeline-right-comment-photo">
+                  <a href="../../../img/clarify/photo-package-big.png"
+                     data-lightbox="example-2" data-title="imgphotosповрежленная посылка.jpg <a href='#'>Скачать</a>">
+                    <img src="../../../img/clarify/photo-package.png" alt="img">
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -587,6 +534,24 @@
   </div>
 
 
+  <div class="close-task-popup">
+    <div class="confirmation-popup__inner">
+
+      <div class="confirmation-popup__top-txt">
+        Вы уверены, что хотите  <span>отменить задачу?</span>
+      </div>
+
+      <div class="taskPopup-create-btns confirmation-popup__btns">
+        <button class="taskPopup-create-btn">
+          Да
+        </button>
+        <button class="taskPopup-create-btn taskPopup-create-btn--outline" onclick="closeTaskNo()">
+          Нет
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- <script src="./js/app.js"></script> -->
   <!-- include FilePond library -->
   <!--<script src="./js/filepond/filepond.min.js"></script>-->
@@ -594,13 +559,14 @@
   <!--<script src="./js/filepond/filepond.jquery.js"></script>-->
   <!-- include FilePond plugins -->
   <!--<script src="./js/filepond/filepond-plugin-file-validate-type.js"></script>-->
-  <script src="../js/fapp.js"></script>
+  <script src="../../../js/fapp.js"></script>
   <!-- <script src="./js/select2.full.min.js"></script> -->
   <!--<script src="./js/custom.js"></script>-->
 
   <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
   <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-  <script src="../js/clarify-popup.js"></script>
+  <script src="../../../js/lightbox.min.js"></script>
+  <script src="../../../js/clarify-popup.js"></script>
 
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>

@@ -592,7 +592,7 @@ div.popup-block{
     display: block;
     width: 87px;
     height: 70px;
-    background: url("../images/open.png") center center no-repeat;
+    background: url("../images/open.svg") center center no-repeat;
     position: absolute;
     top: -1px;
     left: -36px;

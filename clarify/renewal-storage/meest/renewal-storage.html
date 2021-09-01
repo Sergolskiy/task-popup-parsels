@@ -11,11 +11,11 @@
   <!--  <link rel="preconnect" href="https://fonts.gstatic.com">-->
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="../css/app.css" rel="stylesheet">
-  <link href="../css/custom.css" rel="stylesheet">
-  <link href="../css/taskPopup.css" rel="stylesheet">
-  <link href="../css/clarify-popup.css" rel="stylesheet">
-  <link href="../css/confirmation-popup.css" rel="stylesheet">
+  <link href="../../../css/app.css" rel="stylesheet">
+  <link href="../../../css/custom.css" rel="stylesheet">
+  <link href="../../../css/taskPopup.css" rel="stylesheet">
+  <link href="../../../css/clarify-popup.css" rel="stylesheet">
+  <link href="../../../css/confirmation-popup.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 </head>
@@ -279,26 +279,9 @@
 
               <div class="taskPopup-create-task active">
                 <div class="taskPopup-create-task-title">
-                  <span>
-                    Уточнение
+                  <span class="open-status">
+                    Продление срока хранения
                   </span>
-<!--                  <div class="taskPopup-create-task-tooltype">-->
-<!--                    <span class="taskPopup-create-task-tooltype-ico js_popper_task">-->
-<!--                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                        <path fill-rule="evenodd" clip-rule="evenodd"-->
-<!--                          d="M14.3341 0.750122H5.66512C2.64412 0.750122 0.750122 2.88912 0.750122 5.91612V14.0841C0.750122 17.1111 2.63512 19.2501 5.66512 19.2501H14.3331C17.3641 19.2501 19.2501 17.1111 19.2501 14.0841V5.91612C19.2501 2.88912 17.3641 0.750122 14.3341 0.750122Z"-->
-<!--                          stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />-->
-<!--                        <path d="M9.99475 14.0001V10.0001" stroke="#130F26" stroke-width="1.5" stroke-linecap="round"-->
-<!--                          stroke-linejoin="round" />-->
-<!--                        <path d="M9.98987 6.20435H9.99987" stroke="#130F26" stroke-width="2" stroke-linecap="round"-->
-<!--                          stroke-linejoin="round" />-->
-<!--                      </svg>-->
-<!--                    </span>-->
-<!--                    <span class="taskPopup-create-task-tooltype-text">-->
-<!--                      Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text-->
-<!--                      Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text Уточнение text-->
-<!--                    </span>-->
-<!--                  </div>-->
 
 
 
@@ -324,7 +307,7 @@
                           <div class="clarify-timeline-left-name">
                             Открытые
                             <div class="clarify-timeline-left-logo">
-                              <img src="../img/clarify/open.png" alt="img">
+                              <img src="../../../img/clarify/open.svg" alt="img">
                             </div>
                           </div>
 
@@ -339,11 +322,89 @@
                           </div>
                         </div>
                       </div>
+
+                      <div class="clarify-timeline-item reply">
+                        <div class="clarify-timeline-left">
+                          <div class="clarify-timeline-left-line">
+
+                          </div>
+                          <div class="clarify-timeline-left-name">
+                            Ответ
+                            <div class="clarify-timeline-left-logo">
+                              <img src="../../../img/clarify/reply.svg" alt="img">
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="clarify-timeline-right">
+                          <div class="clarify-timeline-right-date">
+                            26/10/2020, 14:10
+                          </div>
+                          <div class="clarify-timeline-right-name">
+                            Виктория Посылкова
+                          </div>
+                          <div class="clarify-timeline-right-massage">
+                            Ищу информацию
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="clarify-timeline-item reply">
+                        <div class="clarify-timeline-left">
+                          <div class="clarify-timeline-left-line">
+
+                          </div>
+                          <div class="clarify-timeline-left-name">
+                            Ответ
+                            <div class="clarify-timeline-left-logo">
+                              <img src="../../../img/clarify/reply.svg" alt="img">
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="clarify-timeline-right">
+                          <div class="clarify-timeline-right-date">
+                            26/10/2020, 14:10
+                          </div>
+                          <div class="clarify-timeline-right-name">
+                            Наталия Петрова
+                          </div>
+                          <div class="clarify-timeline-right-massage">
+                            Сделайте срочно
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
                   <div class="taskPopup-create-task-form clarify-create-task-form">
                     <form action="">
+
+                      <div class="clarify-timeline-radio-answer">
+                        <div class="clarify-timeline-radio-items">
+                          <div class="clarify-timeline-radio-item green">
+                            <input type="radio" id="answer3" name="answer" >
+                            <label for="answer3" onclick="changeRadioType()">
+                              Решено
+                            </label>
+                          </div>
+                          <div class="clarify-timeline-radio-item yellow">
+                            <input type="radio" id="answer2" name="answer" >
+                            <label for="answer2" onclick="changeRadioType()">
+                              В процесе
+                            </label>
+                          </div>
+
+                          <div class="clarify-timeline-radio-item red">
+                            <input type="radio" id="answer4" name="answer" >
+                            <label for="answer4" onclick="changeRadioType()">
+                              Отклонить
+                            </label>
+                          </div>
+                        </div>
+                      </div>
 
                       <div class="send-btn-wrap">
                         <textarea name="text" id="text"
@@ -364,8 +425,8 @@
                         </div>
 
                         <div class="taskPopup-create-btns ml-auto">
-                          <button class="taskPopup-create-btn taskPopup-create-btn--outline">
-                            Отмена задачи
+                          <button class="taskPopup-create-btn">
+                            Подтвердить
                           </button>
                         </div>
                       </div>
@@ -384,11 +445,17 @@
 
           <div class="taskPopup-right clarify-timeline-right">
             <div class="clarify-timeline-title open">
-              Отсутствует нотификации к посылке
+              Срок хранения посылки нужно продлит до:
             </div>
 
             <div class="clarify-timeline-right-data">
-              05 / 09 / 2021
+              05 <span class="open-status">/</span> 09 <span class="open-status">/</span> 2021
+            </div>
+
+            <div class="clarify-timeline-right-comment">
+              <div class="clarify-timeline-right-comment-item blue">
+                Нужно продлить срок хранения
+              </div>
             </div>
 
           </div>
@@ -534,13 +601,13 @@
   <!--<script src="./js/filepond/filepond.jquery.js"></script>-->
   <!-- include FilePond plugins -->
   <!--<script src="./js/filepond/filepond-plugin-file-validate-type.js"></script>-->
-  <script src="../js/fapp.js"></script>
+  <script src="../../../js/fapp.js"></script>
   <!-- <script src="./js/select2.full.min.js"></script> -->
   <!--<script src="./js/custom.js"></script>-->
 
   <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
   <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-  <script src="../js/clarify-popup.js"></script>
+  <script src="../../../js/clarify-popup.js"></script>
 
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>

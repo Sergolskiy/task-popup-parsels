@@ -100,10 +100,11 @@
 }
 
 .clarify-timeline-items{
-    /*max-height: 350px;*/
     overflow: auto;
     padding-right: 10px;
-    /*max-height: 40vh;*/
+    min-height: 476px;
+    max-height: 476px;
+
 }
 
 .clarify-timeline-items::-webkit-scrollbar {
@@ -235,7 +236,7 @@
 }
 
 .clarify-timeline-item.reply .clarify-timeline-left-name{
-    color: #5C0086;
+    color: #B07EC7;
 }
 
 .clarify-timeline-item.reject .clarify-timeline-left-name{
@@ -248,6 +249,7 @@
 
 .clarify-timeline-left-logo{
     margin-top: 10px;
+    display: flex;
 }
 
 .clarify-timeline-right{
@@ -669,7 +671,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 5px;
+    margin-left: auto;
 }
 
 .clarify-timeline-user-txt-ico-i{
@@ -679,6 +681,7 @@
 
 .clarify-timeline-user-txt-ico-i:last-child{
     margin-right: 0;
+    margin-left: 10px;
 }
 
 .clarify-timeline-user-input{
@@ -969,6 +972,7 @@
     font-size: 14px;
     line-height: 16px;
     color: #5081E9;
+    cursor: pointer;
 }
 
 .taskPopup-file-btn label:before{
@@ -978,6 +982,7 @@
     height: 14px;
     background: url("../img/clarify/clip-ico.svg") center center no-repeat;
     margin-right: 8px;
+    margin-top: -2px;
 }
 
 .clarify-create-btn{
@@ -1117,6 +1122,11 @@
     .taskPopup-recipient-data-copy {
         margin: 0 -15px 24px;
         padding: 0 15px 24px;
+    }
+
+    .clarify-timeline-items{
+        min-height: 505px;
+        max-height: 505px;
     }
 }
 

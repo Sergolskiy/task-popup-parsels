@@ -65,3 +65,7 @@ function closeTask() {
 function closeTaskNo() {
     $('.close-task-popup').removeClass('active')
 }
+
+function reOpenTask() {
+
+}
