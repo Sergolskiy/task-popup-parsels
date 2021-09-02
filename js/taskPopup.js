@@ -118,14 +118,16 @@ function icoCalendar(thatClass) {
 }
 
 var templateText = document.querySelector('.taskPopup-create-task-tooltype-text');
+
 if (templateText) {
 	tippy('.js_popper_task', {
 		content: templateText.innerHTML,
 		animation: 'fade',
+		allowHTML: true,
 		arrow: true,
 		maxWidth: 708,
 		placement: 'bottom',
-		delay: [100, 1000],
+		// delay: [100, 1000],
 	});
 }
 
@@ -253,6 +255,7 @@ $(document).ready(function () {
 
 	})
 
+	autosize(document.querySelectorAll('textarea'));
 	// according left block
 
 });

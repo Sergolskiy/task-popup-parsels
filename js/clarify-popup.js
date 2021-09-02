@@ -70,7 +70,6 @@ function reOpenTask() {
     $('.reopen-hide').slideToggle()
 }
 
-autosize(document.querySelectorAll('textarea'));
 
 // document.querySelectorAll('textarea').forEach(el => {
 //     el.style.height = el.setAttribute('style', 'height: ' + (el.scrollHeight + 1) + 'px');

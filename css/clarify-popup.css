@@ -136,8 +136,8 @@
 
 .clarify-timeline-left-line{
     height: 100%;
-    min-width: 15px;
-    width: 15px;
+    min-width: 20px;
+    width: 20px;
 }
 
 .clarify-timeline-left-line:before{
@@ -957,35 +957,6 @@
     background: transparent;
 }
 
-.taskPopup-file-btn{
-    padding-top: 40px;
-}
-
-.taskPopup-file-btn input{
-    display: none;
-}
-
-.taskPopup-file-btn label{
-    display: flex;
-    align-items: center;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    color: #5081E9;
-    cursor: pointer;
-}
-
-.taskPopup-file-btn label:before{
-    content: "";
-    display: block;
-    width: 15px;
-    height: 14px;
-    background: url("../img/clarify/clip-ico.svg") center center no-repeat;
-    margin-right: 8px;
-    margin-top: -2px;
-}
 
 .clarify-create-btn{
     display: none;

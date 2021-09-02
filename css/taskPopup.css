@@ -1038,14 +1038,18 @@
   box-sizing: border-box;
   border-radius: 12px;
   border: 1px solid transparent;
-  padding: 16px;
-  margin-left: 3px;
-  margin-right: 3px;
+  padding: 15px;
   width: 100%;
   font-size: 13px;
   line-height: 15px;
   font-weight: 400;
-  min-height: 180px;
+
+
+  height: 48px;
+  min-height: initial;
+  margin: 0;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 .taskPopup-create-task-form textarea:focus {
@@ -1205,16 +1209,16 @@
   color: #8c8c8c;
   cursor: pointer;
   transition: 0.3s;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .taskPopup-create-radio-type-item
   input:checked
   + .taskPopup-create-radio-type-label {
   font-weight: bold;
-  background: #f3f3f4;
+  background: #E5ECFC;
   text-align: center;
-  color: #000;
+  color: #5081E9;
 }
 
 .taskPopup-create-radio-type-ico {
@@ -1291,12 +1295,12 @@
   margin-right: 16px;
   font-size: 16px;
   line-height: 24px;
-  color: #000000;
-  font-weight: 400;
+  color: #5081E9;
+  font-weight: 500;
   width: 100%;
   max-width: 170px;
   cursor: pointer;
-  background: #f3f3f4;
+  background: #E5ECFC;
 }
 
 .taskPopup-create-calendar-item span.ico-calendar {
@@ -1309,7 +1313,7 @@
 }
 
 .taskPopup-create-calendar-item input::-webkit-input-placeholder {
-  color: #000;
+  color: #5081E9;
 }
 
 .taskPopup-create-calendar-calc {
@@ -1447,9 +1451,40 @@
   border-radius: 12px;
 }
 .tippy-box {
-  text-align: center;
   border-radius: 12px;
+  background: #FFFFFF;
+  border: 1px solid #5081E9;
+  box-sizing: border-box;
+  border-radius: 12px;
+  pointer-events: initial !important;
 }
+
+.tippy-content{
+  background: #FFFFFF;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  max-width: 475px;
+}
+
+.tippy-box[data-placement^=bottom]>.tippy-arrow:before{
+  border-width: 0;
+  border-bottom-color: initial;
+  transform-origin: center bottom;
+  border: 1px solid #5081E9;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  background: white;
+}
+
+.tippy-content a{
+  color: #5081E9;
+}
+
 .taskPopup-create-task-tooltype-text {
   display: none;
   color: #fff;
@@ -1475,6 +1510,37 @@
 
 .taskPopup-content .taskPopup-center {
   padding-right: 9px;
+}
+
+
+.taskPopup-file-btn{
+  padding-top: 40px;
+}
+
+.taskPopup-file-btn input{
+  display: none;
+}
+
+.taskPopup-file-btn label{
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #5081E9;
+  cursor: pointer;
+}
+
+.taskPopup-file-btn label:before{
+  content: "";
+  display: block;
+  width: 15px;
+  height: 14px;
+  background: url("../img/clarify/clip-ico.svg") center center no-repeat;
+  margin-right: 8px;
+  margin-top: -2px;
 }
 
 @media screen and (max-width: 1800px) {
