@@ -67,5 +67,16 @@ function closeTaskNo() {
 }
 
 function reOpenTask() {
-
+    $('.reopen-hide').slideToggle()
 }
+
+autosize(document.querySelectorAll('textarea'));
+
+// document.querySelectorAll('textarea').forEach(el => {
+//     el.style.height = el.setAttribute('style', 'height: ' + (el.scrollHeight + 1) + 'px');
+//     el.classList.add('auto');
+//     el.addEventListener('input', e => {
+//         el.style.height = 'auto';
+//         el.style.height = (el.scrollHeight + 1) + 'px';
+//     });
+// });

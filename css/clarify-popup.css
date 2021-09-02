@@ -58,6 +58,7 @@
     height: 48px;
     min-height: initial;
     padding: 15px;
+    margin: 0;
 }
 
 .taskPopup-create-files-block{
@@ -946,7 +947,8 @@
 
 .send-btn{
     position: absolute;
-    top: 16px;
+    top: 50%;
+    margin-top: -11px;
     right: 0;
     border: 0;
     display: flex;
@@ -1104,6 +1106,28 @@
 
 .lb-data .lb-details{
     width: 100% !important;
+}
+
+.ml-auto{
+    margin-left: auto;
+}
+
+.taskPopup-create-btn.reopen-btn svg{
+    position: relative;
+    top: 3px;
+}
+
+.taskPopup-create-btn.reopen-btn svg path{
+    fill: #5081E9;
+    transition: 0.3s;
+}
+
+.taskPopup-create-btn.reopen-btn:hover svg path{
+    fill: white;
+}
+
+.reopen-hide{
+    display: none;
 }
 
 @media screen and (max-width: 1800px){
