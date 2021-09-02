@@ -883,8 +883,8 @@
     height: 9px;
     background: white;
     position: absolute;
-    top: 100%;
-    margin-top: -8px;
+    top: 50%;
+    margin-top: 10px;
     z-index: 2;
 }
 
@@ -892,21 +892,21 @@
     content: "";
     display: block;
     width: 1px;
-    height: 30px;
+    height: calc(50% + 8px);
     background: blue;
     position: absolute;
-    top: 100%;
-    margin-top: 1px;
+    top: 50%;
+    margin-top: 17px;
     left: 5px;
     z-index: 2;
 }
 
 .clarify-timeline-item.reopen .clarify-timeline-left svg{
-    top: 100%;
+    top: 50%;
     position: absolute;
     left: -1px;
     z-index: 3;
-    margin-top: -10px;
+    margin-top: 7px;
 }
 
 .clarify-timeline-item.reopen .clarify-timeline-left svg path:first-child{
