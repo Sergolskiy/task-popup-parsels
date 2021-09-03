@@ -79,7 +79,6 @@
 }
 
 .taskPopup-content .taskPopup-left {
-  border-right: 1px solid #dcecfa;
   background-color: #f2f2f2;
   padding: 40px;
 }
@@ -1496,10 +1495,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  overflow: auto;
-  overflow-x: hidden;
   padding-bottom: 30px;
-  padding-right: 10px;
+  /*padding-right: 10px;*/
 }
 
 .taskPopup-content .taskPopup-left,
