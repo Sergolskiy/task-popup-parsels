@@ -884,8 +884,8 @@
     height: 9px;
     background: white;
     position: absolute;
-    top: 50%;
-    margin-top: 10px;
+    top: 0;
+    margin-top: -33px;
     z-index: 2;
 }
 
@@ -1151,12 +1151,14 @@
 .filepond--root .filepond--list-scroller {
     height: 100%;
     max-height: 140px;
+    margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
 
 .filepond--list{
     max-height: 120px;
     overflow: auto;
+    overflow-x: hidden;
     height: 100%;
 }
 .filepond--list::-webkit-scrollbar {
