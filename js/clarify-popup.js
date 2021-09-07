@@ -54,7 +54,14 @@ if (templateText) {
     });
 }
 
-function changeRadioType(){
+function changeRadioType(that){
+    if($(that).prev().is(':checked')){
+        $('.clarify-create-btn').removeClass('open')
+        setTimeout(() => {
+            $(that).prev().prop('checked', false);
+        },1)
+        return
+    }
     $('.clarify-create-btn').addClass('open')
 }
 

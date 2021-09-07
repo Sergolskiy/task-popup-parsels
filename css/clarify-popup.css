@@ -129,7 +129,7 @@
 
 .clarify-timeline-left{
     display: flex;
-    width: 118px;
+    width: 135px;
     min-width: fit-content;
     margin-right: 18px;
 }
@@ -187,7 +187,6 @@
     left: 5px;
     width: 1px;
     height: calc(100% + 18px);
-    border-radius: 50%;
 }
 
 .clarify-timeline-item:last-child .clarify-timeline-left-line:after{
@@ -749,6 +748,7 @@
 .taskPopup-left-td-name{
     font-style: normal;
     font-weight: normal;
+    vertical-align: top;
 }
 
 .top-status {
@@ -885,7 +885,7 @@
     background: white;
     position: absolute;
     top: 0;
-    margin-top: -33px;
+    margin-top: -32px;
     z-index: 2;
 }
 
@@ -893,13 +893,13 @@
     content: "";
     display: block;
     width: 1px;
-    height: calc(50% + 8px);
+    height: calc(25px);
     background: blue;
     position: absolute;
-    top: 50%;
-    margin-top: 17px;
+    top: 0;
+    margin-top: -23px;
     left: 5px;
-    z-index: 2;
+    z-index: 0;
 }
 
 .clarify-timeline-item.reopen .clarify-timeline-left svg{
@@ -938,6 +938,43 @@
     fill: #f2564f;
 }
 
+
+
+
+.clarify-timeline-item.in-progress + .clarify-timeline-item.success svg path:first-child{
+    fill: #FEA33D;
+}
+.clarify-timeline-item.in-progress + .clarify-timeline-item.success svg path:last-child{
+    fill: #6CCC79;
+}
+.clarify-timeline-item.in-progress + .clarify-timeline-item.success .clarify-timeline-left:after{
+    background: #6ccc79;
+}
+
+
+
+.clarify-timeline-item.open + .clarify-timeline-item.in-progress svg path:first-child{
+    fill: #5081E9;
+}
+.clarify-timeline-item.open + .clarify-timeline-item.in-progress svg path:last-child{
+    fill: #FEA33D;
+}
+.clarify-timeline-item.open + .clarify-timeline-item.in-progress .clarify-timeline-left:after{
+    background: #FEA33D;
+}
+
+
+
+.clarify-timeline-item.in-progress + .clarify-timeline-item.reject svg path:first-child{
+    fill: #FEA33D;
+}
+.clarify-timeline-item.in-progress + .clarify-timeline-item.reject svg path:last-child{
+    fill: #F2564F;
+}
+.clarify-timeline-item.in-progress + .clarify-timeline-item.reject .clarify-timeline-left:after{
+    background: #F2564F;
+}
+
 .taskPopup-create-task-content{
     padding-bottom: 0;
 }
@@ -948,8 +985,8 @@
 
 .send-btn{
     position: absolute;
-    top: 50%;
-    margin-top: -11px;
+    bottom: 0;
+    margin-bottom: 20px;
     right: 16px;
     border: 0;
     display: flex;
