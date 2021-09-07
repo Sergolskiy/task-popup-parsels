@@ -1137,10 +1137,12 @@
 
 
 .filepond--root{
-    max-height: 190px;
+    max-height: 165px;
 }
 
-
+.filepond--root .filepond--drop-label {
+    min-height: 2.75em !important;
+}
 
 #crmParcelOpenTask .filepond--drop-label label{
     position: absolute;
