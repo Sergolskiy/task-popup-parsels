@@ -97,7 +97,7 @@
 
 .clarify-timeline{
     padding-bottom: 10px;
-    border-bottom: 1px solid #DEDEDE;
+    /*border-bottom: 1px solid #DEDEDE;*/
 }
 
 .clarify-timeline-items{
@@ -831,8 +831,9 @@
 }
 
 .taskPopup-recipient-data-copy{
-    margin: 0 -40px 24px;
-    padding: 0 40px 24px;
+    /*margin: 0 -40px 24px;*/
+    /*padding: 0 40px 24px;*/
+    margin-bottom: 24px;
     border-bottom: 1px solid #DEDEDE;
 }
 
@@ -949,7 +950,7 @@
     position: absolute;
     top: 50%;
     margin-top: -11px;
-    right: 8px;
+    right: 16px;
     border: 0;
     display: flex;
     align-items: center;
@@ -985,6 +986,7 @@
 
 .clarify-timeline-right-comment-photo img{
     max-width: 100%;
+    max-height: 80px;
 }
 
 .clarify-timeline-right-data{
@@ -1115,10 +1117,10 @@
     .accordion-block-wrap {
         min-width: 280px;
     }
-    .taskPopup-recipient-data-copy {
-        margin: 0 -15px 24px;
-        padding: 0 15px 24px;
-    }
+    /*.taskPopup-recipient-data-copy {*/
+    /*    margin: 0 -15px 24px;*/
+    /*    padding: 0 15px 24px;*/
+    /*}*/
 
     .clarify-timeline-items{
         min-height: 505px;
@@ -1131,4 +1133,37 @@
     #clarify-popup .modal-dialog{
         height: 93vh;
     }
+}
+
+
+.filepond--root{
+    max-height: 190px;
+}
+
+
+
+#crmParcelOpenTask .filepond--drop-label label{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.filepond--root .filepond--list-scroller {
+    height: 100%;
+    max-height: 140px;
+    margin-bottom: 0 !important;
+}
+
+.filepond--list{
+    max-height: 120px;
+    overflow: auto;
+    height: 100%;
+}
+.filepond--list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.filepond--list::-webkit-scrollbar-thumb {
+    background-color: #dadce0;
+    border-radius: 4px;
 }
