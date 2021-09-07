@@ -103,8 +103,8 @@
 .clarify-timeline-items{
     overflow: auto;
     /*padding-right: 10px;*/
-    min-height: 492px;
-    max-height: 492px;
+    min-height: 455px;
+    max-height: 455px;
 
 }
 
@@ -903,11 +903,11 @@
 }
 
 .clarify-timeline-item.reopen .clarify-timeline-left svg{
-    top: 50%;
+    top: 0;
     position: absolute;
     left: -1px;
     z-index: 3;
-    margin-top: 7px;
+    margin-top: -34px;
 }
 
 .clarify-timeline-item.reopen .clarify-timeline-left svg path:first-child{
@@ -1084,6 +1084,14 @@
 
 .ml-auto{
     margin-left: auto;
+}
+
+.taskPopup-create-btns{
+    align-items: flex-start;
+}
+
+.taskPopup-create-btn{
+    margin-top: 9px;
 }
 
 .taskPopup-create-btn.reopen-btn svg{
