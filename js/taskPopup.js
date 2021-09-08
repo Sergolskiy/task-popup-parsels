@@ -11,6 +11,19 @@ function openTableDesc(that) {
 }
 
 
+function openConfirmationPopup(that, val){
+
+	$(that).closest('form').submit(function(e){
+		return false;
+	});
+	console.log(val);
+	$('.confirmation-popup[data-type="'+val+'"]').addClass('active')
+}
+
+function closeConfirmationPopup(){
+	$('.confirmation-popup').removeClass('active')
+}
+
 
 function changeTypeTask(type, that) {
 	$('.taskPopup-top-btn').removeClass('active')
