@@ -25,6 +25,12 @@ function closeConfirmationPopup(){
 }
 
 
+function toggleSchedule(){
+	$('.schedule__btn').toggleClass('open')
+	$('.schedule__center').slideToggle()
+}
+
+
 function changeTypeTask(type, that) {
 	$('.taskPopup-top-btn').removeClass('active')
 	$(that).toggleClass('active')
