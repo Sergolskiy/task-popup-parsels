@@ -1795,3 +1795,151 @@
   top: 8px !important;
   right: 5px !important;
 }
+
+
+
+.taskPopup-create-warning{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.taskPopup-create-warning > a{
+  margin-left: 8px;
+}
+
+.taskPopup-create-warning-item {
+  background: #fff6ec;
+  border-radius: 12px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #663C00 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+}
+
+.taskPopup-create-warning-item svg {
+  margin-right: 14px;
+}
+
+.taskPopup-create-task-form .taskPopup-create-warning{
+  margin-top: -20px;
+  margin-bottom: 24px;
+}
+
+.schedule{
+  margin-bottom: 24px;
+}
+
+.schedule__top{
+  display: flex;
+  align-items: center;
+}
+
+.schedule__btn{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.schedule__status{
+  margin-left: 35px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+}
+
+.schedule__status span{
+  margin-left: 14px;
+  position: relative;
+  top: 1px;
+}
+
+.schedule__center{
+  margin-top: 16px;
+  width: 100%;
+  max-width: calc(100vw - 360px - 410px);
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+.schedule__days{
+  display: flex;
+  justify-content: space-between;
+  min-width: fit-content;
+  white-space: nowrap;
+}
+
+.schedule__day{
+  border-right: 1px solid #DEDEDE;
+  padding-right: 9px;
+  margin-right: 9px;
+}
+
+.schedule__day:last-child{
+  border: 0;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.schedule__day-name{
+  margin-bottom: 8px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #5081E9;
+}
+
+.schedule__day-time{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.schedule__bottom{
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.schedule__bottom-item{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #8C8C8C;
+  margin-right: 45px;
+}
+
+.schedule__bottom-item span{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  margin-left: 8px;
+}
+
+.taskPopup-create-task-form .taskPopup-file-btn{
+  padding-top: 40px;
+}
