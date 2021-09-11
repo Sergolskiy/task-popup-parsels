@@ -113,6 +113,11 @@
   background: rgba(80, 128, 233, 0.15);
 }
 
+.taskPopup-top-action.inactive{
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .taskPopup-comments-number {
   display: flex;
   align-items: center;
@@ -925,6 +930,62 @@
   padding-left: 24px;
 }
 
+.taskPopup-create-item.inactive {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.taskPopup-create-item:before{
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  filter: grayscale(1);
+  transition: 0.3s;
+}
+
+.taskPopup-create-item.active:before,
+.taskPopup-create-item:hover:before{
+  filter: grayscale(0);
+}
+
+.taskPopup-create-item.delivery:before{
+  background: url("../img/close-square.svg") center center no-repeat;
+}
+.taskPopup-create-item.restartTask:before{
+  background: url("../img/play.svg") center center no-repeat;
+}
+.taskPopup-create-item.claim:before{
+  background: url("../img/info-circle1.svg") center center no-repeat;
+}
+.taskPopup-create-item.complaint:before{
+  background: url("../img/danger.svg") center center no-repeat;
+}
+.taskPopup-create-item.extended:before{
+  background: url("../img/Calendar1.svg") center center no-repeat;
+}
+.taskPopup-create-item.postponement:before{
+  background: url("../img/Calendar2.svg") center center no-repeat;
+}
+.taskPopup-create-item.сlarification:before{
+  background: url("../img/InfoCircle.svg") center center no-repeat;
+}
+.taskPopup-create-item.forwarding:before{
+  background: url("../img/Swap.svg") center center no-repeat;
+}
+.taskPopup-create-item.reDelivery:before{
+  background: url("../img/Traced.svg") center center no-repeat;
+}
+.taskPopup-create-item.refund:before{
+  background: url("../img/Wallet.svg") center center no-repeat;
+}
+.taskPopup-create-item.freetask:before{
+  background: url("../img/PaperPlus.svg") center center no-repeat;
+}
+.taskPopup-create-item.speedDelivery:before{
+  background: url("../img/TimeCircle.svg") center center no-repeat;
+}
+
 .taskPopup-create-txt {
   font-size: 16px;
   line-height: 24px;
@@ -1190,7 +1251,9 @@
   border-radius: 12px;
   border: 1px solid #f3f3f4;
 }
-.taskPopup-create-radio-type-item {
+.taskPopup-create-radio-type-item.inactive {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .taskPopup-create-radio-type-item input {
