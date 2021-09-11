@@ -17,7 +17,7 @@ function openConfirmationPopup(that, val){
 		return false;
 	});
 	console.log(val);
-	$('.confirmation-popup[data-type="'+val+'"]').addClass('active')
+	$('.confirmation-popup[data-type="'+val+'"]').modal()
 }
 
 function closeConfirmationPopup(){

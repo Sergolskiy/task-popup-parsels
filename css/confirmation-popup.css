@@ -8,9 +8,25 @@
     height: 100vh;
     overflow: auto;
     background: #0000004d;
-    z-index: -1;
     transition: 0.3s;
     opacity: 0;
+    z-index: -1;
+}
+
+.modal.confirmation-popup{
+    z-index: 1000000;
+}
+
+.modal.confirmation-popup .modal-dialog .modal-content{
+    border-radius: 20px;
+}
+
+.confirmation-popup .modal-close{
+    z-index: 10;
+}
+
+.mw-527{
+    max-width: 527px;
 }
 
 .close-task-popup.active,
@@ -21,12 +37,11 @@
 }
 
 .confirmation-popup__inner{
-    max-width: 527px;
     background: #FFFFFF;
     box-sizing: border-box;
     border-radius: 12px;
     margin: 0 auto;
-    margin-top: 90px;
+    /*margin-top: 90px;*/
     padding: 40px;
     min-height: 606px;
     display: flex;
