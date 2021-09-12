@@ -32,17 +32,21 @@ function toggleSchedule(){
 
 
 function changeTypeTask(type, that) {
-	$('.taskPopup-top-btn').removeClass('active')
 	$(that).toggleClass('active')
 	$('.taskPopup-center-table tr').hide()
-	$('.taskPopup-center-table tr[data-type="' + type + '"]').show("slow")
 
-	switch (type) {
-		case 'history':
-			$('.taskPopup-center-table tr[data-type]').show("slow");
-		default:
-			break;
-	}
+	let arr =[]
+	$('.taskPopup-top-btn').each(function (index, item){
+		if($(item).hasClass('active')){
+			arr.push($(item).attr('data-task'))
+		}
+	})
+
+	arr.map((item) => {
+		$('.taskPopup-center-table tr[data-type="'+item+'"]').show("slow");
+	})
+
+
 }
 
 function changeOptionType(that, type) {
