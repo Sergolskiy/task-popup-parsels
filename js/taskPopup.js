@@ -7,7 +7,7 @@ function openNewPopup() {
 
 function openTableDesc(that) {
 	$(that).toggleClass('open')
-	$(that).next().slideToggle()
+	$(that).closest('td').find('.taskPopup-center-table-desc').slideToggle()
 }
 
 
@@ -58,6 +58,9 @@ function changeOptionType(that, type) {
 	$('.taskPopup-right-inner[data-right="' + type + '"]').addClass('active')
 	if (type === 'comments') {
 		$('.taskPopup-center-inner[data-center="table"]').addClass('active')
+	}
+	if (type === 'history' || type === 'table') {
+		$('.taskPopup-top-action').last().addClass('active')
 	}
 }
 
