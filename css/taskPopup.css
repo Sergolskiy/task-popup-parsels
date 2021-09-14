@@ -455,6 +455,11 @@
   line-height: 20px;
   color: #5081e9;
   margin-bottom: 16px;
+  display: flex;
+}
+
+.taskPopup-left-recipient-name a{
+  margin-left: 6px;
 }
 
 .taskPopup-left-value {
