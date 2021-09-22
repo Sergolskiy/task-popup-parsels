@@ -143,11 +143,9 @@ function icoCalendar(thatClass) {
 
 }
 
-var templateText = document.querySelector('.taskPopup-create-task-tooltype-text');
-
-if (templateText) {
-	tippy('.js_popper_task', {
-		content: templateText.innerHTML,
+$('.js_popper_task').each(function (index){
+	tippy($(this)[0], {
+		content: $(this).next().html() + index,
 		animation: 'fade',
 		allowHTML: true,
 		arrow: true,
@@ -155,7 +153,7 @@ if (templateText) {
 		placement: 'bottom',
 		// delay: [100, 1000],
 	});
-}
+})
 
 
 
