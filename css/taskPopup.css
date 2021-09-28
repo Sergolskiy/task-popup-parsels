@@ -193,7 +193,7 @@
 
 .taskPopup-right {
   width: 100%;
-  max-width: 512px; 
+  max-width: 512px;
   max-width: 528px;
 }
 
@@ -401,8 +401,8 @@
 }
 
 .according-item {
-  padding: 24px 0;
-  border-bottom: 1px solid #dedede;
+  /*padding: 24px 0;*/
+  /*border-bottom: 1px solid #dedede;*/
 }
 
 .accordion-title {
@@ -445,11 +445,11 @@
   transition: 0.3s;
 }
 
-.accordion-title-ico{
+.accordion-title-ico svg{
   transition: 0.3s;
 }
 
-.accordion-title-ico._active {
+.accordion-title-ico._active svg {
   transform: rotate(90deg);
 }
 
@@ -2185,6 +2185,7 @@
 
 .accordion-title-ico{
   margin-left: -5px;
+  margin-right: 8px;
 }
 
 .taskPopup-left-block.package-number{
@@ -2366,4 +2367,44 @@
   font-size: 14px;
   line-height: 16px;
   color: #000000;
+}
+
+.caption-data{
+  margin-top: -5px;
+  display: flex;
+}
+
+.caption-data-name{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #8C8C8C;
+}
+
+.caption-data-val{
+  margin-left: 35px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #8C8C8C;
+}
+
+.accordion-title-ico{
+  cursor: pointer;
+}
+
+.taskPopup-recipient-data .caption-data{
+  margin-bottom: 14px;
+}
+
+.taskPopup-recipient-data .accordion-content{
+  padding-top: 0;
+}
+
+.taskPopup-recipient-data .accordion-title-ico{
+  margin-left: 0;
 }

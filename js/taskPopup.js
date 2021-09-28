@@ -126,7 +126,7 @@ function changeForwarding(that) {
 }
 
 function accordingInfo(that) {
-	$(that.querySelector('.accordion-title-ico')).toggleClass('_active')
+	$(that.closest('.according-item').querySelector('.accordion-title-ico')).toggleClass('_active')
 	$(that.closest('.according-item').querySelector('.accordion-content')).slideToggle()
 	//  .toggleClass('_active')
 }
