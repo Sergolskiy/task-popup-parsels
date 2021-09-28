@@ -2369,8 +2369,11 @@
   color: #000000;
 }
 
-.caption-data{
+.according-item .accordion-content{
   margin-top: -5px;
+}
+
+.caption-data{
   display: flex;
 }
 
