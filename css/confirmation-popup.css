@@ -15,7 +15,7 @@
 .close-task-popup.in ~ .modal-backdrop.fade.in:last-child{
     z-index: 1000000;
 }
-.close-task-popup{
+.close-task-popup.in{
     z-index: 10000000;
 }
 
@@ -54,10 +54,10 @@
     flex-direction: column;
 }
 
-.close-task-popup{
-    display: flex;
-    align-items: center;
-}
+/*.close-task-popup{*/
+    /*display: flex;*/
+    /*align-items: center;*/
+/*}*/
 
 .close-task-popup .confirmation-popup__inner{
     max-width: 465px;
