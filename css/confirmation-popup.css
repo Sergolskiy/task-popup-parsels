@@ -48,8 +48,14 @@
     flex-direction: column;
 }
 
+.close-task-popup{
+    display: flex;
+    align-items: center;
+}
+
 .close-task-popup .confirmation-popup__inner{
     max-width: 465px;
+    min-height: auto;
 }
 
 .confirmation-popup__top-img{
