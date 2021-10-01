@@ -2411,3 +2411,50 @@
 .taskPopup-recipient-data .accordion-title-ico{
   margin-left: 0;
 }
+
+
+.left-group-task{
+
+}
+
+.left-group-task__title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.left-group-task__subtitle{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+.left-group-task__links{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-group-task__link{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #5081E9;
+  margin-right: 16px;
+}
+
+.left-group-task__link:focus,
+.left-group-task__link:visited,
+.left-group-task__link:hover{
+  color: #5081E9;
+  text-decoration: none;
+}
