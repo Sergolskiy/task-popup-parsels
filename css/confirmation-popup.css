@@ -54,10 +54,17 @@
     flex-direction: column;
 }
 
-/*.close-task-popup{*/
-    /*display: flex;*/
-    /*align-items: center;*/
-/*}*/
+.close-task-popup .modal-dialog{
+    max-width: 485px;
+    width: 485px;
+    height: 87vh;
+    background: transparent;
+    display: flex;
+    align-items: center;
+}
+.close-task-popup .modal-content{
+    height: auto;
+}
 
 .close-task-popup .confirmation-popup__inner{
     max-width: 465px;

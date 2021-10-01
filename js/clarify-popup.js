@@ -66,11 +66,11 @@ function changeRadioType(that){
 }
 
 function closeTask() {
-    $('.close-task-popup').addClass('active')
+    $('#close-task-popup').modal()
 }
 
 function closeTaskNo() {
-    $('.close-task-popup').removeClass('active')
+    $('#close-task-popup').modal()
 }
 
 function reOpenTask() {

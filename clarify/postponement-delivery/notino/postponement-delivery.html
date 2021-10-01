@@ -511,19 +511,23 @@
 
 
   <div class="modal taskPopup fade close-task-popup" tabindex="-1" id="close-task-popup" role="dialog">
-    <div class="confirmation-popup__inner">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="confirmation-popup__inner ">
 
-      <div class="confirmation-popup__top-txt">
-        Вы уверены, что хотите  <span>отменить задачу?</span>
-      </div>
+          <div class="confirmation-popup__top-txt">
+            Вы уверены, что хотите  <span>отменить задачу?</span>
+          </div>
 
-      <div class="taskPopup-create-btns confirmation-popup__btns">
-        <button class="taskPopup-create-btn">
-          Да
-        </button>
-        <button class="taskPopup-create-btn taskPopup-create-btn--outline" onclick="closeTaskNo()">
-          Нет
-        </button>
+          <div class="taskPopup-create-btns confirmation-popup__btns">
+            <button class="taskPopup-create-btn">
+              Да
+            </button>
+            <button class="taskPopup-create-btn taskPopup-create-btn--outline" onclick="closeTaskNo()">
+              Нет
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
