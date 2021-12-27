@@ -1167,3 +1167,74 @@
     background-color: #dadce0;
     border-radius: 4px;
 }
+
+
+
+.clarify-timeline--border-bottom{
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.request-number{
+    margin-top: 24px;
+    max-width: 245px;
+}
+
+.request-number__name{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.clarify-timeline-input{
+    resize: none;
+    color: #000;
+    background: #f3f3f4;
+    box-shadow: 0 0 0 3px #f3f3f4;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    padding: 15px;
+    width: 100%;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 400;
+    height: 48px;
+    min-height: initial;
+    margin: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.clarify-timeline-input:focus{
+    background: #fff;
+    color: #000;
+    border: 1px solid #dadce0;
+    box-shadow: 0 0 0 3px #f3f3f4;
+}
+
+.request-number__field {
+    position: relative;
+}
+
+.request-number__field:before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url("../img/clarify/request-num-img.svg") center center no-repeat;
+}
+
+.request-number__field .clarify-timeline-input{
+    padding-left: 48px;
+}
+
+.taskPopup-create-btn--call-courier{
+    margin-top: 20px;
+}

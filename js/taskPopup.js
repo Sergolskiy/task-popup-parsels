@@ -143,9 +143,9 @@ function icoCalendar(thatClass) {
 
 }
 
-$('.js_popper_task').each(function (index){
+$('.js_popper_task').each(function (){
 	tippy($(this)[0], {
-		content: $(this).next().html() + index,
+		content: $(this).next().html(),
 		animation: 'fade',
 		allowHTML: true,
 		arrow: true,

@@ -1101,6 +1101,10 @@
 .taskPopup-create-item.speedDelivery:before{
   background: url("../img/TimeCircle.svg") center center no-repeat;
 }
+.taskPopup-create-item.callCourier:before{
+  background: url("../img/callCourier.svg") center center no-repeat;
+  height: 25px;
+}
 
 .taskPopup-create-txt {
   font-size: 16px;
@@ -2457,4 +2461,41 @@
 .left-group-task__link:hover{
   color: #5081E9;
   text-decoration: none;
+}
+
+
+
+
+
+.small-radio-txt{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.small-radio-txt__item{
+  margin-right: 8px;
+}
+
+.small-radio-txt__item input{
+  display: none;
+}
+
+.small-radio-txt__item label{
+  border: 2px solid #E5ECFC;
+  box-sizing: border-box;
+  border-radius: 22px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #5081E9;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.small-radio-txt__item input:checked + label{
+  color: #FFFFFF;
+  background: #5081E9;
 }
