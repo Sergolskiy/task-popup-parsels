@@ -1339,3 +1339,7 @@
     padding: 8px 19px;
     margin-left: auto;
 }
+
+.according-item .taskPopup-left-title{
+    margin-bottom: 15px;
+}
