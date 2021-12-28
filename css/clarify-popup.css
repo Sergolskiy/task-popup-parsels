@@ -1228,7 +1228,15 @@
     display: block;
     width: 16px;
     height: 16px;
-    background: url("../img/clarify/request-num-img.svg") center center no-repeat;
+}
+
+.request-number__field .clarify-timeline-input::placeholder{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #989899;
 }
 
 .request-number__field .clarify-timeline-input{
@@ -1237,4 +1245,97 @@
 
 .taskPopup-create-btn--call-courier{
     margin-top: 20px;
+}
+
+.request-number--notino .request-number__field:before{
+    background: url("../img/clarify/request-num-img.svg") center center no-repeat;
+}
+
+.request-number--meest .request-number__field:before{
+    background: url("../img/clarify/meest-small.svg") center center no-repeat;
+}
+
+.confirmation-popup.call-courier .confirmation-popup__inner{
+    min-height: auto;
+}
+
+.confirmation-popup__table.confirmation-popup__table--rows-small{
+    padding-bottom: 8px;
+}
+
+.clarify-timeline-right-massage--inner-bg{
+    border: 0.5px solid #FEA33D;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background: transparent !important;
+    padding: 14px 16px;
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+    margin-bottom: 15px;
+}
+
+.clarify-timeline-right-massage__inner{
+    display: flex;
+    align-items: center;
+}
+
+.clarify-timeline-right-massage__inner-bg{
+    display: flex;
+    align-items: center;
+    background: #FFF5D4;
+    border-radius: 8px;
+    padding: 7px 8px;
+    margin-left: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.clarify-timeline-right-color-number{
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.clarify-timeline-right-color-number--orange{
+    background: #FFF5D4;
+}
+
+.clarify-timeline-right-color-number--green{
+    background: #DDFFE2;
+}
+
+.clarify-timeline-right-color-number--orange svg path{
+    fill: #FEA33D;
+}
+
+.clarify-timeline-right-color-number--green svg path{
+    fill: #6CCC79;
+}
+
+.clarify-timeline-user-top{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.clarify-timeline-user-col{
+    margin-right: 10px;
+}
+
+.clarify-timeline-item.success .clarify-timeline-right-massage .clarify-timeline-right-massage__inner-bg{
+    background: #DDFFE2;
+}
+
+.clarify-timeline-item.success .clarify-timeline-right-massage--inner-bg{
+    border: 0.5px solid #6CCC79;
+}
+
+.taskPopup-create-task-title .taskPopup-create-btn{
+    padding: 8px 19px;
+    margin-left: auto;
 }
