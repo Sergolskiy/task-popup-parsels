@@ -1343,3 +1343,46 @@
 .according-item .taskPopup-left-title{
     margin-bottom: 15px;
 }
+
+.request-number--notino{
+    max-width: 100%;
+}
+
+.request-number--notino .clarify-timeline-input{
+    max-width: 245px;
+}
+
+.request-number--notino .taskPopup-create-calendar-item{
+    margin-left: 16px;
+    max-width: 186px;
+    width: 100%;
+}
+
+.request-number--notino .daterange-input-2{
+    border: 0;
+}
+
+.request-number--notino > .request-number__field{
+    display: flex;
+}
+
+.taskPopup-accept-btn{
+    outline: none !important;
+    border-radius: 8px;
+    padding: 6px 15px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #ffffff;
+    background: #FEA33D;
+    transition: 0.3s;
+    border: 0;
+    min-width: 80px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.clarify-timeline-item.cancel .clarify-timeline-right-massage.clarify-timeline-right-massage-accept{
+    padding: 8px 16px;
+}

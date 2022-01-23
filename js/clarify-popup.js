@@ -87,6 +87,69 @@ function openConfirmationPopup2(that){
     $('.confirmation-popup').modal()
 }
 
+function icoCalendar(thatClass) {
+    if ($('.daterangepicker').is(":visible")) {
+        return
+    }
+    let curClass = "." + thatClass;
+
+    setTimeout(function () {
+        $(curClass).click()
+    }, 10)
+
+}
+
+function acceptRequest(){
+    $('.request-number--meest').addClass('hide')
+    $('.request-number--notino').removeClass('hide')
+}
+
+$(document).ready(function (){
+    // let today = moment()
+    $('.daterange-input-2').daterangepicker({
+        "singleDatePicker": true,
+        "linkedCalendars": false,
+        "autoUpdateInput": true,
+        "showCustomRangeLabel": false,
+        "autoApply": true,
+        // "startDate": today.format('MM/DD/YYYY'),
+        // "minDate": today.format('MM/DD/YYYY'),
+
+        locale: {
+            "format": 'MM/DD/YYYY',
+            "applyLabel": "Ок",
+            "cancelLabel": "Отмена",
+            "fromLabel": "От",
+            "toLabel": "До",
+            "customRangeLabel": "Произвольный",
+            "daysOfWeek": [
+                "Вс",
+                "Пн",
+                "Вт",
+                "Ср",
+                "Чт",
+                "Пт",
+                "Сб"
+            ],
+            "monthNames": [
+                "Январь",
+                "Февраль",
+                "Март",
+                "Апрель",
+                "Май",
+                "Июнь",
+                "Июль",
+                "Август",
+                "Сентябрь",
+                "Октябрь",
+                "Ноябрь",
+                "Декабрь"
+            ],
+            "firstDay": 1
+        }
+    });
+})
+
 // document.querySelectorAll('textarea').forEach(el => {
 //     el.style.height = el.setAttribute('style', 'height: ' + (el.scrollHeight + 1) + 'px');
 //     el.classList.add('auto');
