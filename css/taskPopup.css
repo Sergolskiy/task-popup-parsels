@@ -1342,6 +1342,7 @@
   background: #FFFFFF;
   border: 1px solid #5081E9;
   color: #5081E9;
+  cursor: pointer;
 }
 
 .taskPopup-create-radio-type {

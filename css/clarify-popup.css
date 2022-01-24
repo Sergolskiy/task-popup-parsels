@@ -1386,3 +1386,8 @@
 .clarify-timeline-item.cancel .clarify-timeline-right-massage.clarify-timeline-right-massage-accept{
     padding: 8px 16px;
 }
+
+.re-request{
+    margin-top: 25px;
+    display: flex;
+}
