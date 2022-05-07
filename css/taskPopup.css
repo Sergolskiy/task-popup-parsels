@@ -2500,3 +2500,226 @@
   color: #FFFFFF;
   background: #5081E9;
 }
+
+
+
+
+/* Redesign left menu css tpl-v2 */
+
+.tpl-v2.taskPopup-left{
+  background: white;
+  position: relative;
+  border-right: 16px solid #fafafa;
+  padding-right: 40px;
+
+  display: block;
+  overflow: auto;
+  overflow-x: hidden;
+
+  /*fix height block*/
+  max-height: 867px;
+}
+
+.tpl-v2 .taskPopup-left-section-detail{
+  padding-bottom: 24px;
+  border-bottom: 1px solid #dedede;
+}
+
+
+.tpl-v2 .taskPopup-left-block{
+  margin-bottom: 0;
+  border: 0;
+  padding-bottom: 0;
+}
+
+.tpl-v2 .taskPopup-left-section-detail:last-child{
+  margin-bottom: 0;
+  border: 0;
+  padding-bottom: 0;
+}
+
+.tpl-v2__meest-ico {
+  color: #0862AF;
+}
+
+.tpl-v2__meest-ico > span {
+  color: #ED1C24;
+}
+
+.tpl-v2__np-ico {
+  color: #ED1C24;
+}
+
+.tpl-v2 .taskPopup-left-title{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.04em;
+  color: #9D9D9D;
+}
+
+.tpl-v2 .taskPopup-left-section-title{
+  text-transform: initial;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin-bottom: 24px;
+  display: flex;
+}
+.tpl-v2 .taskPopup-left-section-link{
+  margin-left: auto;
+  padding: 0 2px;
+}
+
+.tpl-v2 .taskPopup-left-name{
+  color: #000000;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.tpl-v2 .taskPopup-left-name-medium{
+  color: #000000;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.04em;
+}
+
+.tpl-v2 .taskPopup-left-td-name,
+.tpl-v2 .taskPopup-left-td-val{
+  padding-bottom: 16px;
+}
+
+
+.tpl-v2 .taskPopup-left-td-name{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.04em;
+  color: #9D9D9D;
+  width: initial;
+  vertical-align: top;
+  min-width: 77px;
+
+}
+.tpl-v2 .taskPopup-left-td-inner{
+  display: flex;
+  width: 100%;
+}
+
+.tpl-v2 .taskPopup-left-td-inner > a{
+  margin-left: auto;
+}
+
+.tpl-v2 .taskPopup-left-td-val-text{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.04em;
+  color: #000000;
+  width: 100%;
+  text-align: end;
+  /*max-width: 195px;*/
+  padding-left: 8px;
+}
+
+.tpl-v2 .taskPopup-left-td-val-text + a{
+  margin-left: 8px;
+}
+
+/*=====================================================================*/
+/* .taskPopup-left-td-val--nowrap for hide piece row if text very long*/
+
+.tpl-v2 .taskPopup-left-td-val--nowrap .taskPopup-left-td-val-text{
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  max-width: 195px;
+  padding-right: 8px;
+  left: 8px;
+  display: flex;
+}
+
+.tpl-v2 .taskPopup-left-td-val--nowrap .taskPopup-left-td-val-text:after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 24px;
+  background: white;
+  background: linear-gradient(270deg, #fff 0%, #fff 25%, rgba(243, 243, 244, 0) 100%);
+}
+
+.tpl-v2 .taskPopup-left-td-val--nowrap .taskPopup-left-td-inner > a {
+  /*background: white;*/
+}
+/*=====================================================================*/
+
+.tpl-v2 .address-department{
+  top: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: -0.04em;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.tpl-v2 .address-department.success{
+  color: #6CCC79;
+}
+
+.tpl-v2 .taskPopup-left-td-phone{
+  width: 100%;
+}
+
+.tpl-v2 .taskPopup-left-td-phone-inner{
+  display: flex;
+}
+
+.tpl-v2 .taskPopup-left-td-phone .accordion-content .taskPopup-left-td-phone-inner .taskPopup-left-td-val-text{
+  color: #9D9D9D;
+}
+
+
+@media screen and (max-width: 1800px) {
+  .tpl-v2.taskPopup-left{
+    padding-right: 15px;
+    padding-bottom: 0;
+  }
+
+  .tpl-v2 .taskPopup-left-td-val--nowrap .taskPopup-left-td-val-text:after{
+    width: 12px;
+  }
+
+  .tpl-v2 .taskPopup-left-td-name{
+    padding-right: 0;
+  }
+
+  .tpl-v2 .taskPopup-left-section-detail{
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .tpl-v2 .taskPopup-left-td-val--nowrap .taskPopup-left-td-val-text{
+    max-width: 190px;
+  }
+
+  .tpl-v2 .taskPopup-left-section-detail{
+    padding-bottom: 15px;
+  }
+}
+@media screen and (max-width: 1550px) {
+  .tpl-v2 .taskPopup-left-td-val--nowrap .taskPopup-left-td-val-text{
+    max-width: 150px;
+  }
+}
