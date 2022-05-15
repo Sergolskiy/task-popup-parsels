@@ -20,6 +20,8 @@
   <link href="./css/custom.css" rel="stylesheet">
   <link href="./css/taskPopup.css" rel="stylesheet">
 
+  <!-- Add new CSS file for redesign taskPopup -->
+  <link href="./css/taskPopupRedesign.css" rel="stylesheet">
   <link href="./css/confirmation-popup.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
@@ -46,10 +48,7 @@
           <div class="taskPopup-left tpl-v2">
             <div class="taskPopup-left-block package-number">
               <div class="taskPopup-left-item">
-                <div class="taskPopup-left-title">
-                  № ПОСЫЛКИ
-                  <span class="tpl-v2__meest-ico">M<span>E</span>EST</span>
-                </div>
+
                 <div class="taskPopup-left-name"> CV858286079CZ
                   <a href="javascript:void(0)">
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,29 +59,55 @@
                   </a>
                 </div>
               </div>
-              <div class="taskPopup-left-item clarify-left-item-small" >
-                <div class="taskPopup-left-title">
-                  № ПОСЫЛКИ
-                  <span class="tpl-v2__np-ico">НОВА ПОШТА</span>
-                </div>
-                <div class="taskPopup-left-name taskPopup-left-name-medium">
-                  20 4002 3132 0297
-                  <a href="javascript:void(0)">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                              d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
-                              fill="#5081E9" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
 
-              <div class="taskPopup-left-item clarify-left-item-small">
-                <div class="taskPopup-left-title">
-                  ТИП ДОСТАВКИ
-                </div>
-                <div class="taskPopup-left-name taskPopup-left-name-medium">
-                  Нова пошта
+              <div class="taskPopup-left-item clarify-left-item-small taskPopup-left-section-detail">
+                <div class="taskPopup-left-block">
+                  <table class="taskPopup-left-table ">
+                    <tr>
+                      <td class="taskPopup-left-td-name">
+                        Перевозчик
+                      </td>
+                      <td class="taskPopup-left-td-val">
+                        <div class="display-flex align-center taskPopup-left-td-inner">
+                          <div class="taskPopup-left-td-val-text">
+                            Meest
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="taskPopup-left-td-name">
+                        Тип доставки
+                      </td>
+                      <td class="taskPopup-left-td-val">
+                        <div class="display-flex align-center taskPopup-left-td-inner">
+                          <div class="taskPopup-left-td-val-text">
+                            Нова пошта
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="taskPopup-left-td-name">
+                        № посылки Нова пошта
+                      </td>
+                      <td class="taskPopup-left-td-val">
+                        <div class="display-flex align-center taskPopup-left-td-inner">
+                          <div class="taskPopup-left-td-val-text">
+                            20 4002 3132 0297
+                          </div>
+                          <a href="javascript:void(0)">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                                  fill="#5081E9" />
+                            </svg>
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                  </table>
                 </div>
               </div>
 
@@ -114,38 +139,61 @@
                     </tr>
 
                     <tr>
-                      <td class="taskPopup-left-td-name">
-                        № телефона
-                      </td>
-                      <td class="taskPopup-left-td-val">
-                        <div class="display-flex align-center taskPopup-left-td-inner">
-
-                          <div class="according-item taskPopup-left-td-phone">
-                            <div class="taskPopup-left-td-phone-inner">
-                              <div class="taskPopup-left-td-val-text" onclick="accordingInfo(this)">
-                                +38 (097) 985 63 56
+                      <td class="taskPopup-left-phone-block" colspan="2">
+                        <div class="taskPopup-left-phone-items according-item" >
+                          <div class="taskPopup-left-phone-item">
+                            <div class="taskPopup-left-phone-item-inner">
+                              <div class="taskPopup-left-td-name">
+                                № телефона
                               </div>
-                              <a href="javascript:void(0)">
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                      d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
-                                      fill="#5081E9" />
-                                </svg>
-                              </a>
-                            </div>
-
-                            <div class="accordion-content">
-                              <div class="taskPopup-left-td-phone-inner">
-                                <div class="taskPopup-left-td-val-text" >
-                                  +38 (097) 000 11 22
+                              <div class="taskPopup-left-td-val">
+                                <div class="display-flex align-center taskPopup-left-td-inner">
+                                  <div class="accordion-title-ico" onclick="accordingInfo(this)">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path
+                                          d="M0.442383 1.5575L3.87738 5L0.442383 8.4425L1.49988 9.5L5.99988 5L1.49988 0.5L0.442383 1.5575Z"
+                                          fill="#8C8C8C" />
+                                    </svg>
+                                  </div>
+                                  <div class="taskPopup-left-td-phone">
+                                    <div class="taskPopup-left-td-phone-inner">
+                                      <div class="taskPopup-left-td-val-text">
+                                        +38 (097) 985 63 56
+                                      </div>
+                                      <a href="javascript:void(0)">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                              d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                                              fill="#5081E9" />
+                                        </svg>
+                                      </a>
+                                    </div>
+                                  </div>
                                 </div>
-                                <a href="javascript:void(0)">
-                                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
-                                        fill="#5081E9" />
-                                  </svg>
-                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="taskPopup-left-phone-item accordion-content">
+                            <div class="taskPopup-left-phone-item-inner">
+                              <div class="taskPopup-left-td-name">
+                                № телефона
+                              </div>
+                              <div class="taskPopup-left-td-val">
+                                <div class="display-flex align-center taskPopup-left-td-inner">
+                                  <div class="taskPopup-left-td-phone-inner">
+                                    <div class="taskPopup-left-td-val-text">
+                                      +38 (097) 000 11 22
+                                    </div>
+                                    <a href="javascript:void(0)">
+                                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
+                                            fill="#5081E9" />
+                                      </svg>
+                                    </a>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -218,7 +266,7 @@
                       <td class="taskPopup-left-td-val">
                         <div class="display-flex align-center taskPopup-left-td-inner">
                           <div class="taskPopup-left-td-val-text">
-                            Северодонецк
+                            <a class="tpl-v2-td-val-link" href="#">Северодонецк</a>
                           </div>
                           <a href="javascript:void(0)">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -238,15 +286,15 @@
                       <td class="taskPopup-left-td-val">
                         <div class="display-flex align-center taskPopup-left-td-inner">
                           <div class="taskPopup-left-td-val-text">
-                            № 10
+                            <a href="#" class="tpl-v2-td-val-link">№ 10</a>
                           </div>
-                          <a href="javascript:void(0)">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                  d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"
-                                  fill="#5081E9" />
-                            </svg>
-                          </a>
+<!--                          <a href="javascript:void(0)">-->
+<!--                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                              <path-->
+<!--                                  d="M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z"-->
+<!--                                  fill="#5081E9" />-->
+<!--                            </svg>-->
+<!--                          </a>-->
                         </div>
                       </td>
                     </tr>
@@ -255,10 +303,12 @@
                       <td class="taskPopup-left-td-name">
                         Улица
                       </td>
+
+                      <!-- taskPopup-left-td-val--nowrap if the text does not fit in the line, the class adds a gradient -->
                       <td class="taskPopup-left-td-val taskPopup-left-td-val--nowrap">
                         <div class="display-flex align-center taskPopup-left-td-inner ">
                           <div class="taskPopup-left-td-val-text">
-<!--                            ул. Модзалевського Вадим,44example text long-->
+<!--                            ул. Модзалевського Вадим,44 example text long-->
                             ул. Модзалевського Вадим,44
                           </div>
                           <a href="javascript:void(0)">

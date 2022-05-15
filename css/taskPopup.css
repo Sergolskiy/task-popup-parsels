@@ -2505,6 +2505,7 @@
 
 
 /* Redesign left menu css tpl-v2 */
+/* test */
 
 .tpl-v2.taskPopup-left{
   background: white;
@@ -2538,18 +2539,6 @@
   padding-bottom: 0;
 }
 
-.tpl-v2__meest-ico {
-  color: #0862AF;
-}
-
-.tpl-v2__meest-ico > span {
-  color: #ED1C24;
-}
-
-.tpl-v2__np-ico {
-  color: #ED1C24;
-}
-
 .tpl-v2 .taskPopup-left-title{
   font-style: normal;
   font-weight: 500;
@@ -2579,6 +2568,7 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  padding-bottom: 16px;
 }
 .tpl-v2 .taskPopup-left-name-medium{
   color: #000000;
@@ -2638,12 +2628,15 @@
   position: relative;
   white-space: nowrap;
   max-width: 195px;
-  padding-right: 8px;
   left: 8px;
-  display: flex;
 }
 
 .tpl-v2 .taskPopup-left-td-val--nowrap .taskPopup-left-td-val-text:after{
+  content: '';
+  width: 15px;
+  display: inline-block;
+}
+.tpl-v2 .taskPopup-left-td-val--nowrap .taskPopup-left-td-val-text:before{
   content: '';
   position: absolute;
   right: 0;
@@ -2717,9 +2710,59 @@
   .tpl-v2 .taskPopup-left-section-detail{
     padding-bottom: 15px;
   }
+
+  .tpl-v2 .taskPopup-left-name{
+    padding-bottom: 8px;
+  }
 }
 @media screen and (max-width: 1550px) {
   .tpl-v2 .taskPopup-left-td-val--nowrap .taskPopup-left-td-val-text{
     max-width: 150px;
   }
+
+  .tpl-v2 .taskPopup-left-name{
+    padding-bottom: 0;
+  }
 }
+
+.tpl-v2 .taskPopup-left-phone-block{
+  width: initial;
+}
+
+.tpl-v2 .taskPopup-left-phone-item{
+  padding-top: 0;
+}
+
+.tpl-v2 .taskPopup-left-phone-item:not(.taskPopup-left-phone-item:first-child) .taskPopup-left-td-val-text{
+  color: #8C8C8C;
+}
+
+.tpl-v2 .taskPopup-left-phone-item-inner{
+  display: flex;
+}
+
+.tpl-v2 .taskPopup-left-phone-item-inner > .taskPopup-left-td-val{
+  margin-left: auto;
+}
+
+.tpl-v2 .taskPopup-left-phone-item .accordion-title-ico{
+  transform: translate(4px, -2px);
+}
+
+.tpl-v2 .tpl-v2-td-val-link{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: -0.04em;
+  color: #5081E9;
+  text-decoration: none;
+}
+
+.tpl-v2 .tpl-v2-td-val-link:active,
+.tpl-v2 .tpl-v2-td-val-link:focus,
+.tpl-v2 .tpl-v2-td-val-link:hover{
+  text-decoration: none;
+  color: #5081E9;
+}
+
